@@ -26,7 +26,7 @@ class ViewController: NSViewController {
             attributedString: (self.goals?.attributedStringValue)!
         )
         
-        var font = "HelveticaNeue-Light"
+        var font = "Lato-Light"
         
         increase(goalTitle, NSFont(name: font, size: 14)!, 3, 28)
         increase(goalTitle, NSFont(name: font, size: 20)!, 6, 2)

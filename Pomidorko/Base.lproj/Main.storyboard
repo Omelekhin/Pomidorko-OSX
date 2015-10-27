@@ -138,7 +138,7 @@
                 </windowController>
                 <customObject id="Oky-zY-oP4" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="70" y="375"/>
+            <point key="canvasLocation" x="70" y="353"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="hIz-AP-VOD">
@@ -151,17 +151,9 @@
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="c0u-jL-dOE" userLabel="Time">
                                 <rect key="frame" x="-2" y="329" width="324" height="129"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="25:00" id="YO0-UC-0S2">
-                                    <font key="font" size="72" name="Lato-Light"/>
+                                    <font key="font" size="72" name="Lato-Thin"/>
                                     <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
-                                </textFieldCell>
-                            </textField>
-                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZYe-o0-HZK" userLabel="Goals">
-                                <rect key="frame" x="-2" y="30" width="324" height="61"/>
-                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="13 из 12 отработанных помидорок" id="Yef-Et-obV">
-                                    <font key="font" size="28" name="HelveticaNeue-Thin"/>
-                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
                             <button focusRingType="none" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xbp-hu-5tH" userLabel="Skip">
@@ -181,6 +173,14 @@
                             <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="w3U-eG-cfD" customClass="Scale" customModule="Pomidorko" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="239" width="320" height="100"/>
                             </customView>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZYe-o0-HZK" userLabel="Goals">
+                                <rect key="frame" x="-2" y="30" width="324" height="61"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="13 из 12 отработанных помидорок" id="Yef-Et-obV">
+                                    <font key="font" size="28" name="HelveticaNeue-Thin"/>
+                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
                         </subviews>
                     </view>
                     <connections>

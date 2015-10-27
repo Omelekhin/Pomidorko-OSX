@@ -5,10 +5,6 @@
 //  Created by Volter on 28.09.15.
 //  Copyright (c) 2015 volter9. All rights reserved.
 //
-// Red #ed4455
-// Blue #08b1cf
-// Settings #f7f7f7
-// About #fff
 
 import Cocoa
 
