@@ -16,6 +16,7 @@
 		133AD5551BDFEE530023788E /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 133AD54F1BDFDA3A0023788E /* Model.swift */; };
 		133AD5561BDFEE570023788E /* Observer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 133AD5511BDFE2840023788E /* Observer.swift */; };
 		133AD5581BDFF0580023788E /* ModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 133AD5571BDFF0580023788E /* ModelTests.swift */; };
+		133AD55A1BE01E160023788E /* Dictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 133AD5591BE01E160023788E /* Dictionary.swift */; };
 		133D89C31BB9A950007AFAF7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 133D89C21BB9A950007AFAF7 /* AppDelegate.swift */; };
 		133D89C51BB9A950007AFAF7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 133D89C41BB9A950007AFAF7 /* ViewController.swift */; };
 		133D89C71BB9A950007AFAF7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 133D89C61BB9A950007AFAF7 /* Images.xcassets */; };
@@ -42,6 +43,7 @@
 		133AD5511BDFE2840023788E /* Observer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Observer.swift; sourceTree = "<group>"; };
 		133AD5531BDFE5DF0023788E /* ObserversTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ObserversTest.swift; sourceTree = "<group>"; };
 		133AD5571BDFF0580023788E /* ModelTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModelTests.swift; sourceTree = "<group>"; };
+		133AD5591BE01E160023788E /* Dictionary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Dictionary.swift; sourceTree = "<group>"; };
 		133D89BD1BB9A950007AFAF7 /* Pomidorko.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pomidorko.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		133D89C11BB9A950007AFAF7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		133D89C21BB9A950007AFAF7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -156,6 +158,7 @@
 				137AAB381BD6D1660049209B /* Colors.swift */,
 				1339E0B61BD965F00014CBDB /* Functions.swift */,
 				1339E0BA1BD97DD90014CBDB /* Shapes.swift */,
+				133AD5591BE01E160023788E /* Dictionary.swift */,
 			);
 			name = Common;
 			sourceTree = "<group>";
@@ -267,6 +270,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				133D89C51BB9A950007AFAF7 /* ViewController.swift in Sources */,
+				133AD55A1BE01E160023788E /* Dictionary.swift in Sources */,
 				137AAB391BD6D1660049209B /* Colors.swift in Sources */,
 				1339E0B91BD96B820014CBDB /* PlayPause.swift in Sources */,
 				133AD5521BDFE2840023788E /* Observer.swift in Sources */,

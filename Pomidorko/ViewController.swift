@@ -16,7 +16,8 @@ class ViewController: NSViewController {
     
     override func viewDidAppear()
     {
-        self.view.window?.backgroundColor = RedColor
+        self.view.window?.backgroundColor = BlueColor
+        self.control?.backgroundColor = LightBlueColor
         
         self.skip?.attributedTitle = colorize(
             self.skip?.attributedTitle, WhiteColor
