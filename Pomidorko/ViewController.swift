@@ -16,6 +16,8 @@ class ViewController: NSViewController {
     
     override func viewDidAppear()
     {
+        super.viewDidAppear()
+        
         self.view.window?.backgroundColor = BlueColor
         self.control?.backgroundColor = LightBlueColor
         
@@ -27,7 +29,7 @@ class ViewController: NSViewController {
             attributedString: (self.goals?.attributedStringValue)!
         )
         
-        var font = "Lato-Light"
+        let font = "HelveticaNeue-Light"
         
         increase(goalTitle, NSFont(name: font, size: 14)!, 3, 28)
         increase(goalTitle, NSFont(name: font, size: 20)!, 6, 2)

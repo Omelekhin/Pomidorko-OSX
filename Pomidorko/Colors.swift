@@ -18,6 +18,8 @@ import Cocoa
  * Light blue - #68c4db
  */
 
+var AboutColor: NSColor = hex(0xf7f7f7)
+
 var RedColor: NSColor = hex(0xed4455)
 var LightRedColor: NSColor = hex(0xeb6169)
 

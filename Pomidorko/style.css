@@ -1,0 +1,112 @@
+body {
+	font-family: 'Helvetica Neue', sans-serif;
+}
+
+html {
+    overflow: hidden;
+}
+
+a {
+	color: #ed4455;
+}
+
+a:hover {
+	color: #c00;
+}
+
+#window-h {
+	width: 100%;
+	margin: 0;
+	position: absolute;
+	top: 7.5px;
+	
+	font-size: 13px;
+	color: #666;
+	text-align: center;
+}
+
+.text {
+	margin: 0 20px;
+}
+
+#about-h {
+	font-size: 18px;
+	font-weight: 500;
+	
+	display: inline-block;
+}
+
+#h-caption {
+	font-size: 11px;
+	line-height: 19px;
+}
+
+#instruction-h,
+#creators-h,
+#donate-h {
+	display: inline-block;
+	font-size: 11px;
+	font-weight: 600;
+	color: #404040;
+}
+
+#instruction-h {
+	margin-top: 15px;
+}
+
+#instruction {
+	padding: 0 0 0 16px;
+	margin: 0;
+	font-size: 11px;
+	color: #404040;
+}
+
+#instruction li {
+	line-height: 14px;
+	margin-top: 4px;
+}
+
+#instruction li:first-child {
+	margin-top: 2px;
+}
+
+#instruction-caption {
+	display: inline-block;
+	font-size: 11px;
+	line-height: 13.5px;
+	color: #505050;
+	margin-top: 8px;
+}
+
+#hr {
+	border: none;
+	height: 1px;
+	background: #ccc;
+	margin: 25px 0;
+}
+
+#creators,
+#donate {
+	display: inline-block;
+	font-size: 11px;
+	line-height: 15px;
+	color: #404040;
+}
+
+#donate {
+	margin-bottom: 30px;
+}
+
+#donate-h {
+	margin-top: 10px;
+}
+
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+	#about-window {
+		border: .5px solid #5b5b5b;
+	}
+	
+    #hr {
+		height: .5px;
+	}
+}
