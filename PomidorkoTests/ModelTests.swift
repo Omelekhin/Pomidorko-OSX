@@ -13,15 +13,15 @@ class ModelTests: XCTestCase
 {
     func testModel()
     {
-        var model: Model = Model(data: [
+        let model: Model = Model(data: [
             "cool": "foo"
         ])
         
-        var key = "cool"
-        var value = "abc"
+        let key = "cool"
+        let value = "abc"
         
         model.observers.add({ (dict: [String: AnyObject?]) -> Void in
-            XCTAssertEqual(dict[key] as! String, value, "Tots not equals")
+            XCTAssertEqual(dict[key] as? String, value, "Tots not equals")
             
             return
         })

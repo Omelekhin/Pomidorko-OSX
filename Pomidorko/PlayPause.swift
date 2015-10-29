@@ -14,7 +14,7 @@ class PlayPause: NSButton
     
     override func drawRect(dirtyRect: NSRect)
     {
-        var context: CGContext? = NSGraphicsContext.currentContext()?.CGContext
+        let context: CGContext? = NSGraphicsContext.currentContext()?.CGContext
         
         CGContextSetFillColorWithColor(context, self.backgroundColor.CGColor)
         CGContextFillEllipseInRect(context, dirtyRect)

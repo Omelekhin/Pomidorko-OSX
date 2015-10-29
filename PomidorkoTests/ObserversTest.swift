@@ -13,8 +13,8 @@ class ObserverTest: XCTestCase
 {
     func testObserver()
     {
-        var observer = Observer<Int, Void>()
-        var value = 10
+        let observer = Observer<Int, Void>()
+        let value = 10
         
         observer.add({ (foo: Int) -> Void in
             XCTAssertEqual(foo, value, "Two args arent equals")
@@ -25,14 +25,14 @@ class ObserverTest: XCTestCase
     
     func testObserverWithDict()
     {
-        var observer = Observer<Dictionary<String, AnyObject?>, Void>()
-        var value: [String: AnyObject?] = [
+        let observer = Observer<Dictionary<String, AnyObject?>, Void>()
+        let value: [String: AnyObject?] = [
             "cool": "value"
         ]
         
         observer.add({ (foo: Dictionary<String, AnyObject?>) -> Void in
             XCTAssertEqual(
-                "value", foo["cool"] as! String,
+                "value", foo["cool"] as? String,
                 "Given dictionary doesn't have such value"
             )
             

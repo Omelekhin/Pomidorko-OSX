@@ -12,13 +12,13 @@ class Scale: NSView
 {
     override func drawRect(dirtyRect: NSRect)
     {
-        var context = NSGraphicsContext.currentContext()?.CGContext
+        let context = NSGraphicsContext.currentContext()?.CGContext
         
         CGContextSetFillColorWithColor(context, WhiteColor.CGColor)
         CGContextSetFontSize(context, 10)
         
         for index in 0..<55 {
-            var x: CGFloat = CGFloat(index * 40) + 10
+            let x: CGFloat = CGFloat(index * 40) + 10
             
             if x > dirtyRect.width {
                 break

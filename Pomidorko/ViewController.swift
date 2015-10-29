@@ -22,17 +22,26 @@ class ViewController: NSViewController {
         self.control?.backgroundColor = LightBlueColor
         
         self.skip?.attributedTitle = colorize(
-            self.skip?.attributedTitle, WhiteColor
+            self.skip?.attributedTitle,
+            color: WhiteColor
         )
         
-        var goalTitle = NSMutableAttributedString(
+        let goalTitle = NSMutableAttributedString(
             attributedString: (self.goals?.attributedStringValue)!
         )
         
         let font = "HelveticaNeue-Light"
         
-        increase(goalTitle, NSFont(name: font, size: 14)!, 3, 28)
-        increase(goalTitle, NSFont(name: font, size: 20)!, 6, 2)
+        increase(goalTitle,
+            font: NSFont(name: font, size: 14)!,
+            offset: 3,
+            length: 28
+        )
+        increase(goalTitle,
+            font: NSFont(name: font, size: 20)!,
+            offset: 6,
+            length: 2
+        )
         
         self.goals?.attributedStringValue = goalTitle
     }

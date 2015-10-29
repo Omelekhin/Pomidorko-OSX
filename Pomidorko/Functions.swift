@@ -22,18 +22,18 @@ func hex(hex: Int, alpha: CGFloat = 1.0) -> NSColor
 {
     return rgb(
         CGFloat(hex >> 16 & 0xff),
-        CGFloat(hex >> 8  & 0xff),
-        CGFloat(hex       & 0xff),
+        green: CGFloat(hex >> 8  & 0xff),
+        blue:  CGFloat(hex       & 0xff),
         alpha: alpha
     )
 }
 
 func colorize(string: NSAttributedString?, color: NSColor) -> NSMutableAttributedString
 {
-    var result: NSMutableAttributedString = NSMutableAttributedString(
+    let result: NSMutableAttributedString = NSMutableAttributedString(
         attributedString: string!
     )
-    var range: NSRange = NSMakeRange(0, string!.length)
+    let range: NSRange = NSMakeRange(0, string!.length)
     
     result.addAttribute(
         NSForegroundColorAttributeName,
@@ -45,7 +45,7 @@ func colorize(string: NSAttributedString?, color: NSColor) -> NSMutableAttribute
 
 func increase(string: NSMutableAttributedString, font:NSFont, offset: Int, length: Int)
 {
-    var range: NSRange = NSMakeRange(offset, length)
+    let range: NSRange = NSMakeRange(offset, length)
     
     string.addAttribute(
         NSFontAttributeName,

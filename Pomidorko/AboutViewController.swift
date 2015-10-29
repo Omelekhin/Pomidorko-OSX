@@ -9,7 +9,7 @@
 import Cocoa
 import WebKit
 
-class AboutViewController: NSViewController
+class AboutViewController: NSViewController, WebPolicyDelegate
 {
     override func viewDidAppear()
     {
@@ -17,15 +17,15 @@ class AboutViewController: NSViewController
         
         let view: NSView? = self.view
         
-        var webView = WebView(
+        let webView = WebView(
             frame: (view?.frame)!,
             frameName: "Frame",
             groupName: "Group"
         )
         
-        var path = NSBundle.mainBundle().pathForResource("index", ofType: "html")
-        var url = NSURL(fileURLWithPath: path!)
-        var request = NSURLRequest(URL: url!)
+        let path = NSBundle.mainBundle().pathForResource("index", ofType: "html")
+        let url = NSURL(fileURLWithPath: path!)
+        let request = NSURLRequest(URL: url)
         
         webView.mainFrame.loadRequest(request)
         webView.policyDelegate = self
@@ -34,7 +34,10 @@ class AboutViewController: NSViewController
         view?.window?.backgroundColor = WhiteColor
     }
     
-    override func webView(
+    /**
+     * From stack overflow
+     */
+    func webView(
         webView: WebView!,
         decidePolicyForNavigationAction actionInformation: [NSObject : AnyObject]!,
         request: NSURLRequest!,
