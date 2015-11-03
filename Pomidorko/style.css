@@ -102,10 +102,6 @@ a:hover {
 }
 
 @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
-	#about-window {
-		border: .5px solid #5b5b5b;
-	}
-	
     #hr {
 		height: .5px;
 	}
