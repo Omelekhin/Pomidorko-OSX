@@ -8,20 +8,29 @@
 
 import Cocoa
 
-class ViewController: NSViewController {
-    @IBOutlet var skip: NSButton?
-    @IBOutlet var time: NSTextField?
-    @IBOutlet var goals: NSTextField?
-    @IBOutlet var control: PlayPause?
+class ViewController: NSViewController
+{
+    @IBOutlet weak var skip: NSButton?
+    @IBOutlet weak var time: NSTextField?
+    @IBOutlet weak var goals: NSTextField?
+    @IBOutlet weak var control: PlayPause?
+    
+    var settings: Settings?
     
     override func viewDidAppear()
     {
         super.viewDidAppear()
         
         self.view.window?.backgroundColor = BlueColor
-        self.control?.backgroundColor = LightBlueColor
+        self.view.window?.titlebarAppearsTransparent = true
         
-        self.skip?.attributedTitle = colorize(
+        let existingStyleMask = self.view.window!.styleMask
+        
+        self.view.window?.styleMask = existingStyleMask | NSFullSizeContentViewWindowMask
+        
+        control?.backgroundColor = LightBlueColor
+        
+        skip?.attributedTitle = colorize(
             self.skip?.attributedTitle,
             color: WhiteColor
         )
@@ -30,20 +39,27 @@ class ViewController: NSViewController {
             attributedString: (self.goals?.attributedStringValue)!
         )
         
-        let font = "HelveticaNeue-Light"
-        
         increase(goalTitle,
-            font: NSFont(name: font, size: 14)!,
+            font: NSFont.systemFontOfSize(14),
             offset: 3,
             length: 28
         )
         increase(goalTitle,
-            font: NSFont(name: font, size: 20)!,
+            font: NSFont.systemFontOfSize(20),
             offset: 6,
             length: 2
         )
         
-        self.goals?.attributedStringValue = goalTitle
+        goals?.attributedStringValue = goalTitle
+    }
+    
+    func initComponents()
+    {
+        let components: Array<Component> = [
+            CGoals()
+        ]
+        
+        print(components)
     }
 }
 

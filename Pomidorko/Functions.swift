@@ -30,9 +30,7 @@ func hex(hex: Int, alpha: CGFloat = 1.0) -> NSColor
 
 func colorize(string: NSAttributedString?, color: NSColor) -> NSMutableAttributedString
 {
-    let result: NSMutableAttributedString = NSMutableAttributedString(
-        attributedString: string!
-    )
+    let result: NSMutableAttributedString = NSMutableAttributedString(attributedString: string!)
     let range: NSRange = NSMakeRange(0, string!.length)
     
     result.addAttribute(

@@ -17,8 +17,13 @@ class AboutViewController: NSViewController, WebPolicyDelegate
         
         let view: NSView? = self.view
         
+        let frame: NSRect = NSMakeRect(
+            0, 0,
+            (view?.frame.width)!,
+            (view?.frame.height)! - 18)
+        
         let webView = WebView(
-            frame: (view?.frame)!,
+            frame: frame,
             frameName: "Frame",
             groupName: "Group"
         )
@@ -32,11 +37,13 @@ class AboutViewController: NSViewController, WebPolicyDelegate
         
         view?.addSubview(webView)
         view?.window?.backgroundColor = WhiteColor
+        view?.window?.titlebarAppearsTransparent = true
+        
+        let existingStyleMask = self.view.window!.styleMask
+        
+        view?.window?.styleMask = existingStyleMask|NSFullSizeContentViewWindowMask
     }
     
-    /**
-     * From stack overflow
-     */
     func webView(
         webView: WebView!,
         decidePolicyForNavigationAction actionInformation: [NSObject : AnyObject]!,
