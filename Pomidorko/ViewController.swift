@@ -21,45 +21,27 @@ class ViewController: NSViewController
     {
         super.viewDidAppear()
         
-        self.view.window?.backgroundColor = BlueColor
-        self.view.window?.titlebarAppearsTransparent = true
-        
-        let existingStyleMask = self.view.window!.styleMask
-        
-        self.view.window?.styleMask = existingStyleMask | NSFullSizeContentViewWindowMask
+        initView()
+        initComponents()
+    }
+    
+    func initView()
+    {
+        flatify(view.window!, color: BlueColor)
         
         control?.backgroundColor = LightBlueColor
-        
-        skip?.attributedTitle = colorize(
-            self.skip?.attributedTitle,
-            color: WhiteColor
-        )
-        
-        let goalTitle = NSMutableAttributedString(
-            attributedString: (self.goals?.attributedStringValue)!
-        )
-        
-        increase(goalTitle,
-            font: NSFont.systemFontOfSize(14),
-            offset: 3,
-            length: 28
-        )
-        increase(goalTitle,
-            font: NSFont.systemFontOfSize(20),
-            offset: 6,
-            length: 2
-        )
-        
-        goals?.attributedStringValue = goalTitle
+        skip?.attributedTitle = colorize(skip?.attributedTitle, color: WhiteColor)
     }
     
     func initComponents()
     {
         let components: Array<Component> = [
-            CGoals()
+            CGoals(goals: goals)
         ]
         
-        print(components)
+        for component in components {
+            component.activate()
+        }
     }
 }
 

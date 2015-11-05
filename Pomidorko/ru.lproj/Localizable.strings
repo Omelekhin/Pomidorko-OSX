@@ -1,0 +1,12 @@
+/* 
+  Localizable.strings
+  Pomidorko
+
+  Created by Volter on 04.11.15.
+  Copyright © 2015 volter9. All rights reserved.
+*/
+
+"goals" = "%i из %i отработанных помидорок";
+"second-index" = "4";
+
+"about-page" = "index-ru";

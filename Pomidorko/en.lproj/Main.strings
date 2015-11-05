@@ -1,0 +1,60 @@
+
+/* Class = "NSMenuItem"; title = "Pomidorko"; ObjectID = "1Xt-HY-uBw"; */
+"1Xt-HY-uBw.title" = "Pomidorko";
+
+/* Class = "NSMenuItem"; title = "Quit Pomidorko"; ObjectID = "4sb-4s-VLi"; */
+"4sb-4s-VLi.title" = "Quit Pomidorko";
+
+/* Class = "NSMenuItem"; title = "About Pomidorko"; ObjectID = "5kV-Vb-QxS"; */
+"5kV-Vb-QxS.title" = "About Pomidorko";
+
+/* Class = "NSMenu"; title = "Main Menu"; ObjectID = "AYu-sK-qS6"; */
+"AYu-sK-qS6.title" = "Main Menu";
+
+/* Class = "NSMenuItem"; title = "Preferences…"; ObjectID = "BOF-NM-1cW"; */
+"BOF-NM-1cW.title" = "Preferences…";
+
+/* Class = "NSMenu"; title = "Help"; ObjectID = "F2S-fz-NVQ"; */
+"F2S-fz-NVQ.title" = "Help";
+
+/* Class = "NSMenuItem"; title = "Pomidorko Help"; ObjectID = "FKE-Sm-Kum"; */
+"FKE-Sm-Kum.title" = "Pomidorko Help";
+
+/* Class = "NSButtonCell"; title = "Skip the pomidoro"; ObjectID = "HKI-XO-Dob"; */
+"HKI-XO-Dob.title" = "Skip the pomidoro";
+
+/* Class = "NSMenuItem"; title = "Show All"; ObjectID = "Kd2-mp-pUS"; */
+"Kd2-mp-pUS.title" = "Show All";
+
+/* Class = "NSMenuItem"; title = "Bring All to Front"; ObjectID = "LE2-aR-0XJ"; */
+"LE2-aR-0XJ.title" = "Bring All to Front";
+
+/* Class = "NSMenuItem"; title = "Minimize"; ObjectID = "OY7-WF-poV"; */
+"OY7-WF-poV.title" = "Minimize";
+
+/* Class = "NSMenuItem"; title = "Hide Pomidorko"; ObjectID = "Olw-nP-bQN"; */
+"Olw-nP-bQN.title" = "Hide Pomidorko";
+
+/* Class = "NSMenuItem"; title = "Zoom"; ObjectID = "R4o-n2-Eq4"; */
+"R4o-n2-Eq4.title" = "Zoom";
+
+/* Class = "NSWindow"; title = "About timer"; ObjectID = "SZX-S9-C18"; */
+"SZX-S9-C18.title" = "About timer";
+
+/* Class = "NSMenu"; title = "Window"; ObjectID = "Td7-aD-5lo"; */
+"Td7-aD-5lo.title" = "Window";
+
+/* Class = "NSMenuItem"; title = "Hide Others"; ObjectID = "Vdr-fp-XzO"; */
+"Vdr-fp-XzO.title" = "Hide Others";
+
+/* Class = "NSTextFieldCell"; title = "25:00"; ObjectID = "YO0-UC-0S2"; */
+"YO0-UC-0S2.title" = "25:00";
+
+/* Class = "NSMenuItem"; title = "Window"; ObjectID = "aUF-d1-5bR"; */
+"aUF-d1-5bR.title" = "Window";
+
+/* Class = "NSMenu"; title = "Pomidorko"; ObjectID = "uQy-DD-JDr"; */
+"uQy-DD-JDr.title" = "Pomidorko";
+
+/* Class = "NSMenuItem"; title = "Help"; ObjectID = "wpr-3q-Mcd"; */
+"wpr-3q-Mcd.title" = "Help";

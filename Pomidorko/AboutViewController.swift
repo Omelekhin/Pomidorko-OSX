@@ -9,53 +9,66 @@
 import Cocoa
 import WebKit
 
-class AboutViewController: NSViewController, WebPolicyDelegate
+class AboutViewController: NSViewController, WebPolicyDelegate, WebUIDelegate
 {
     override func viewDidAppear()
     {
         super.viewDidAppear()
         
-        let view: NSView? = self.view
-        
-        let frame: NSRect = NSMakeRect(
-            0, 0,
-            (view?.frame.width)!,
-            (view?.frame.height)! - 18)
-        
         let webView = WebView(
-            frame: frame,
+            frame: NSMakeRect(
+                0,  0,
+                view.frame.width,
+                view.frame.height - 18
+            ),
             frameName: "Frame",
             groupName: "Group"
         )
         
-        let path = NSBundle.mainBundle().pathForResource("index", ofType: "html")
+        let path = NSBundle.mainBundle().pathForResource(
+            localeString("about-page"), ofType: "html"
+        )
         let url = NSURL(fileURLWithPath: path!)
         let request = NSURLRequest(URL: url)
         
         webView.mainFrame.loadRequest(request)
+        
         webView.policyDelegate = self
+        webView.UIDelegate = self
+        webView.editingDelegate = self
         
-        view?.addSubview(webView)
-        view?.window?.backgroundColor = WhiteColor
-        view?.window?.titlebarAppearsTransparent = true
+        view.addSubview(webView)
         
-        let existingStyleMask = self.view.window!.styleMask
-        
-        view?.window?.styleMask = existingStyleMask|NSFullSizeContentViewWindowMask
+        flatify(view.window!, color: WhiteColor)
     }
     
-    func webView(
-        webView: WebView!,
-        decidePolicyForNavigationAction actionInformation: [NSObject : AnyObject]!,
-        request: NSURLRequest!,
-        frame: WebFrame!,
-        decisionListener listener: WebPolicyDecisionListener!
-    ) {
+    func webView(webView: WebView!, decidePolicyForNavigationAction actionInformation: [NSObject : AnyObject]!, request: NSURLRequest!, frame: WebFrame!, decisionListener listener: WebPolicyDecisionListener!)
+    {
         if (request.URL?.host != nil) {
             NSWorkspace.sharedWorkspace().openURL(request.URL!)
         }
         else {
             listener.use()
         }
+    }
+    
+    func webView(sender: WebView!, contextMenuItemsForElement element: [NSObject : AnyObject]!, defaultMenuItems: [AnyObject]!) -> [AnyObject]!
+    {
+        return nil
+    }
+    
+    override func webView(webView: WebView!, shouldChangeSelectedDOMRange currentRange: DOMRange!, toDOMRange proposedRange: DOMRange!, affinity selectionAffinity: NSSelectionAffinity, stillSelecting flag: Bool) -> Bool
+    {
+        return false
+    }
+    
+    func webView(webView: WebView!, dragSourceActionMaskForPoint point: NSPoint) -> Int
+    {
+        return 0
+    }
+    
+    func webView(webView: WebView!, dragDestinationActionMaskForDraggingInfo draggingInfo: NSDraggingInfo!) -> Int
+    {
+        return 0
     }
 }
