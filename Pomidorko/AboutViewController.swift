@@ -42,8 +42,19 @@ class AboutViewController: NSViewController, WebPolicyDelegate, WebUIDelegate
         flatify(view.window!, color: WhiteColor)
     }
     
-    func webView(webView: WebView!, decidePolicyForNavigationAction actionInformation: [NSObject : AnyObject]!, request: NSURLRequest!, frame: WebFrame!, decisionListener listener: WebPolicyDecisionListener!)
-    {
+    /** 
+     * WebView disabling shit 
+     * 
+     * I hate those long method definitions
+     */
+    
+    func webView(
+        webView:                                            WebView!,
+        decidePolicyForNavigationAction actionInformation: [NSObject : AnyObject]!,
+        request:                                            NSURLRequest!,
+        frame:                                              WebFrame!,
+        decisionListener listener:                          WebPolicyDecisionListener!
+    ) {
         if (request.URL?.host != nil) {
             NSWorkspace.sharedWorkspace().openURL(request.URL!)
         }
@@ -52,22 +63,34 @@ class AboutViewController: NSViewController, WebPolicyDelegate, WebUIDelegate
         }
     }
     
-    func webView(sender: WebView!, contextMenuItemsForElement element: [NSObject : AnyObject]!, defaultMenuItems: [AnyObject]!) -> [AnyObject]!
+    func webView(
+        sender:                              WebView!,
+        contextMenuItemsForElement element: [NSObject : AnyObject]!,
+        defaultMenuItems:                   [AnyObject]!) -> [AnyObject]!
     {
         return nil
     }
     
-    override func webView(webView: WebView!, shouldChangeSelectedDOMRange currentRange: DOMRange!, toDOMRange proposedRange: DOMRange!, affinity selectionAffinity: NSSelectionAffinity, stillSelecting flag: Bool) -> Bool
-    {
+    override func webView(
+        webView:                                   WebView!,
+        shouldChangeSelectedDOMRange currentRange: DOMRange!,
+        toDOMRange proposedRange:                  DOMRange!,
+        affinity selectionAffinity:                NSSelectionAffinity,
+        stillSelecting flag:                       Bool
+    ) -> Bool {
         return false
     }
     
-    func webView(webView: WebView!, dragSourceActionMaskForPoint point: NSPoint) -> Int
+    func webView(
+        webView:                            WebView!,
+        dragSourceActionMaskForPoint point: NSPoint) -> Int
     {
         return 0
     }
     
-    func webView(webView: WebView!, dragDestinationActionMaskForDraggingInfo draggingInfo: NSDraggingInfo!) -> Int
+    func webView(
+        webView:                                               WebView!,
+        dragDestinationActionMaskForDraggingInfo draggingInfo: NSDraggingInfo!) -> Int
     {
         return 0
     }

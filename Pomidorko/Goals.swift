@@ -1,27 +1,22 @@
 //
-//  Settings.swift
+//  Goals.swift
 //  Pomidorko
 //
-//  Created by Volter on 31.10.15.
+//  Created by Volter on 05.11.15.
 //  Copyright © 2015 volter9. All rights reserved.
 //
 
 import Cocoa
 
-class Settings: Model
+class Goals: Model
 {
     override init(data: [String: AnyObject?])
     {
         let defaults: [String: AnyObject?] = [
-            "shortBreak": 5,
-            "longBreak": 20,
-            "time": 25,
-            
-            "round": 4,
-            "total": 12,
-            
-            "sound": true,
-            "tick":  false
+            "remained": false,
+            "current":  0,
+            "recess":   false,
+            "start":    now()
         ]
         
         super.init()

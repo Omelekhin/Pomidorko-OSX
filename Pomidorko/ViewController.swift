@@ -12,16 +12,19 @@ class ViewController: NSViewController
 {
     @IBOutlet weak var skip: NSButton?
     @IBOutlet weak var time: NSTextField?
-    @IBOutlet weak var goals: NSTextField?
+    @IBOutlet weak var goalsField: NSTextField?
     @IBOutlet weak var control: PlayPause?
     
     var settings: Settings?
+    var goals: Goals?
+    var components: [String: Component]?
     
     override func viewDidAppear()
     {
         super.viewDidAppear()
         
         initView()
+        initModels()
         initComponents()
     }
     
@@ -33,15 +36,32 @@ class ViewController: NSViewController
         skip?.attributedTitle = colorize(skip?.attributedTitle, color: WhiteColor)
     }
     
+    func initModels()
+    {
+        settings = Settings(data: [String: AnyObject?]())
+        goals = Goals(data: [String: AnyObject?]())
+    }
+    
     func initComponents()
     {
-        let components: Array<Component> = [
-            CGoals(goals: goals)
+        components = [
+            "goals": CGoals(field: goalsField, goals: goals, settings: settings),
+            "skip":  CSkip(button: skip, goals: goals)
         ]
         
-        for component in components {
+        for (_, component) in components! {
             component.activate()
         }
     }
+    
+    /**
+     * IB actions, didn't found other way to attach UI events to components
+     */
+    
+    @IBAction func skip(sender: AnyObject?)
+    {
+        let skip = components!["skip"] as! CSkip
+        
+        skip.skip()
+    }
 }
-

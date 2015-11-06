@@ -8,34 +8,43 @@
 
 import Cocoa
 
-class CGoals: NSObject, Component
+class CGoals: Component
 {
     var goalsField: NSTextField?
-    var goalsModel: Model?
+    var goalsModel: Goals?
+    var settingsModel: Settings?
     
-    var goals: Int = 10
-    var total: Int = 12
-    
-    init(goals: NSTextField?)
-    {
-        goalsField = goals
+    init(
+        field: NSTextField?,
+        goals: Goals?,
+        settings: Settings?
+    ) {
+        goalsField = field
+        goalsModel = goals
+        settingsModel = settings
     }
     
     func activate()
     {
+        let closure = { (dict: [String: AnyObject?]) -> Void in
+            self.render()
+            
+            return
+        }
+        
+        goalsModel?.observer.add(closure)
+        settingsModel?.observer.add(closure)
+        
         self.render()
     }
     
     func render()
     {
-        let title = String(
-            format: localeString("goals"),
-            arguments: [goals, total]
-        )
+        let goals = goalsModel?.get("current") as! Int
+        let total = settingsModel?.get("total") as! Int
         
-        let goalTitle = NSMutableAttributedString(
-            string: title
-        )
+        let title = String(format: localeString("goals"), arguments: [goals, total])
+        let goalTitle = NSMutableAttributedString(string: title)
         
         let goalsOffset = String(goals).characters.count
         let totalOffset = String(total).characters.count

@@ -13,9 +13,9 @@ import Cocoa
 func rgb(red: CGFloat, green: CGFloat, blue: CGFloat, alpha: CGFloat = 1.0) -> NSColor
 {
     return NSColor(
-        red: red / 255,
+        red:   red / 255,
         green: green / 255,
-        blue: blue / 255,
+        blue:  blue / 255,
         alpha: alpha
     )
 }
@@ -82,4 +82,24 @@ func localeString(key: String) -> String
 func now() -> Double
 {
     return NSDate().timeIntervalSince1970 * 1000.0
+}
+
+/** Path */
+
+func getFileURL(fileName: String) -> NSURL {
+    let manager = NSFileManager.defaultManager()
+    var dirURL: NSURL?
+    
+    do {
+        dirURL = try manager.URLForDirectory(
+            .DocumentDirectory,
+            inDomain: .UserDomainMask,
+            appropriateForURL: nil,
+            create: false
+        )
+    } catch {
+        print(error)
+    }
+    
+    return (dirURL?.URLByAppendingPathComponent(fileName))!
 }
