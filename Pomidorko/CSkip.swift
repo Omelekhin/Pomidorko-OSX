@@ -21,12 +21,22 @@ class CSkip: NSObject, Component
         goalsModel = goals
     }
     
-    func activate() {}
+    func activate()
+    {   
+        renderTitle()
+    }
     
     func skip()
     {
         let current = goalsModel?.get("current") as! Int
         
         goalsModel?.set("current", value: current + 1)
+    }
+    
+    func renderTitle()
+    {
+        skipButton?.attributedTitle = colorize(
+            skipButton?.attributedTitle, color: WhiteColor
+        )
     }
 }

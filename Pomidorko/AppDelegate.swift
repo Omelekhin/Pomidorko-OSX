@@ -11,14 +11,17 @@ import Cocoa
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate
 {
-    func applicationDidFinishLaunching(aNotification: NSNotification)
+    static var settings: Settings?
+    static var timer: Timer?
+    static var goals: Goals?
+    
+    override init()
     {
+        super.init()
         
-    }
-
-    func applicationWillTerminate(aNotification: NSNotification)
-    {
-        // Insert code here to tear down your application
+        AppDelegate.settings = Settings(data: Dictionary<String, AnyObject?>())
+        AppDelegate.timer = Timer()
+        AppDelegate.goals = Goals(data: Dictionary<String, AnyObject?>())
     }
 }
 

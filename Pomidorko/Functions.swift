@@ -8,28 +8,6 @@
 
 import Cocoa
 
-/** Color functions */
-
-func rgb(red: CGFloat, green: CGFloat, blue: CGFloat, alpha: CGFloat = 1.0) -> NSColor
-{
-    return NSColor(
-        red:   red / 255,
-        green: green / 255,
-        blue:  blue / 255,
-        alpha: alpha
-    )
-}
-
-func hex(hex: Int, alpha: CGFloat = 1.0) -> NSColor
-{
-    return rgb(
-        CGFloat(hex >> 16 & 0xff),
-        green: CGFloat(hex >> 8  & 0xff),
-        blue:  CGFloat(hex       & 0xff),
-        alpha: alpha
-    )
-}
-
 func flatify(window: NSWindow, color: NSColor)
 {
     window.backgroundColor = color

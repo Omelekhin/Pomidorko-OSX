@@ -17,13 +17,7 @@ class Timer: NSObject
     var duration: Int = 0
     
     var timer: NSTimer?
-    
     var emitter = EventEmitter<Double>()
-    
-    init(duration: Int)
-    {
-        self.duration = duration
-    }
     
     func start()
     {
@@ -31,10 +25,9 @@ class Timer: NSObject
             return
         }
         
-        let duration = remained != 0 ? remained : Double(self.duration) * 1000.0
-        
         startTime = now()
-        endTime = startTime + duration
+        endTime = startTime + (remained == 0 ? Double(duration) * 1000.0
+                                             : remained)
         
         timer = NSTimer.scheduledTimerWithTimeInterval(
             1 / 24,
@@ -44,14 +37,7 @@ class Timer: NSObject
             repeats: true
         )
         
-        emitter.emit("start", arg: 0)
-    }
-    
-    func pause()
-    {
-        remained = endTime - startTime
-        
-        timer?.invalidate()
+        emitter.emit("start", arg: 0.0)
     }
     
     func stop()
@@ -62,7 +48,14 @@ class Timer: NSObject
         
         timer?.invalidate()
         
-        emitter.emit("stap", arg: 0)
+        emitter.emit("stop", arg: 0.0)
+    }
+    
+    func pause()
+    {
+        remained = endTime - startTime
+        
+        timer?.invalidate()
     }
     
     func tick()
@@ -75,6 +68,6 @@ class Timer: NSObject
             stop()
         }
         
-        emitter.emit("tick", arg: 0)
+        emitter.emit("tick", arg: time)
     }
 }

@@ -23,10 +23,12 @@
 		133D89C31BB9A950007AFAF7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 133D89C21BB9A950007AFAF7 /* AppDelegate.swift */; };
 		133D89C51BB9A950007AFAF7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 133D89C41BB9A950007AFAF7 /* ViewController.swift */; };
 		133D89C71BB9A950007AFAF7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 133D89C61BB9A950007AFAF7 /* Images.xcassets */; };
-		133F3A5B1BE5AA2A007ED1B7 /* FlatWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 133F3A5A1BE5AA2A007ED1B7 /* FlatWindow.swift */; };
 		133F3A5F1BE5B009007ED1B7 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 133F3A5E1BE5B009007ED1B7 /* Settings.swift */; };
 		1342CA901BEBBFBC00184716 /* Goals.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1342CA8F1BEBBFBC00184716 /* Goals.swift */; };
 		1342CA921BEC3EC000184716 /* CSkip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1342CA911BEC3EC000184716 /* CSkip.swift */; };
+		1342CA941BEC616700184716 /* TimerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1342CA931BEC616700184716 /* TimerTests.swift */; };
+		1342CA951BEC617900184716 /* Timer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 134690AC1BEA6A0900414003 /* Timer.swift */; };
+		1342CA961BEC618100184716 /* Functions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1339E0B61BD965F00014CBDB /* Functions.swift */; };
 		134690AD1BEA6A0900414003 /* Timer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 134690AC1BEA6A0900414003 /* Timer.swift */; };
 		134690AF1BEA793E00414003 /* EventEmitter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 134690AE1BEA793E00414003 /* EventEmitter.swift */; };
 		134690B21BEA7A9100414003 /* EventEmitterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 134690B11BEA7A9100414003 /* EventEmitterTests.swift */; };
@@ -70,13 +72,13 @@
 		133D89C61BB9A950007AFAF7 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		133D89CF1BB9A951007AFAF7 /* PomidorkoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PomidorkoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		133D89D41BB9A951007AFAF7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		133F3A5A1BE5AA2A007ED1B7 /* FlatWindow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlatWindow.swift; sourceTree = "<group>"; };
 		133F3A5E1BE5B009007ED1B7 /* Settings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
 		1342CA8A1BEAFF9F00184716 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1342CA8C1BEAFFA800184716 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
 		1342CA8E1BEAFFAE00184716 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Main.strings; sourceTree = "<group>"; };
 		1342CA8F1BEBBFBC00184716 /* Goals.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Goals.swift; sourceTree = "<group>"; };
 		1342CA911BEC3EC000184716 /* CSkip.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CSkip.swift; sourceTree = "<group>"; };
+		1342CA931BEC616700184716 /* TimerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimerTests.swift; sourceTree = "<group>"; };
 		134690AC1BEA6A0900414003 /* Timer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Timer.swift; sourceTree = "<group>"; };
 		134690AE1BEA793E00414003 /* EventEmitter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventEmitter.swift; sourceTree = "<group>"; };
 		134690B11BEA7A9100414003 /* EventEmitterTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventEmitterTests.swift; sourceTree = "<group>"; };
@@ -177,8 +179,8 @@
 		133D89C01BB9A950007AFAF7 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				134690CB1BEAFE2900414003 /* Main.storyboard */,
 				130982171BE1182F00C48C12 /* About */,
+				134690CB1BEAFE2900414003 /* Main.storyboard */,
 				133D89C11BB9A950007AFAF7 /* Info.plist */,
 				134690BD1BEAEBE600414003 /* Localizable.strings */,
 			);
@@ -191,6 +193,7 @@
 				133AD5571BDFF0580023788E /* ModelTests.swift */,
 				133AD5531BDFE5DF0023788E /* ObserversTest.swift */,
 				134690B11BEA7A9100414003 /* EventEmitterTests.swift */,
+				1342CA931BEC616700184716 /* TimerTests.swift */,
 				133D89D31BB9A951007AFAF7 /* Supporting Files */,
 			);
 			path = PomidorkoTests;
@@ -219,7 +222,6 @@
 				130982141BE1177A00C48C12 /* ViewControllers */,
 				1339E0B81BD96B820014CBDB /* PlayPause.swift */,
 				13BA886E1BD9D8D5008E98AC /* Scale.swift */,
-				133F3A5A1BE5AA2A007ED1B7 /* FlatWindow.swift */,
 			);
 			name = UI;
 			sourceTree = "<group>";
@@ -360,7 +362,6 @@
 				134690AD1BEA6A0900414003 /* Timer.swift in Sources */,
 				1339E0B91BD96B820014CBDB /* PlayPause.swift in Sources */,
 				133AD5521BDFE2840023788E /* Observer.swift in Sources */,
-				133F3A5B1BE5AA2A007ED1B7 /* FlatWindow.swift in Sources */,
 				133D89C31BB9A950007AFAF7 /* AppDelegate.swift in Sources */,
 				1342CA921BEC3EC000184716 /* CSkip.swift in Sources */,
 				134690AF1BEA793E00414003 /* EventEmitter.swift in Sources */,
@@ -377,11 +378,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				134690B21BEA7A9100414003 /* EventEmitterTests.swift in Sources */,
+				1342CA941BEC616700184716 /* TimerTests.swift in Sources */,
+				1342CA961BEC618100184716 /* Functions.swift in Sources */,
 				134690B31BEA7F4500414003 /* EventEmitter.swift in Sources */,
 				133AD5551BDFEE530023788E /* Model.swift in Sources */,
 				133AD5561BDFEE570023788E /* Observer.swift in Sources */,
 				133AD5581BDFF0580023788E /* ModelTests.swift in Sources */,
 				133AD5541BDFE5DF0023788E /* ObserversTest.swift in Sources */,
+				1342CA951BEC617900184716 /* Timer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -8,7 +8,7 @@
 
 import Foundation
 
-func mergeDict <K, V> (first: Dictionary<K, V>, second: Dictionary<K, V>)
+func mergeDict<K, V> (first: Dictionary<K, V>, second: Dictionary<K, V>)
     -> Dictionary<K, V>
 {
     var output = Dictionary<K, V>()
