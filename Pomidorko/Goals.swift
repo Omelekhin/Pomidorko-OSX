@@ -10,15 +10,15 @@ import Cocoa
 
 class Goals: Model
 {
-    override init(data: [String: AnyObject?])
+    override init(data: KVDict)
     {
-        let defaults: [String: AnyObject?] = [
+        let defaults: KVDict = [
             "remained": 0.0,
             "current":  0,
             "recess":   false,
             "start":    now()
         ]
         
-        super.init(data: mergeDict(defaults, second: data))
+        super.init(data: defaults.merge(data))
     }
 }

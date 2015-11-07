@@ -22,15 +22,8 @@ class ViewController: NSViewController
     {
         super.viewDidAppear()
         
-        initView()
-        initComponents()
-    }
-    
-    func initView()
-    {
         flatify(view.window!, color: BlueColor)
-        
-        control?.backgroundColor = LightBlueColor
+        initComponents()
     }
     
     func initComponents()
@@ -40,6 +33,7 @@ class ViewController: NSViewController
         let settings = AppDelegate.settings
         
         components = [
+            "control": CControl(timer: timer, control: control),
             "goals": CGoals(field: goalsField, goals: goals, settings: settings),
             "state": CState(
                 timer: timer, 
@@ -48,9 +42,9 @@ class ViewController: NSViewController
                 control: control,
                 window: view.window
             ),
-            "scale": CScale(timer: timer, scale: scale),
-            "skip":  CSkip(button: skip, goals: goals, timer: timer),
-            "time":  CTime(label: time, timer: timer)
+            "scale":   CScale(timer: timer, scale: scale),
+            "skip":    CSkip(button: skip, goals: goals, timer: timer),
+            "time":    CTime(label: time, timer: timer)
         ]
         
         for (_, component) in components! {
@@ -65,5 +59,10 @@ class ViewController: NSViewController
     @IBAction func skip(sender: AnyObject?)
     {
         (components!["skip"] as! CSkip).skip()
+    }
+    
+    @IBAction func playPause(sender: AnyObject?)
+    {
+        (components!["control"] as! CControl).toggle()
     }
 }

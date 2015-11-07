@@ -20,10 +20,8 @@ class ModelTests: XCTestCase
         let key = "cool"
         let value = "abc"
         
-        model.observer.add({ (dict: [String: AnyObject?]) -> Void in
+        model.observer.add({ (dict: KVDict) -> Void in
             XCTAssertEqual(dict[key] as? String, value, "Tots not equals")
-            
-            return
         })
         
         model.set(key, value: value)

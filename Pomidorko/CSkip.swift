@@ -28,8 +28,6 @@ class CSkip: NSObject, Component
     {
         timer?.emitter.add("stop", closure: { (d: Double) -> Void  in
             self.renderTitle()
-            
-            return
         })
         
         renderTitle()
@@ -44,11 +42,13 @@ class CSkip: NSObject, Component
     {
         let recess = goalsModel?.get("recess") as! Bool
         let title = recess == true ? localeString("skip-break") 
-                                   : localeString("skip-pomodoro") 
+                                   : localeString("skip-pomodoro")
         
         let attributed = NSMutableAttributedString(string: title)
         
         align(attributed, alignment: NSCenterTextAlignment)
-        skipButton?.attributedTitle = colorize(attributed, color: WhiteColor)
+        colorize(attributed, color: WhiteColor)
+        
+        skipButton?.attributedTitle = attributed
     }
 }

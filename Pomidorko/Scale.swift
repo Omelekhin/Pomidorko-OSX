@@ -39,7 +39,7 @@ class Scale: NSView
             
             if index % 5 == 0 {
                 NSString(format: "%i", Int(index)).drawAtPoint(
-                    NSMakePoint(x - 7, 20),
+                    NSMakePoint(x - (index < 10 ? 3.5 : 7), 20),
                     withAttributes: [NSForegroundColorAttributeName: WhiteColor]
                 )
             }

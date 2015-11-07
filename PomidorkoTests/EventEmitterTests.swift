@@ -17,8 +17,6 @@ class EventEmitterTest: XCTestCase
         
         emitter.add("shit", closure: { (a: Int) -> Void in
             XCTAssertEqual(a, value, "Given value doesn't match")
-            
-            return
         })
         
         emitter.emit("shit", arg: value)

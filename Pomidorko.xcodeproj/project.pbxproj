@@ -30,7 +30,7 @@
 		1342CA951BEC617900184716 /* Timer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 134690AC1BEA6A0900414003 /* Timer.swift */; };
 		1342CA961BEC618100184716 /* Functions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1339E0B61BD965F00014CBDB /* Functions.swift */; };
 		1342CA981BED0D9D00184716 /* CState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1342CA971BED0D9D00184716 /* CState.swift */; };
-		1342CA9B1BED1A2C00184716 /* Int.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1342CA9A1BED1A2C00184716 /* Int.swift */; };
+		1342CA9B1BED1A2C00184716 /* Bool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1342CA9A1BED1A2C00184716 /* Bool.swift */; };
 		1342CA9C1BED1AEF00184716 /* Dictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 133AD5591BE01E160023788E /* Dictionary.swift */; };
 		134690AD1BEA6A0900414003 /* Timer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 134690AC1BEA6A0900414003 /* Timer.swift */; };
 		134690AF1BEA793E00414003 /* EventEmitter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 134690AE1BEA793E00414003 /* EventEmitter.swift */; };
@@ -42,6 +42,7 @@
 		137AAB391BD6D1660049209B /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 137AAB381BD6D1660049209B /* Colors.swift */; };
 		13816C031BED757500E55319 /* CTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13816C021BED757500E55319 /* CTime.swift */; };
 		13816C051BED97BE00E55319 /* CScale.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13816C041BED97BE00E55319 /* CScale.swift */; };
+		1393E5CA1BEE50C50062C8C8 /* CControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1393E5C91BEE50C50062C8C8 /* CControl.swift */; };
 		13BA886F1BD9D8D5008E98AC /* Scale.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13BA886E1BD9D8D5008E98AC /* Scale.swift */; };
 		13BAEBE11BE16466007ED8C2 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 13BAEBE01BE16466007ED8C2 /* WebKit.framework */; };
 		13DC2A7F1BE9177A009F6474 /* Component.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13DC2A7E1BE9177A009F6474 /* Component.swift */; };
@@ -85,7 +86,7 @@
 		1342CA911BEC3EC000184716 /* CSkip.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CSkip.swift; sourceTree = "<group>"; };
 		1342CA931BEC616700184716 /* TimerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimerTests.swift; sourceTree = "<group>"; };
 		1342CA971BED0D9D00184716 /* CState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CState.swift; sourceTree = "<group>"; };
-		1342CA9A1BED1A2C00184716 /* Int.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Int.swift; sourceTree = "<group>"; };
+		1342CA9A1BED1A2C00184716 /* Bool.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Bool.swift; sourceTree = "<group>"; };
 		134690AC1BEA6A0900414003 /* Timer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Timer.swift; sourceTree = "<group>"; };
 		134690AE1BEA793E00414003 /* EventEmitter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventEmitter.swift; sourceTree = "<group>"; };
 		134690B11BEA7A9100414003 /* EventEmitterTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventEmitterTests.swift; sourceTree = "<group>"; };
@@ -95,6 +96,7 @@
 		137AAB381BD6D1660049209B /* Colors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		13816C021BED757500E55319 /* CTime.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CTime.swift; sourceTree = "<group>"; };
 		13816C041BED97BE00E55319 /* CScale.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CScale.swift; sourceTree = "<group>"; };
+		1393E5C91BEE50C50062C8C8 /* CControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CControl.swift; sourceTree = "<group>"; };
 		13BA886E1BD9D8D5008E98AC /* Scale.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Scale.swift; sourceTree = "<group>"; };
 		13BAEBE01BE16466007ED8C2 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		13DC2A7E1BE9177A009F6474 /* Component.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Component.swift; sourceTree = "<group>"; };
@@ -173,14 +175,13 @@
 		133D89BF1BB9A950007AFAF7 /* Pomidorko */ = {
 			isa = PBXGroup;
 			children = (
-				1342CA991BED1A1A00184716 /* Extensions */,
 				133D89C21BB9A950007AFAF7 /* AppDelegate.swift */,
-				133F3A5C1BE5AEAA007ED1B7 /* Models */,
 				133AD54E1BDFDA200023788E /* Classes */,
 				137AAB3B1BD6DADF0049209B /* Common */,
 				13BA886D1BD9D231008E98AC /* Components */,
+				1342CA991BED1A1A00184716 /* Extensions */,
+				133F3A5C1BE5AEAA007ED1B7 /* Models */,
 				137AAB3A1BD6DAD40049209B /* UI */,
-				133D89C61BB9A950007AFAF7 /* Images.xcassets */,
 				133D89C01BB9A950007AFAF7 /* Supporting Files */,
 			);
 			path = Pomidorko;
@@ -191,6 +192,7 @@
 			children = (
 				130982171BE1182F00C48C12 /* About */,
 				134690CB1BEAFE2900414003 /* Main.storyboard */,
+				133D89C61BB9A950007AFAF7 /* Images.xcassets */,
 				133D89C11BB9A950007AFAF7 /* Info.plist */,
 				134690BD1BEAEBE600414003 /* Localizable.strings */,
 			);
@@ -229,7 +231,8 @@
 		1342CA991BED1A1A00184716 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				1342CA9A1BED1A2C00184716 /* Int.swift */,
+				133AD5591BE01E160023788E /* Dictionary.swift */,
+				1342CA9A1BED1A2C00184716 /* Bool.swift */,
 			);
 			name = Extensions;
 			sourceTree = "<group>";
@@ -250,7 +253,6 @@
 				137AAB381BD6D1660049209B /* Colors.swift */,
 				1339E0B61BD965F00014CBDB /* Functions.swift */,
 				1339E0BA1BD97DD90014CBDB /* Shapes.swift */,
-				133AD5591BE01E160023788E /* Dictionary.swift */,
 			);
 			name = Common;
 			sourceTree = "<group>";
@@ -263,6 +265,7 @@
 				1342CA971BED0D9D00184716 /* CState.swift */,
 				13816C021BED757500E55319 /* CTime.swift */,
 				13816C041BED97BE00E55319 /* CScale.swift */,
+				1393E5C91BEE50C50062C8C8 /* CControl.swift */,
 			);
 			name = Components;
 			sourceTree = "<group>";
@@ -382,11 +385,12 @@
 				137AAB391BD6D1660049209B /* Colors.swift in Sources */,
 				134690AD1BEA6A0900414003 /* Timer.swift in Sources */,
 				1339E0B91BD96B820014CBDB /* PlayPause.swift in Sources */,
+				1393E5CA1BEE50C50062C8C8 /* CControl.swift in Sources */,
 				1342CA981BED0D9D00184716 /* CState.swift in Sources */,
 				133AD5521BDFE2840023788E /* Observer.swift in Sources */,
 				133D89C31BB9A950007AFAF7 /* AppDelegate.swift in Sources */,
 				1342CA921BEC3EC000184716 /* CSkip.swift in Sources */,
-				1342CA9B1BED1A2C00184716 /* Int.swift in Sources */,
+				1342CA9B1BED1A2C00184716 /* Bool.swift in Sources */,
 				13816C051BED97BE00E55319 /* CScale.swift in Sources */,
 				134690AF1BEA793E00414003 /* EventEmitter.swift in Sources */,
 				13BA886F1BD9D8D5008E98AC /* Scale.swift in Sources */,

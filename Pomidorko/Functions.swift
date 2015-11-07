@@ -17,17 +17,14 @@ func flatify(window: NSWindow, color: NSColor)
 
 /** Attributed string functions */
 
-func colorize(string: NSAttributedString?, color: NSColor) -> NSMutableAttributedString
+func colorize(string: NSMutableAttributedString, color: NSColor)
 {
-    let result: NSMutableAttributedString = NSMutableAttributedString(attributedString: string!)
-    let range: NSRange = NSMakeRange(0, string!.length)
+    let range: NSRange = NSMakeRange(0, string.length)
     
-    result.addAttribute(
+    string.addAttribute(
         NSForegroundColorAttributeName,
         value: color, range: range
-    );
-    
-    return result;
+    )
 }
 
 func increase(string: NSMutableAttributedString, font: NSFont, offset: Int, length: Int)

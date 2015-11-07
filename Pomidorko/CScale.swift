@@ -23,9 +23,11 @@ class CScale: Component
     {
         timer?.emitter.add("tick", closure: { (time: Double) -> Void in
             self.render(time)
-            
-            return
         })
+        
+        let time = (timer?.time())!
+        
+        render(time)
     }
     
     func render(time: Double)

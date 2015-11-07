@@ -2,6 +2,10 @@ body {
 	font-family: 'Helvetica Neue', sans-serif;
 }
 
+html body * {
+    cursor: default;
+}
+
 html {
     overflow: hidden;
 }

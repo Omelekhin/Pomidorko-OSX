@@ -26,10 +26,8 @@ class CGoals: Component
     
     func activate()
     {
-        let closure = { (dict: [String: AnyObject?]) -> Void in
+        let closure = { (dict: KVDict) -> Void in
             self.render()
-            
-            return
         }
         
         goalsModel?.observer.add(closure)

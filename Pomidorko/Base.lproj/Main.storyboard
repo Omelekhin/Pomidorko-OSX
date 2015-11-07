@@ -177,6 +177,9 @@
                                     <behavior key="behavior" pushIn="YES" changeContents="YES" lightByContents="YES"/>
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
+                                <connections>
+                                    <action selector="playPause:" target="XfG-lQ-9wD" id="mha-3i-BCY"/>
+                                </connections>
                             </button>
                             <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="w3U-eG-cfD" customClass="Scale" customModule="Pomidorko" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="216" width="320" height="100"/>

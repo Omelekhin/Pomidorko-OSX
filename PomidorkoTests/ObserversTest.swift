@@ -25,16 +25,14 @@ class ObserverTest: XCTestCase
     
     func testObserverWithDict()
     {
-        let observer = Observer<Dictionary<String, AnyObject?>, Void>()
-        let value: [String: AnyObject?] = ["cool": "value"]
+        let observer = Observer<KVDict, Void>()
+        let value: KVDict = ["cool": "value"]
         
-        observer.add({ (foo: Dictionary<String, AnyObject?>) -> Void in
+        observer.add({ (foo: KVDict) -> Void in
             XCTAssertEqual(
                 "value", foo["cool"] as? String,
                 "Given dictionary doesn't have such value"
             )
-            
-            return
         })
         
         observer.invoke(value)

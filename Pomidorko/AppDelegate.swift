@@ -19,8 +19,20 @@ class AppDelegate: NSObject, NSApplicationDelegate
     {
         super.init()
         
-        AppDelegate.settings = Settings(data: Dictionary<String, AnyObject?>())
-        AppDelegate.timer = Timer()
-        AppDelegate.goals = Goals(data: Dictionary<String, AnyObject?>())
+        let timer = Timer()
+        let goals = Goals(data: KVDict())
+        let settings = Settings(data: KVDict())
+        
+        goals.observer.add({ (dict: KVDict) -> Void in
+            
+        })
+        
+        settings.observer.add({ (dict: KVDict) -> Void in
+            
+        })
+        
+        AppDelegate.timer = timer
+        AppDelegate.goals = goals
+        AppDelegate.settings = settings
     }
 }

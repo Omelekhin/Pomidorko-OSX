@@ -21,14 +21,10 @@ class TimerTests: XCTestCase
         
         timer.emitter.add("start", closure: { (t: Double) -> Void in
             XCTAssertTrue(true)
-            
-            return
         })
         
         timer.emitter.add("tick", closure: { (t: Double) -> Void in
             time += 1
-            
-            return
         })
         
         timer.emitter.add("stop", closure: { (t: Double) -> Void in
@@ -38,8 +34,6 @@ class TimerTests: XCTestCase
             )
             
             expectation.fulfill()
-            
-            return
         })
         
         timer.start()

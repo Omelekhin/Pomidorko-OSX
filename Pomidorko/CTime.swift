@@ -23,9 +23,9 @@ class CTime: Component
     {
         timer?.emitter.add("tick", closure: { (time: Double) -> Void in
             self.render(time)
-            
-            return
         })
+        
+        render((timer?.time())!)
     }
     
     func render(time: Double)
@@ -35,13 +35,19 @@ class CTime: Component
         
         let title = pad(String(min), subject: "00") + ":" + pad(String(sec), subject: "00")
         let attributed = NSMutableAttributedString(string: title)
-        let font = NSFont(name: ".AppleSystemUIFontUltraLight", size: 72.0)
         
-        // print(label?.attributedStringValue)
+        var font: NSFont
+        
+        if #available(OSX 10.11, *) {
+            font = NSFont.monospacedDigitSystemFontOfSize(72, weight: NSFontWeightUltraLight)
+        }
+        else {
+            font = NSFont(name: "LatoUltraLight", size: 72)!
+        }
         
         increase(
             attributed,
-            font: font!,
+            font: font,
             offset: 0,
             length: title.characters.count
         )

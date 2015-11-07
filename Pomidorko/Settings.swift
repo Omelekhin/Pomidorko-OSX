@@ -10,9 +10,9 @@ import Cocoa
 
 class Settings: Model
 {
-    override init(data: [String: AnyObject?])
+    override init(data: KVDict)
     {
-        let defaults: [String: AnyObject?] = [
+        let defaults: KVDict = [
             "shortBreak": 5,
             "longBreak": 20,
             "time": 25,
@@ -24,6 +24,6 @@ class Settings: Model
             "tick":  false
         ]
         
-        super.init(data: mergeDict(defaults, second: data))
+        super.init(data: defaults.merge(data))
     }
 }

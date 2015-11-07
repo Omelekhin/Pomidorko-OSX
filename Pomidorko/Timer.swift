@@ -21,7 +21,7 @@ class Timer: NSObject
     
     func start()
     {
-        if self.duration <= 0 {
+        if duration <= 0 || isRunning() {
             return
         }
         
@@ -47,15 +47,17 @@ class Timer: NSObject
         endTime   = 0.0
         
         timer?.invalidate()
+        timer = nil
         
         emitter.emit("stop", arg: 0.0)
     }
     
     func pause()
     {
-        remained = endTime - startTime
+        remained = endTime - now()
         
         timer?.invalidate()
+        timer = nil
     }
     
     func tick()
@@ -69,5 +71,16 @@ class Timer: NSObject
         }
         
         emitter.emit("tick", arg: time)
+    }
+    
+    func time() -> Double
+    {   
+        return remained > 0 ? remained / 1000.0
+                            : Double(duration)
+    }
+    
+    func isRunning() -> Bool
+    {
+        return timer != nil
     }
 }

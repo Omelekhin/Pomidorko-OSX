@@ -34,35 +34,34 @@ class CState: Component
     {
         timer?.emitter.add("stop", closure: {(d: Double) -> Void in
             self.next()
-            
-            return
         })
         
-        render(
-            goalsModel?.get("recess") as! Bool, 
-            goalsModel?.get("current") as! Int
-        )
+        let recess = goalsModel?.get("recess") as! Bool
+        let time = goalsModel?.get("current") as! Int
+        
+        setTime(recess, current: time)
+        render(recess, current: time)
     }
     
     func next()
     {
-        print(goalsModel?.data)
-        
         let recess = !(goalsModel?.get("recess") as! Bool)
         let current = (goalsModel?.get("current") as! Int) + recess.toInt()
         
-        let values: [String: AnyObject?] = [
-            "recess": recess,
+        let values: KVDict = [
+            "recess":  recess,
             "current": current
         ]
         
         goalsModel?.merge(values)
         
-        setTime(recess, current)
-        render(recess, current)
+        setTime(recess, current: current)
+        render(recess, current: current)
+        
+        timer?.start()
     }
     
-    func setTime(recess: Bool, _ current: Int)
+    func setTime(recess: Bool, current: Int)
     {
         let shortBreak = settingsModel?.get("shortBreak") as! Int
         let longBreak = settingsModel?.get("longBreak") as! Int
@@ -80,10 +79,9 @@ class CState: Component
         }
         
         timer?.duration = duration * 60
-        timer?.start()
     }
     
-    func render(recess: Bool, _ current: Int)
+    func render(recess: Bool, current: Int)
     {
         window?.backgroundColor  = recess == true ? BlueColor : RedColor
         control?.backgroundColor = recess == true ? LightBlueColor : LightRedColor

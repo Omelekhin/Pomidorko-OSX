@@ -10,10 +10,10 @@ import Cocoa
 
 class Model
 {
-    var data: [String: AnyObject?]
-    var observer = Observer<[String: AnyObject?], Void>()
+    var data: KVDict
+    var observer = Observer<KVDict, Void>()
     
-    init(data: [String: AnyObject?] = [String: AnyObject?]())
+    init(data: KVDict = KVDict())
     {
         self.data = data
     }
@@ -29,9 +29,9 @@ class Model
         observer.invoke(data)
     }
     
-    func merge(dict: [String: AnyObject?])
+    func merge(dict: KVDict)
     {
-        data = mergeDict(data, second: dict)
+        data = data.merge(dict)
         observer.invoke(data)
     }
 }

@@ -8,18 +8,22 @@
 
 import Foundation
 
-func mergeDict<K, V> (first: Dictionary<K, V>, second: Dictionary<K, V>)
-    -> Dictionary<K, V>
+typealias KVDict = Dictionary<String, AnyObject?>
+
+extension Dictionary
 {
-    var output = Dictionary<K, V>()
+    func merge(dict: Dictionary) -> Dictionary
+    {
+        var output = Dictionary()
     
-    for (key, value) in first {
-        output.updateValue(value, forKey: key)
+        for (key, value) in self {
+            output.updateValue(value, forKey: key)
+        }
+        
+        for (key, value) in dict {
+            output.updateValue(value, forKey: key)
+        }
+        
+        return output
     }
-    
-    for (key, value) in second {
-        output.updateValue(value, forKey: key)
-    }
-    
-    return output
 }
