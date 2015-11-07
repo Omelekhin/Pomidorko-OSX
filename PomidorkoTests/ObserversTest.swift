@@ -26,9 +26,7 @@ class ObserverTest: XCTestCase
     func testObserverWithDict()
     {
         let observer = Observer<Dictionary<String, AnyObject?>, Void>()
-        let value: [String: AnyObject?] = [
-            "cool": "value"
-        ]
+        let value: [String: AnyObject?] = ["cool": "value"]
         
         observer.add({ (foo: Dictionary<String, AnyObject?>) -> Void in
             XCTAssertEqual(

@@ -206,6 +206,7 @@
                     <connections>
                         <outlet property="control" destination="Ff9-iI-A4R" id="ulX-Zg-esk"/>
                         <outlet property="goalsField" destination="ZYe-o0-HZK" id="mxt-VJ-EXh"/>
+                        <outlet property="scale" destination="w3U-eG-cfD" id="SSf-xu-C1U"/>
                         <outlet property="skip" destination="xbp-hu-5tH" id="GQC-Bs-6yr"/>
                         <outlet property="time" destination="c0u-jL-dOE" id="xox-a2-6Aj"/>
                     </connections>

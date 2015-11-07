@@ -13,10 +13,9 @@ class Model
     var data: [String: AnyObject?]
     var observer = Observer<[String: AnyObject?], Void>()
     
-    func set(key: String, value: AnyObject?)
+    init(data: [String: AnyObject?] = [String: AnyObject?]())
     {
-        data.updateValue(value, forKey: key)
-        observer.invoke(data)
+        self.data = data
     }
     
     func get(key: String) -> AnyObject!
@@ -24,8 +23,15 @@ class Model
         return data[key]!
     }
     
-    init(data: [String: AnyObject?] = [String: AnyObject?]())
+    func set(key: String, value: AnyObject?)
     {
-        self.data = data
+        data.updateValue(value, forKey: key)
+        observer.invoke(data)
+    }
+    
+    func merge(dict: [String: AnyObject?])
+    {
+        data = mergeDict(data, second: dict)
+        observer.invoke(data)
     }
 }

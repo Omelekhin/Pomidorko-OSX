@@ -24,4 +24,3 @@ class AppDelegate: NSObject, NSApplicationDelegate
         AppDelegate.goals = Goals(data: Dictionary<String, AnyObject?>())
     }
 }
-

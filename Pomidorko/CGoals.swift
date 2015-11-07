@@ -35,7 +35,7 @@ class CGoals: Component
         goalsModel?.observer.add(closure)
         settingsModel?.observer.add(closure)
         
-        self.render()
+        render()
     }
     
     func render()

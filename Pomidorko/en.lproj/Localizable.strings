@@ -10,3 +10,6 @@
 "second-index" = "8";
 
 "about-page" = "index-en";
+
+"skip-break" = "Skip break";
+"skip-pomodoro" = "Skip pomodoro";

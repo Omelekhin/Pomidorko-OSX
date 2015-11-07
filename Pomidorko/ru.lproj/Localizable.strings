@@ -10,3 +10,6 @@
 "second-index" = "4";
 
 "about-page" = "index-ru";
+
+"skip-break" = "Пропустить перерыв";
+"skip-pomodoro" = "Пропустить помидорку";

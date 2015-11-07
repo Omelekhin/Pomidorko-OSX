@@ -12,31 +12,43 @@ class CSkip: NSObject, Component
 {
     var skipButton: NSButton?
     var goalsModel: Goals?
+    var timer: Timer?
     
     init(
         button: NSButton?,
-        goals: Goals?
+        goals: Goals?,
+        timer: Timer?
     ) {
         skipButton = button
         goalsModel = goals
+        self.timer = timer
     }
     
     func activate()
-    {   
+    {
+        timer?.emitter.add("stop", closure: { (d: Double) -> Void  in
+            self.renderTitle()
+            
+            return
+        })
+        
         renderTitle()
     }
     
     func skip()
     {
-        let current = goalsModel?.get("current") as! Int
-        
-        goalsModel?.set("current", value: current + 1)
+        timer?.stop()
     }
     
     func renderTitle()
     {
-        skipButton?.attributedTitle = colorize(
-            skipButton?.attributedTitle, color: WhiteColor
-        )
+        let recess = goalsModel?.get("recess") as! Bool
+        let title = recess == true ? localeString("skip-break") 
+                                   : localeString("skip-pomodoro") 
+        
+        let attributed = NSMutableAttributedString(string: title)
+        
+        align(attributed, alignment: NSCenterTextAlignment)
+        skipButton?.attributedTitle = colorize(attributed, color: WhiteColor)
     }
 }

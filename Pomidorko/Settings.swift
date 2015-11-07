@@ -24,8 +24,6 @@ class Settings: Model
             "tick":  false
         ]
         
-        super.init()
-        
-        self.data = mergeDict(defaults, second: data)
+        super.init(data: mergeDict(defaults, second: data))
     }
 }

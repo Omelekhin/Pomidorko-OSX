@@ -13,14 +13,12 @@ class Goals: Model
     override init(data: [String: AnyObject?])
     {
         let defaults: [String: AnyObject?] = [
-            "remained": false,
+            "remained": 0.0,
             "current":  0,
             "recess":   false,
             "start":    now()
         ]
         
-        super.init()
-        
-        self.data = mergeDict(defaults, second: data)
+        super.init(data: mergeDict(defaults, second: data))
     }
 }

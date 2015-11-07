@@ -81,3 +81,8 @@ func getFileURL(fileName: String) -> NSURL {
     
     return (dirURL?.URLByAppendingPathComponent(fileName))!
 }
+
+func pad(target: String, subject: String) -> String
+{
+    return subject.substringFromIndex(target.endIndex) + target
+}
