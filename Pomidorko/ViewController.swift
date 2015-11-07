@@ -22,7 +22,9 @@ class ViewController: NSViewController
     {
         super.viewDidAppear()
         
+        AppDelegate.timerWindow = view.window
         flatify(view.window!, color: BlueColor)
+        
         initComponents()
     }
     

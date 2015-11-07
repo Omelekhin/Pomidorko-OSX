@@ -11,6 +11,8 @@ import Cocoa
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate
 {
+    static var timerWindow: NSWindow?
+    
     static var settings: Settings?
     static var timer: Timer?
     static var goals: Goals?
@@ -34,5 +36,14 @@ class AppDelegate: NSObject, NSApplicationDelegate
         AppDelegate.timer = timer
         AppDelegate.goals = goals
         AppDelegate.settings = settings
+    }
+    
+    func applicationShouldHandleReopen(sender: NSApplication, hasVisibleWindows flag: Bool) -> Bool
+    {
+        if let window = AppDelegate.timerWindow {
+            window.makeKeyAndOrderFront(nil)
+        }
+        
+        return true
     }
 }
