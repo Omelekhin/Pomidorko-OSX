@@ -6,9 +6,10 @@ So bla-bla-bla, ok, so here's the plan...
 
 So, we have following shit done:
 
-1. About ~page~ window UI
+1. About ~~page~~ window UI
 2. Timer UI 
 3. Timer logic
+4. Motherfucking hovering
 
 We need to make up this shit before December the 20th:
 
@@ -20,3 +21,5 @@ We need to make up this shit before December the 20th:
 6. Fade from dock
 
 That's all the shit needed to be implemented
+
+P.S.: I love writing README's files in `vim`, it's very fun, ha-ha-ha
