@@ -65,8 +65,8 @@ class CState: Component
     {
         let shortBreak = settingsModel?.get("shortBreak") as! Int
         let longBreak = settingsModel?.get("longBreak") as! Int
-        let time = settingsModel?.get("time") as! Int
         
+        let time = settingsModel?.get("time") as! Int
         let round = settingsModel?.get("round") as! Int
         
         var duration: Int

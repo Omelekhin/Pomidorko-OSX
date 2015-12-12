@@ -21,7 +21,9 @@ class Settings: Model
             "total": 12,
             
             "sound": true,
-            "tick":  false
+            "tick":  true,
+
+            "dock": true
         ]
         
         super.init(data: defaults.merge(data))

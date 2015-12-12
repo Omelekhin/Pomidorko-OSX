@@ -37,6 +37,11 @@ class ViewController: NSViewController
         let goals = AppDelegate.goals
         let settings = AppDelegate.settings
         
+        // Some unexaplainable shit
+        // I need to debug this part of code
+        // @todo debug
+        CSound(timer: timer).activate()
+        
         components = [
             "control": CControl(timer: timer, control: control),
             "goals": CGoals(field: goalsField, goals: goals, settings: settings),
@@ -47,9 +52,9 @@ class ViewController: NSViewController
                 control: control,
                 window: view.window
             ),
-            "scale":   CScale(timer: timer, scale: scale),
-            "skip":    CSkip(button: skip, goals: goals, timer: timer),
-            "time":    CTime(label: time, timer: timer)
+            "scale": CScale(timer: timer, scale: scale),
+            "skip":  CSkip(button: skip, goals: goals, timer: timer),
+            "time":  CTime(label: time, timer: timer),
         ]
         
         for (_, component) in components! {

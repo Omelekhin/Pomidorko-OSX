@@ -40,6 +40,9 @@
 		134690C21BEAFCCE00414003 /* index-en.html in Resources */ = {isa = PBXBuildFile; fileRef = 134690C11BEAFCCE00414003 /* index-en.html */; };
 		134690C91BEAFE2900414003 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 134690CB1BEAFE2900414003 /* Main.storyboard */; };
 		1370B2791C1C98CE00ED1934 /* HoverableButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1370B2781C1C98CE00ED1934 /* HoverableButton.swift */; };
+		1370B27D1C1C9D2900ED1934 /* bell.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 1370B27B1C1C9D2900ED1934 /* bell.mp3 */; };
+		1370B27E1C1C9D2900ED1934 /* tick.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 1370B27C1C1C9D2900ED1934 /* tick.mp3 */; };
+		1370B2801C1C9E6300ED1934 /* CSound.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1370B27F1C1C9E6300ED1934 /* CSound.swift */; };
 		137AAB391BD6D1660049209B /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 137AAB381BD6D1660049209B /* Colors.swift */; };
 		13816C031BED757500E55319 /* CTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13816C021BED757500E55319 /* CTime.swift */; };
 		13816C051BED97BE00E55319 /* CScale.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13816C041BED97BE00E55319 /* CScale.swift */; };
@@ -95,6 +98,9 @@
 		134690C11BEAFCCE00414003 /* index-en.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "index-en.html"; sourceTree = "<group>"; };
 		134690C31BEAFD5600414003 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		1370B2781C1C98CE00ED1934 /* HoverableButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HoverableButton.swift; sourceTree = "<group>"; };
+		1370B27B1C1C9D2900ED1934 /* bell.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = bell.mp3; sourceTree = "<group>"; };
+		1370B27C1C1C9D2900ED1934 /* tick.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = tick.mp3; sourceTree = "<group>"; };
+		1370B27F1C1C9E6300ED1934 /* CSound.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CSound.swift; sourceTree = "<group>"; };
 		137AAB381BD6D1660049209B /* Colors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		13816C021BED757500E55319 /* CTime.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CTime.swift; sourceTree = "<group>"; };
 		13816C041BED97BE00E55319 /* CScale.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CScale.swift; sourceTree = "<group>"; };
@@ -192,6 +198,7 @@
 		133D89C01BB9A950007AFAF7 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				1370B27A1C1C9D2000ED1934 /* Sounds */,
 				130982171BE1182F00C48C12 /* About */,
 				134690CB1BEAFE2900414003 /* Main.storyboard */,
 				133D89C61BB9A950007AFAF7 /* Images.xcassets */,
@@ -239,6 +246,15 @@
 			name = Extensions;
 			sourceTree = "<group>";
 		};
+		1370B27A1C1C9D2000ED1934 /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+				1370B27B1C1C9D2900ED1934 /* bell.mp3 */,
+				1370B27C1C1C9D2900ED1934 /* tick.mp3 */,
+			);
+			name = Sounds;
+			sourceTree = "<group>";
+		};
 		137AAB3A1BD6DAD40049209B /* UI */ = {
 			isa = PBXGroup;
 			children = (
@@ -269,6 +285,7 @@
 				13816C021BED757500E55319 /* CTime.swift */,
 				13816C041BED97BE00E55319 /* CScale.swift */,
 				1393E5C91BEE50C50062C8C8 /* CControl.swift */,
+				1370B27F1C1C9E6300ED1934 /* CSound.swift */,
 			);
 			name = Components;
 			sourceTree = "<group>";
@@ -357,8 +374,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				134690BB1BEAEBE600414003 /* Localizable.strings in Resources */,
+				1370B27E1C1C9D2900ED1934 /* tick.mp3 in Resources */,
 				1309821A1BE1183C00C48C12 /* index-ru.html in Resources */,
 				1309821B1BE1183C00C48C12 /* style.css in Resources */,
+				1370B27D1C1C9D2900ED1934 /* bell.mp3 in Resources */,
 				134690C91BEAFE2900414003 /* Main.storyboard in Resources */,
 				133D89C71BB9A950007AFAF7 /* Images.xcassets in Resources */,
 				134690C21BEAFCCE00414003 /* index-en.html in Resources */,
@@ -382,6 +401,7 @@
 				133D89C51BB9A950007AFAF7 /* ViewController.swift in Sources */,
 				13DC2A7F1BE9177A009F6474 /* Component.swift in Sources */,
 				133AD55A1BE01E160023788E /* Dictionary.swift in Sources */,
+				1370B2801C1C9E6300ED1934 /* CSound.swift in Sources */,
 				133F3A5F1BE5B009007ED1B7 /* Settings.swift in Sources */,
 				1370B2791C1C98CE00ED1934 /* HoverableButton.swift in Sources */,
 				130982161BE1179700C48C12 /* AboutViewController.swift in Sources */,
