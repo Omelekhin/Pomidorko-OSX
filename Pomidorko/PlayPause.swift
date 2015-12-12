@@ -8,7 +8,7 @@
 
 import Cocoa
 
-class PlayPause: NSButton
+class PlayPause: HoverableButton
 {
     var backgroundColor: NSColor = LightRedColor
     

@@ -10,7 +10,7 @@ import Cocoa
 
 class ViewController: NSViewController
 {
-    @IBOutlet weak var skip: NSButton?
+    @IBOutlet weak var skip: HoverableButton?
     @IBOutlet weak var time: NSTextField?
     @IBOutlet weak var goalsField: NSTextField?
     @IBOutlet weak var control: PlayPause?
@@ -24,6 +24,9 @@ class ViewController: NSViewController
         
         AppDelegate.timerWindow = view.window
         flatify(view.window!, color: BlueColor)
+        
+        skip?.cursor = NSCursor.pointingHandCursor()
+        control?.cursor = NSCursor.pointingHandCursor()
         
         initComponents()
     }

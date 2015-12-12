@@ -6,7 +6,7 @@
 "4sb-4s-VLi.title" = "Завершить Pomidorko";
 
 /* Class = "NSMenuItem"; title = "About Pomidorko"; ObjectID = "5kV-Vb-QxS"; */
-"5kV-Vb-QxS.title" = "О Pomidorko";
+"5kV-Vb-QxS.title" = "О таймере";
 
 /* Class = "NSMenu"; title = "Main Menu"; ObjectID = "AYu-sK-qS6"; */
 "AYu-sK-qS6.title" = "Главнаое меню";
@@ -33,7 +33,7 @@
 "OY7-WF-poV.title" = "Уменщить";
 
 /* Class = "NSMenuItem"; title = "Hide Pomidorko"; ObjectID = "Olw-nP-bQN"; */
-"Olw-nP-bQN.title" = "Скрыть Pomidorko";
+"Olw-nP-bQN.title" = "Скрыть Помидорко";
 
 /* Class = "NSMenuItem"; title = "Zoom"; ObjectID = "R4o-n2-Eq4"; */
 "R4o-n2-Eq4.title" = "Увеличить";
