@@ -7,6 +7,7 @@
 //
 
 import Cocoa
+import AVFoundation
 
 func flatify(window: NSWindow, color: NSColor)
 {
@@ -82,4 +83,24 @@ func getFileURL(fileName: String) -> NSURL {
 func pad(target: String, subject: String) -> String
 {
     return subject.substringFromIndex(target.endIndex) + target
+}
+
+/** Sounds */
+
+func getSound(name: String) -> AVAudioPlayer?
+{
+    var player: AVAudioPlayer?
+    let url = NSURL(fileURLWithPath:
+        NSBundle.mainBundle().pathForResource(name, ofType: "mp3")!
+    )
+    
+    do {
+        player = try AVAudioPlayer(contentsOfURL: url)
+        player?.prepareToPlay()
+    }
+    catch {
+        print("Error loading '\(name)' sound!")
+    }
+    
+    return player
 }

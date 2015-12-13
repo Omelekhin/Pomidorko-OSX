@@ -23,7 +23,7 @@ class Settings: Model
             "sound": true,
             "tick":  true,
 
-            "dock": true
+            "dock": false
         ]
         
         super.init(data: defaults.merge(data))

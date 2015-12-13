@@ -16,7 +16,7 @@ We need to make up this shit before December the 20th:
 
 1. The shit in the right corner
 2. Saving progress to the disk
-3. Reset progress at early summer
+3. Reset progress at early morning
 4. Settings window
 5. Fade from dock
 

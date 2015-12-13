@@ -17,17 +17,8 @@ class CTick: Component
     
     init(timer: Timer?)
     {
-        let url = NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("tick", ofType: "mp3")!)
-        
         self.timer = timer
-        
-        do {
-            self.sound = try AVAudioPlayer(contentsOfURL: url)
-            self.sound?.prepareToPlay()
-        }
-        catch {
-            print("Error loading bell sound!")
-        }
+        self.sound = getSound("tick")
     }
     
     func activate()

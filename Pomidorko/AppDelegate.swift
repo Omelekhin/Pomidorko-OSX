@@ -46,4 +46,10 @@ class AppDelegate: NSObject, NSApplicationDelegate
         
         return true
     }
+    
+    internal class func toggleDock()
+    {
+        NSApp.setActivationPolicy(.Accessory)
+        NSApp.presentationOptions = .Default
+    }
 }
