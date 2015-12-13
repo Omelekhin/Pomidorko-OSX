@@ -30,23 +30,10 @@ class CTime: Component
     
     func render(time: Double)
     {
-        let min = Int(time / 60)
-        let sec = Int(time % 60)
-        
-        let title = pad(String(min), subject: "00") + ":"
-                  + pad(String(sec), subject: "00")
+        let title = timeString(time)
         let attributed = NSMutableAttributedString(string: title)
         
-        var font: NSFont
-        
-        if #available(OSX 10.11, *) {
-            font = NSFont.monospacedDigitSystemFontOfSize(72, weight: NSFontWeightUltraLight)
-        }
-        else {
-            font = NSFont(name: "LatoUltraLight", size: 72)!
-        }
-        
-        increase(attributed, font: font, offset: 0, length: title.characters.count)
+        increase(attributed, font: timeFont(72), offset: 0, length: title.characters.count)
         align(attributed, alignment: NSCenterTextAlignment)
         
         label?.attributedStringValue = attributed

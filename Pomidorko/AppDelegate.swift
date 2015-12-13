@@ -11,11 +11,14 @@ import Cocoa
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate
 {
+    var statusItem: NSStatusItem?
+    
     static var timerWindow: NSWindow?
     
     static var settings: Settings?
     static var timer: Timer?
     static var goals: Goals?
+    static var statusBar: StatusBar?
     
     override init()
     {
@@ -36,6 +39,7 @@ class AppDelegate: NSObject, NSApplicationDelegate
         AppDelegate.timer = timer
         AppDelegate.goals = goals
         AppDelegate.settings = settings
+        AppDelegate.statusBar = createMenuItem()
     }
     
     func applicationShouldHandleReopen(sender: NSApplication, hasVisibleWindows flag: Bool) -> Bool
@@ -47,9 +51,21 @@ class AppDelegate: NSObject, NSApplicationDelegate
         return true
     }
     
-    internal class func toggleDock()
+    func createMenuItem() -> StatusBar
     {
-        NSApp.setActivationPolicy(.Accessory)
-        NSApp.presentationOptions = .Default
+        let menu = NSMenu()
+        
+        menu.addItemWithTitle("Test", action:"test", keyEquivalent: "")
+        statusItem = NSStatusBar.systemStatusBar()
+            .statusItemWithLength(NSVariableStatusItemLength)
+        
+        let statusView = StatusBar(frame: NSMakeRect(0, 0, 72, 18))
+        statusView.statusItem = statusItem
+        
+        statusItem?.highlightMode = true
+        statusItem?.menu = menu
+        statusItem?.view = statusView
+        
+        return statusView
     }
 }

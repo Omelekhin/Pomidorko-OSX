@@ -18,6 +18,22 @@ func flatify(window: NSWindow, color: NSColor)
 
 /** Attributed string functions */
 
+func timeFont(size: CGFloat) -> NSFont
+{
+    var font: NSFont
+    
+    if #available(OSX 10.11, *) {
+        let weight = size > 70 ? NSFontWeightUltraLight : NSFontWeightRegular
+        
+        font = NSFont.monospacedDigitSystemFontOfSize(size, weight: weight)
+    }
+    else {
+        font = NSFont(name: "LatoUltraLight", size: size)!
+    }
+    
+    return font
+}
+
 func colorize(string: NSMutableAttributedString, color: NSColor)
 {
     let range: NSRange = NSMakeRange(0, string.length)
@@ -58,6 +74,15 @@ func localeString(key: String) -> String
 func now() -> Double
 {
     return NSDate().timeIntervalSince1970 * 1000.0
+}
+
+func timeString(time: Double) -> String
+{
+    let min = Int(time / 60)
+    let sec = Int(time % 60)
+    
+    return pad(String(min), subject: "00") + ":"
+         + pad(String(sec), subject: "00")
 }
 
 /** Path */

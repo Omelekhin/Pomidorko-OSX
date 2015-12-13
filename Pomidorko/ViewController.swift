@@ -45,8 +45,6 @@ class ViewController: NSViewController
         CTick(timer: timer).activate()
         
         components = [
-            "control": CControl(timer: timer, control: control),
-            "goals": CGoals(field: goalsField, goals: goals, settings: settings),
             "state": CState(
                 timer: timer, 
                 goals: goals, 
@@ -54,6 +52,9 @@ class ViewController: NSViewController
                 control: control,
                 window: view.window
             ),
+            "control": CControl(timer: timer, control: control),
+            "status": CStatusBar(timer: timer, statusBar: AppDelegate.statusBar),
+            "goals": CGoals(field: goalsField, goals: goals, settings: settings),
             "scale": CScale(timer: timer, scale: scale),
             "skip":  CSkip(button: skip, goals: goals, timer: timer),
             "time":  CTime(label: time, timer: timer),
