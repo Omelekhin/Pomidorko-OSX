@@ -1,9 +1,9 @@
 
 /* Class = "NSMenuItem"; title = "Pomidorko"; ObjectID = "1Xt-HY-uBw"; */
-"1Xt-HY-uBw.title" = "Pomidorko";
+"1Xt-HY-uBw.title" = "Помидорко";
 
 /* Class = "NSMenuItem"; title = "Quit Pomidorko"; ObjectID = "4sb-4s-VLi"; */
-"4sb-4s-VLi.title" = "Завершить Pomidorko";
+"4sb-4s-VLi.title" = "Завершить";
 
 /* Class = "NSMenuItem"; title = "About Pomidorko"; ObjectID = "5kV-Vb-QxS"; */
 "5kV-Vb-QxS.title" = "О таймере";
@@ -18,22 +18,22 @@
 "F2S-fz-NVQ.title" = "Справка";
 
 /* Class = "NSMenuItem"; title = "Pomidorko Help"; ObjectID = "FKE-Sm-Kum"; */
-"FKE-Sm-Kum.title" = "Pomidorko Справка";
+"FKE-Sm-Kum.title" = "Справка";
 
 /* Class = "NSButtonCell"; title = "Skip the pomidoro"; ObjectID = "HKI-XO-Dob"; */
 "HKI-XO-Dob.title" = "Пропустить помидорку";
 
 /* Class = "NSMenuItem"; title = "Show All"; ObjectID = "Kd2-mp-pUS"; */
-"Kd2-mp-pUS.title" = "Показть все";
+"Kd2-mp-pUS.title" = "Показать все";
 
 /* Class = "NSMenuItem"; title = "Bring All to Front"; ObjectID = "LE2-aR-0XJ"; */
 "LE2-aR-0XJ.title" = "Все окна – на передний план";
 
 /* Class = "NSMenuItem"; title = "Minimize"; ObjectID = "OY7-WF-poV"; */
-"OY7-WF-poV.title" = "Уменщить";
+"OY7-WF-poV.title" = "Уменьшить";
 
 /* Class = "NSMenuItem"; title = "Hide Pomidorko"; ObjectID = "Olw-nP-bQN"; */
-"Olw-nP-bQN.title" = "Скрыть Помидорко";
+"Olw-nP-bQN.title" = "Скрыть таймер";
 
 /* Class = "NSMenuItem"; title = "Zoom"; ObjectID = "R4o-n2-Eq4"; */
 "R4o-n2-Eq4.title" = "Увеличить";
@@ -42,7 +42,7 @@
 "SZX-S9-C18.title" = "О таймере";
 
 /* Class = "NSMenu"; title = "Window"; ObjectID = "Td7-aD-5lo"; */
-"Td7-aD-5lo.title" = "Window";
+"Td7-aD-5lo.title" = "Окно";
 
 /* Class = "NSMenuItem"; title = "Hide Others"; ObjectID = "Vdr-fp-XzO"; */
 "Vdr-fp-XzO.title" = "Скрыть остальные";
@@ -54,7 +54,7 @@
 "aUF-d1-5bR.title" = "Окно";
 
 /* Class = "NSMenu"; title = "Pomidorko"; ObjectID = "uQy-DD-JDr"; */
-"uQy-DD-JDr.title" = "Pomidorko";
+"uQy-DD-JDr.title" = "Помидорко";
 
 /* Class = "NSMenuItem"; title = "Help"; ObjectID = "wpr-3q-Mcd"; */
 "wpr-3q-Mcd.title" = "Справка";

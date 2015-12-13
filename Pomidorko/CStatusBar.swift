@@ -8,15 +8,31 @@
 
 import Cocoa
 
-class CStatusBar: Component
+class CStatusBar: NSObject, Component
 {
     var statusBar: StatusBar?
     var timer: Timer?
     
     init(timer: Timer?, statusBar: StatusBar?)
     {
+        super.init()
+        
         self.statusBar = statusBar
         self.timer = timer
+        
+        NSDistributedNotificationCenter.defaultCenter().addObserver(
+            self,
+            selector: "detectMode",
+            name: "AppleInterfaceThemeChangedNotification",
+            object: nil
+        )
+        
+        detectMode()
+    }
+    
+    func detectMode()
+    {
+        statusBar?.color = NSColor.textColor()
     }
     
     func activate()
@@ -25,7 +41,7 @@ class CStatusBar: Component
             self.render(time)
         })
         
-        render(0)
+        render(Double((timer?.duration)!))
     }
     
     func render(time: Double)
