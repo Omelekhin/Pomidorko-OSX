@@ -23,6 +23,7 @@
 		133D89C31BB9A950007AFAF7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 133D89C21BB9A950007AFAF7 /* AppDelegate.swift */; };
 		133D89C51BB9A950007AFAF7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 133D89C41BB9A950007AFAF7 /* ViewController.swift */; };
 		133D89C71BB9A950007AFAF7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 133D89C61BB9A950007AFAF7 /* Images.xcassets */; };
+		133E349F1C1CC79300F79C30 /* CTick.swift in Sources */ = {isa = PBXBuildFile; fileRef = 133E349E1C1CC79300F79C30 /* CTick.swift */; };
 		133F3A5F1BE5B009007ED1B7 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 133F3A5E1BE5B009007ED1B7 /* Settings.swift */; };
 		1342CA901BEBBFBC00184716 /* Goals.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1342CA8F1BEBBFBC00184716 /* Goals.swift */; };
 		1342CA921BEC3EC000184716 /* CSkip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1342CA911BEC3EC000184716 /* CSkip.swift */; };
@@ -82,6 +83,7 @@
 		133D89C61BB9A950007AFAF7 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		133D89CF1BB9A951007AFAF7 /* PomidorkoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PomidorkoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		133D89D41BB9A951007AFAF7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		133E349E1C1CC79300F79C30 /* CTick.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CTick.swift; sourceTree = "<group>"; };
 		133F3A5E1BE5B009007ED1B7 /* Settings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
 		1342CA8A1BEAFF9F00184716 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1342CA8C1BEAFFA800184716 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
@@ -286,6 +288,7 @@
 				13816C041BED97BE00E55319 /* CScale.swift */,
 				1393E5C91BEE50C50062C8C8 /* CControl.swift */,
 				1370B27F1C1C9E6300ED1934 /* CSound.swift */,
+				133E349E1C1CC79300F79C30 /* CTick.swift */,
 			);
 			name = Components;
 			sourceTree = "<group>";
@@ -416,6 +419,7 @@
 				1342CA921BEC3EC000184716 /* CSkip.swift in Sources */,
 				1342CA9B1BED1A2C00184716 /* Bool.swift in Sources */,
 				13816C051BED97BE00E55319 /* CScale.swift in Sources */,
+				133E349F1C1CC79300F79C30 /* CTick.swift in Sources */,
 				134690AF1BEA793E00414003 /* EventEmitter.swift in Sources */,
 				13BA886F1BD9D8D5008E98AC /* Scale.swift in Sources */,
 				1342CA901BEBBFBC00184716 /* Goals.swift in Sources */,

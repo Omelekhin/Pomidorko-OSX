@@ -10,6 +10,7 @@ So, we have following shit done:
 2. Timer UI 
 3. Timer logic
 4. Motherfucking hovering
+5. Ticking and sound notification
 
 We need to make up this shit before December the 20th:
 
@@ -17,8 +18,7 @@ We need to make up this shit before December the 20th:
 2. Saving progress to the disk
 3. Reset progress at early summer
 4. Settings window
-5. Ticking and sound notification
-6. Fade from dock
+5. Fade from dock
 
 That's all the shit needed to be implemented
 

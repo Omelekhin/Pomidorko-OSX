@@ -33,7 +33,8 @@ class CTime: Component
         let min = Int(time / 60)
         let sec = Int(time % 60)
         
-        let title = pad(String(min), subject: "00") + ":" + pad(String(sec), subject: "00")
+        let title = pad(String(min), subject: "00") + ":"
+                  + pad(String(sec), subject: "00")
         let attributed = NSMutableAttributedString(string: title)
         
         var font: NSFont
@@ -45,13 +46,7 @@ class CTime: Component
             font = NSFont(name: "LatoUltraLight", size: 72)!
         }
         
-        increase(
-            attributed,
-            font: font,
-            offset: 0,
-            length: title.characters.count
-        )
-        
+        increase(attributed, font: font, offset: 0, length: title.characters.count)
         align(attributed, alignment: NSCenterTextAlignment)
         
         label?.attributedStringValue = attributed

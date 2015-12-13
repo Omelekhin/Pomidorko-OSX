@@ -40,7 +40,9 @@ class ViewController: NSViewController
         // Some unexaplainable shit
         // I need to debug this part of code
         // @todo debug
+        // Some dark black magic shit
         CSound(timer: timer).activate()
+        CTick(timer: timer).activate()
         
         components = [
             "control": CControl(timer: timer, control: control),

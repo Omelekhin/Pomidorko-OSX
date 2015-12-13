@@ -25,9 +25,7 @@ class CScale: Component
             self.render(time)
         })
         
-        let time = (timer?.time())!
-        
-        render(time)
+        render((timer?.time())!)
     }
     
     func render(time: Double)
