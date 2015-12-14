@@ -17,8 +17,8 @@ class CStatusBar: NSObject, Component
     {
         super.init()
         
-        self.statusBar = statusBar
         self.timer = timer
+        self.statusBar = statusBar
         
         NSDistributedNotificationCenter.defaultCenter().addObserver(
             self,

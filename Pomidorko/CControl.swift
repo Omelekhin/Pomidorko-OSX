@@ -29,6 +29,10 @@ class CControl: Component
             self.render(true)
         })
         
+        timer?.emitter.add("pause", closure: { (time: Double) -> Void in
+            self.render(true)
+        })
+        
         render(true)
     }
     

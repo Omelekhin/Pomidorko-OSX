@@ -29,13 +29,15 @@ class Timer: NSObject
         endTime = startTime + (remained == 0 ? Double(duration) * 1000.0
                                              : remained)
         
-        timer = NSTimer.scheduledTimerWithTimeInterval(
-            1 / 24,
+        timer = NSTimer(
+            timeInterval: 1 / 24,
             target: self,
             selector: "tick",
             userInfo: nil,
             repeats: true
         )
+        
+        NSRunLoop.mainRunLoop().addTimer(timer!, forMode:NSRunLoopCommonModes)
         
         emitter.emit("start", arg: 0.0)
     }
@@ -54,10 +56,16 @@ class Timer: NSObject
     
     func pause()
     {
+        if timer == nil {
+            return
+        }
+        
         remained = endTime - now()
         
         timer?.invalidate()
         timer = nil
+        
+        emitter.emit("pause", arg: 0.0)
     }
     
     func tick()

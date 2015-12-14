@@ -17,9 +17,14 @@ class ViewController: NSViewController
     @IBOutlet weak var scale: Scale?
     
     var components: [String: Component]?
+    var initialized: Bool = false
     
     override func viewDidAppear()
     {
+        if (initialized) {
+            return
+        }
+        
         super.viewDidAppear()
         
         AppDelegate.timerWindow = view.window
@@ -29,6 +34,7 @@ class ViewController: NSViewController
         control?.cursor = NSCursor.pointingHandCursor()
         
         initComponents()
+        initialized = true
     }
     
     func initComponents()

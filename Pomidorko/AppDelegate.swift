@@ -12,6 +12,7 @@ import Cocoa
 class AppDelegate: NSObject, NSApplicationDelegate
 {
     var statusItem: NSStatusItem?
+    var statusController: StatusBarController
     
     static var timerWindow: NSWindow?
     
@@ -22,6 +23,8 @@ class AppDelegate: NSObject, NSApplicationDelegate
     
     override init()
     {
+        statusController = StatusBarController()
+        
         super.init()
         
         let timer = Timer()
@@ -39,38 +42,25 @@ class AppDelegate: NSObject, NSApplicationDelegate
         AppDelegate.timer = timer
         AppDelegate.goals = goals
         AppDelegate.settings = settings
-        AppDelegate.statusBar = createMenuItem()
+        AppDelegate.statusBar = statusController.view as? StatusBar
     }
     
     func applicationShouldHandleReopen(sender: NSApplication, hasVisibleWindows flag: Bool) -> Bool
     {
-        if let window = AppDelegate.timerWindow {
-            window.makeKeyAndOrderFront(nil)
-        }
+        AppDelegate.openTimer()
         
         return true
-    }
-    
-    func createMenuItem() -> StatusBar
-    {
-        let menu = NSMenu()
-        
-        menu.addItemWithTitle("Test", action:"test", keyEquivalent: "")
-        statusItem = NSStatusBar.systemStatusBar()
-            .statusItemWithLength(NSVariableStatusItemLength)
-        
-        let statusView = StatusBar(frame: NSMakeRect(0, 0, 72, 18))
-        statusView.statusItem = statusItem
-        
-        statusItem?.highlightMode = true
-        statusItem?.menu = menu
-        statusItem?.view = statusView
-        
-        return statusView
     }
     
     internal class func toggleMenuItem(toggle: Bool)
     {
         AppDelegate.statusBar?.statusItem?.length = toggle == false ? 72 : 0
+    }
+    
+    internal class func openTimer()
+    {
+        if let window = AppDelegate.timerWindow {
+            window.makeKeyAndOrderFront(nil)
+        }
     }
 }
