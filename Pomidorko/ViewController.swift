@@ -62,7 +62,8 @@ class ViewController: NSViewController
     }
     
     /**
-     * IB actions, didn't found other way to attach UI events to components
+     * IB actions, because I didn't found other way to attach UI events to 
+     * component objects, such a shame
      */
     
     @IBAction func skip(sender: AnyObject?)

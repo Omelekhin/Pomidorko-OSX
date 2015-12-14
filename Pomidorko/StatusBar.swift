@@ -11,7 +11,7 @@ import Cocoa
 let StatusBarMarginLeft = 6
 let StatusBarMarginTop = 4
 
-class StatusBar: NSView
+class StatusBar: NSView, NSMenuDelegate
 {
     var isMenuVisible: Bool = false
     var statusItem: NSStatusItem?
@@ -21,8 +21,10 @@ class StatusBar: NSView
     
     override func drawRect(dirtyRect: NSRect)
     {
+        statusItem?.drawStatusBarBackgroundInRect(bounds, withHighlight: isMenuVisible)
+        
         let context = NSGraphicsContext.currentContext()?.CGContext
-        let color   = self.color.CGColor
+        let color   = (isMenuVisible ? WhiteColor : self.color).CGColor
         let radius  = 7
         
         CGContextSetFillColorWithColor(context!, color)
@@ -58,6 +60,31 @@ class StatusBar: NSView
             NSMakePoint(26, CGFloat(StatusBarMarginTop - 1)),
             withAttributes: attributes
         )
+    }
+    
+    override func mouseDown(theEvent: NSEvent)
+    {
+        statusItem?.menu?.delegate = self
+        statusItem?.popUpStatusItemMenu((statusItem?.menu)!)
+        needsDisplay = true
+    }
+    
+    override func rightMouseDown(theEvent: NSEvent)
+    {
+        mouseDown(theEvent)
+    }
+    
+    func menuWillOpen(menu: NSMenu)
+    {
+        isMenuVisible = true
+        needsDisplay = true
+    }
+    
+    func menuDidClose(menu: NSMenu)
+    {
+        isMenuVisible = false
+        statusItem?.menu?.delegate = nil
+        needsDisplay = true
     }
     
     func render(segment: Double, title: String)

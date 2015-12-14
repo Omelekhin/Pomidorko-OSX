@@ -68,4 +68,9 @@ class AppDelegate: NSObject, NSApplicationDelegate
         
         return statusView
     }
+    
+    internal class func toggleMenuItem(toggle: Bool)
+    {
+        AppDelegate.statusBar?.statusItem?.length = toggle == false ? 72 : 0
+    }
 }
