@@ -41,7 +41,7 @@ class CStatusBar: NSObject, Component
             self.render(time)
         })
         
-        render(Double((timer?.duration)!))
+        render((timer?.time())!)
     }
     
     func render(time: Double)

@@ -37,21 +37,17 @@ class ViewController: NSViewController
         let goals = AppDelegate.goals
         let settings = AppDelegate.settings
         
-        // Some unexaplainable shit
-        // I need to debug this part of code
-        // @todo debug
-        // Some dark black magic shit
-        CSound(timer: timer).activate()
-        CTick(timer: timer).activate()
+        CState(
+            timer: timer,
+            goals: goals, 
+            settings: settings,
+            control: control,
+            window: view.window
+        ).activate()
         
         components = [
-            "state": CState(
-                timer: timer, 
-                goals: goals, 
-                settings: settings,
-                control: control,
-                window: view.window
-            ),
+            "sound": CSound(timer: timer),
+            "tick": CTick(timer: timer),
             "control": CControl(timer: timer, control: control),
             "status": CStatusBar(timer: timer, statusBar: AppDelegate.statusBar),
             "goals": CGoals(field: goalsField, goals: goals, settings: settings),

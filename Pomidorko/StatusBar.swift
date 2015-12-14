@@ -62,8 +62,9 @@ class StatusBar: NSView
     
     func render(segment: Double, title: String)
     {
-        self.segment = segment % 1.0
+        self.segment = segment
         self.title = title
+        
         needsDisplay = true
     }
 }

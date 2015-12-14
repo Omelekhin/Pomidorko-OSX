@@ -29,11 +29,11 @@ class AppDelegate: NSObject, NSApplicationDelegate
         let settings = Settings(data: KVDict())
         
         goals.observer.add({ (dict: KVDict) -> Void in
-            
+            // Add logic for persisting model to the disk
         })
         
         settings.observer.add({ (dict: KVDict) -> Void in
-            
+            // Add logic for persisting model to the disk
         })
         
         AppDelegate.timer = timer
