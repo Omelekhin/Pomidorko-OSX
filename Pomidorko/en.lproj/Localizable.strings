@@ -13,3 +13,9 @@
 
 "skip-break" = "Skip break";
 "skip-pomodoro" = "Skip pomodoro";
+
+"pause" = "Pause";
+"play" = "Play";
+
+"open-timer" = "Open timer";
+"n-pomodoro" = "%i pomodoro";

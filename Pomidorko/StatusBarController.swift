@@ -13,14 +13,34 @@ class StatusBarController: NSViewController
     var statusMenu: NSMenu?
     var statusBar: NSStatusItem?
     
-    init()
+    var goals: Goals
+    var timer: Timer
+    
+    init(goals: Goals, timer: Timer)
     {
+        self.goals = goals
+        self.timer = timer
+        
         super.init(nibName: nil, bundle: nil)!
         
+        goals.observer.add({ (dict: KVDict) -> Void in
+            self.render()
+        })
+        
+        timer.emitter.add("pause", closure: { (d: Double) -> Void in
+            self.render()
+        })
+        
+        timer.emitter.add("start", closure: { (d: Double) -> Void in
+            self.render()
+        })
+        
         statusBar = createStatusBar()
+        render()
     }
 
-    required init?(coder: NSCoder) {
+    required init?(coder: NSCoder)
+    {
         fatalError("init(coder:) has not been implemented")
     }
     
@@ -45,19 +65,43 @@ class StatusBarController: NSViewController
     func createMenu()
     {
         statusMenu = NSMenu()
-        statusMenu?.addItemWithTitle("10-я помидорка", action:"", keyEquivalent: "")
+        statusMenu?.addItemWithTitle("", action:"", keyEquivalent: "")
         statusMenu?.addItem(NSMenuItem.separatorItem())
-        statusMenu?.addItemWithTitle("Пауза", action: "pauseTimer", keyEquivalent: "")
-        statusMenu?.addItemWithTitle("Пропустить перерыв", action: "skipTimer", keyEquivalent: "")
+        statusMenu?.addItemWithTitle("", action: "toggleTimer", keyEquivalent: "")
+        statusMenu?.addItemWithTitle("", action: "skipTimer", keyEquivalent: "")
         statusMenu?.addItem(NSMenuItem.separatorItem())
-        statusMenu?.addItemWithTitle("Открыть таймер", action: "openTimer", keyEquivalent: "")
+        statusMenu?.addItemWithTitle("", action: "openTimer", keyEquivalent: "")
         
         for (_, item) in (statusMenu?.itemArray.enumerate())! {
             (item as NSMenuItem).target = self
         }
     }
     
-    func pauseTimer()
+    func render()
+    {
+        let current = goals.get("current") as! Int
+        let pomodoros = String(
+            format: localeString("n-pomodoro"),
+            arguments: [current]
+        )
+        
+        let isBreak = goals.get("recess") as! Bool
+        
+        statusMenu?.itemAtIndex(0)?.title = pomodoros
+        statusMenu?.itemAtIndex(2)?.title = localeString(
+            timer.isRunning() == true ? "pause" : "play"
+        )
+        statusMenu?.itemAtIndex(3)?.title = localeString(
+            isBreak == true ? "skip-break" : "skip-pomodoro"
+        )
+        statusMenu?.itemAtIndex(5)?.title = localeString("open-timer")
+    }
+    
+    /**
+     * Menu actions
+     */
+    
+    func toggleTimer()
     {
         let timer = AppDelegate.timer
         
