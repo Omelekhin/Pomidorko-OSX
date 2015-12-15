@@ -49,6 +49,7 @@
 		13816C031BED757500E55319 /* CTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13816C021BED757500E55319 /* CTime.swift */; };
 		13816C051BED97BE00E55319 /* CScale.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13816C041BED97BE00E55319 /* CScale.swift */; };
 		1393E5CA1BEE50C50062C8C8 /* CControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1393E5C91BEE50C50062C8C8 /* CControl.swift */; };
+		13B8565A1C205C6600E83891 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 13B8565C1C205C6600E83891 /* InfoPlist.strings */; };
 		13BA886F1BD9D8D5008E98AC /* Scale.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13BA886E1BD9D8D5008E98AC /* Scale.swift */; };
 		13BAEBE11BE16466007ED8C2 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 13BAEBE01BE16466007ED8C2 /* WebKit.framework */; };
 		13D8ED461C1DB87B0084A31A /* CStatusBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13D8ED451C1DB87B0084A31A /* CStatusBar.swift */; };
@@ -111,6 +112,8 @@
 		13816C021BED757500E55319 /* CTime.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CTime.swift; sourceTree = "<group>"; };
 		13816C041BED97BE00E55319 /* CScale.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CScale.swift; sourceTree = "<group>"; };
 		1393E5C91BEE50C50062C8C8 /* CControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CControl.swift; sourceTree = "<group>"; };
+		13B8565B1C205C6600E83891 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		13B8565F1C205CAB00E83891 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		13BA886E1BD9D8D5008E98AC /* Scale.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Scale.swift; sourceTree = "<group>"; };
 		13BAEBE01BE16466007ED8C2 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		13D8ED451C1DB87B0084A31A /* CStatusBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CStatusBar.swift; sourceTree = "<group>"; };
@@ -213,6 +216,7 @@
 				133D89C61BB9A950007AFAF7 /* Images.xcassets */,
 				133D89C11BB9A950007AFAF7 /* Info.plist */,
 				134690BD1BEAEBE600414003 /* Localizable.strings */,
+				13B8565C1C205C6600E83891 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -392,6 +396,7 @@
 				1370B27D1C1C9D2900ED1934 /* bell.mp3 in Resources */,
 				134690C91BEAFE2900414003 /* Main.storyboard in Resources */,
 				133D89C71BB9A950007AFAF7 /* Images.xcassets in Resources */,
+				13B8565A1C205C6600E83891 /* InfoPlist.strings in Resources */,
 				134690C21BEAFCCE00414003 /* index-en.html in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -487,6 +492,15 @@
 				1342CA8E1BEAFFAE00184716 /* ru */,
 			);
 			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		13B8565C1C205C6600E83891 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				13B8565B1C205C6600E83891 /* ru */,
+				13B8565F1C205CAB00E83891 /* en */,
+			);
+			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
