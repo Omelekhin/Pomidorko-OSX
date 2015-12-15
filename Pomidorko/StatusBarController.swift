@@ -82,7 +82,7 @@ class StatusBarController: NSViewController
         let current = goals.get("current") as! Int
         let pomodoros = String(
             format: localeString("n-pomodoro"),
-            arguments: [current]
+            arguments: [timeOrdinal(current)]
         )
         
         let isBreak = goals.get("recess") as! Bool

@@ -43,10 +43,7 @@ class CGoals: Component
         
         let title = String(format: localeString("goals"), arguments: [goals, total])
         let goalTitle = NSMutableAttributedString(string: title)
-        
         let goalsOffset = String(goals).characters.count
-        let totalOffset = String(total).characters.count
-        let range = Int(localeString("second-index"))!
         
         increase(goalTitle,
             font: NSFont.systemFontOfSize(14),
@@ -58,12 +55,6 @@ class CGoals: Component
             font: NSFont.systemFontOfSize(28),
             offset: 0,
             length: goalsOffset
-        )
-        
-        increase(goalTitle,
-            font: NSFont.systemFontOfSize(20),
-            offset: goalsOffset + range,
-            length: totalOffset
         )
         
         align(goalTitle, alignment: NSCenterTextAlignment)

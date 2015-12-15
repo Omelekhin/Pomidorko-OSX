@@ -21,16 +21,16 @@ class CControl: Component
     
     func activate()
     {
-        timer?.emitter.add("start", closure: { (time: Double) -> Void in
-            self.render(false)
-        })
-        
         timer?.emitter.add("stop", closure: { (time: Double) -> Void in
             self.render(true)
         })
         
         timer?.emitter.add("pause", closure: { (time: Double) -> Void in
             self.render(true)
+        })
+        
+        timer?.emitter.add("start", closure: { (time: Double) -> Void in
+            self.render(false)
         })
         
         render(true)

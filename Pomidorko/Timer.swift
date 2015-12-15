@@ -25,9 +25,11 @@ class Timer: NSObject
             return
         }
         
+        let dur = remained == 0 ? Double(duration) * 1000.0
+                                : remained
+        
         startTime = now()
-        endTime = startTime + (remained == 0 ? Double(duration) * 1000.0
-                                             : remained)
+        endTime = startTime + dur
         
         timer = NSTimer(
             timeInterval: 1 / 24,
@@ -39,11 +41,15 @@ class Timer: NSObject
         
         NSRunLoop.mainRunLoop().addTimer(timer!, forMode:NSRunLoopCommonModes)
         
-        emitter.emit("start", arg: 0.0)
+        emitter.emit("start", arg: dur / 1000.0)
     }
     
     func stop()
     {
+        if timer == nil {
+            return
+        }
+        
         startTime = 0.0
         remained  = 0.0
         endTime   = 0.0

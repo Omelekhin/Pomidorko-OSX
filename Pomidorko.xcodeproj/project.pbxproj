@@ -293,10 +293,10 @@
 				13DC2A801BE91806009F6474 /* CGoals.swift */,
 				1342CA971BED0D9D00184716 /* CState.swift */,
 				13816C021BED757500E55319 /* CTime.swift */,
+				133E349E1C1CC79300F79C30 /* CTick.swift */,
 				13816C041BED97BE00E55319 /* CScale.swift */,
 				1393E5C91BEE50C50062C8C8 /* CControl.swift */,
 				1370B27F1C1C9E6300ED1934 /* CSound.swift */,
-				133E349E1C1CC79300F79C30 /* CTick.swift */,
 				13D8ED451C1DB87B0084A31A /* CStatusBar.swift */,
 			);
 			name = Components;

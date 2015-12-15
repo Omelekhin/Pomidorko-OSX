@@ -52,14 +52,14 @@ class ViewController: NSViewController
         ).activate()
         
         components = [
-            "sound": CSound(timer: timer),
-            "tick": CTick(timer: timer),
             "control": CControl(timer: timer, control: control),
-            "status": CStatusBar(timer: timer, statusBar: AppDelegate.statusBar),
-            "goals": CGoals(field: goalsField, goals: goals, settings: settings),
-            "scale": CScale(timer: timer, scale: scale),
-            "skip":  CSkip(button: skip, goals: goals, timer: timer),
-            "time":  CTime(label: time, timer: timer),
+            "status":  CStatusBar(timer: timer, statusBar: AppDelegate.statusBar),
+            "goals":   CGoals(field: goalsField, goals: goals, settings: settings),
+            "scale":   CScale(timer: timer, scale: scale),
+            "sound":   CSound(timer: timer),
+            "tick":    CTick(timer: timer),
+            "skip":    CSkip(button: skip, goals: goals, timer: timer),
+            "time":    CTime(label: time, timer: timer),
         ]
         
         for (_, component) in components! {

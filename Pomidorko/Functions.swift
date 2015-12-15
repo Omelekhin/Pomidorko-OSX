@@ -76,6 +76,24 @@ func now() -> Double
     return NSDate().timeIntervalSince1970 * 1000.0
 }
 
+func timeOrdinal(time: Int) -> String
+{
+    let ending = String(time % 10)
+    
+    let index = String(time)
+    var suffix: String = localeString(index)
+    
+    if suffix == index {
+        suffix = localeString(ending)
+    }
+    
+    if suffix == ending {
+        suffix = ""
+    }
+    
+    return index + suffix
+}
+
 func timeString(time: Double) -> String
 {
     let min = Int(time / 60)
