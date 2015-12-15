@@ -69,14 +69,9 @@ class CState: Component
         let time = settingsModel?.get("time") as! Int
         let round = settingsModel?.get("round") as! Int
         
-        var duration: Int
-        
-        if recess == true {
-            duration = current % round == 0 ? longBreak : shortBreak
-        }
-        else {
-            duration = time
-        }
+        let duration: Int = recess == true
+            ? (current % round == 0 ? longBreak : shortBreak)
+            : time
         
         timer?.duration = duration * 60
     }

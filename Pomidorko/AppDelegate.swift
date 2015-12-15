@@ -54,11 +54,6 @@ class AppDelegate: NSObject, NSApplicationDelegate
         return true
     }
     
-    internal class func toggleMenuItem(toggle: Bool)
-    {
-        AppDelegate.statusBar?.statusItem?.length = toggle == false ? 72 : 0
-    }
-    
     internal class func openTimer()
     {
         if let window = AppDelegate.timerWindow {
