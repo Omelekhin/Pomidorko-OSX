@@ -11,7 +11,7 @@ import Cocoa
 class CSkip: NSObject, Component
 {
     var skipButton: NSButton?
-    var goalsModel: Goals?
+    var goals: Goals?
     var timer: Timer?
     
     init(
@@ -20,7 +20,7 @@ class CSkip: NSObject, Component
         timer: Timer?
     ) {
         skipButton = button
-        goalsModel = goals
+        self.goals = goals
         self.timer = timer
     }
     
@@ -40,7 +40,7 @@ class CSkip: NSObject, Component
     
     func renderTitle()
     {
-        let recess = goalsModel?.get("recess") as! Bool
+        let recess = goals?.get("recess") as! Bool
         let title = recess == true ? localeString("skip-break") 
                                    : localeString("skip-pomodoro")
         

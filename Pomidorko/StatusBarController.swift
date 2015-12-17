@@ -51,7 +51,7 @@ class StatusBarController: NSViewController
         let statusItem = NSStatusBar.systemStatusBar()
             .statusItemWithLength(NSVariableStatusItemLength)
         
-        let statusView = StatusBar(frame: NSMakeRect(0, 0, 72, 18))
+        let statusView = StatusBar(frame: NSMakeRect(0, 0, 72, 22))
         statusView.statusItem = statusItem
         
         statusItem.menu = statusMenu
@@ -121,5 +121,6 @@ class StatusBarController: NSViewController
     func openTimer()
     {
         AppDelegate.openTimer()
+        NSApp.activateIgnoringOtherApps(true)
     }
 }

@@ -46,10 +46,6 @@ class Timer: NSObject
     
     func stop()
     {
-        if timer == nil {
-            return
-        }
-        
         startTime = 0.0
         remained  = 0.0
         endTime   = 0.0

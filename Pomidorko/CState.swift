@@ -11,8 +11,8 @@ import Cocoa
 class CState: Component
 {
     var timer: Timer?
-    var goalsModel: Goals?
-    var settingsModel: Settings?
+    var goals: Goals?
+    var settings: Settings?
     var control: PlayPause?
     var window: NSWindow?
     
@@ -24,8 +24,8 @@ class CState: Component
         window: NSWindow?
     ) {
         self.timer = timer
-        goalsModel = goals
-        settingsModel = settings
+        self.goals = goals
+        self.settings = settings
         self.control = control
         self.window = window
     }
@@ -36,8 +36,8 @@ class CState: Component
             self.next()
         })
         
-        let recess = goalsModel?.get("recess") as! Bool
-        let time = goalsModel?.get("current") as! Int
+        let recess = goals?.get("recess") as! Bool
+        let time = goals?.get("current") as! Int
         
         setTime(recess, current: time)
         render(recess, current: time)
@@ -45,15 +45,15 @@ class CState: Component
     
     func next()
     {
-        let recess = !(goalsModel?.get("recess") as! Bool)
-        let current = (goalsModel?.get("current") as! Int) + recess.toInt()
+        let recess = !(goals?.get("recess") as! Bool)
+        let current = (goals?.get("current") as! Int) + recess.toInt()
         
         let values: KVDict = [
             "recess":  recess,
             "current": current
         ]
         
-        goalsModel?.merge(values)
+        goals?.merge(values)
         
         setTime(recess, current: current)
         render(recess, current: current)
@@ -63,11 +63,11 @@ class CState: Component
     
     func setTime(recess: Bool, current: Int)
     {
-        let shortBreak = settingsModel?.get("shortBreak") as! Int
-        let longBreak = settingsModel?.get("longBreak") as! Int
+        let shortBreak = settings?.get("shortBreak") as! Int
+        let longBreak = settings?.get("longBreak") as! Int
         
-        let time = settingsModel?.get("time") as! Int
-        let round = settingsModel?.get("round") as! Int
+        let time = settings?.get("time") as! Int
+        let round = settings?.get("round") as! Int
         
         let duration: Int = recess == true
             ? (current % round == 0 ? longBreak : shortBreak)

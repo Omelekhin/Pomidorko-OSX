@@ -11,8 +11,8 @@ import Cocoa
 class CGoals: Component
 {
     var goalsField: NSTextField?
-    var goalsModel: Goals?
-    var settingsModel: Settings?
+    var goals: Goals?
+    var settings: Settings?
     
     init(
         field: NSTextField?,
@@ -20,8 +20,8 @@ class CGoals: Component
         settings: Settings?
     ) {
         goalsField = field
-        goalsModel = goals
-        settingsModel = settings
+        self.goals = goals
+        self.settings = settings
     }
     
     func activate()
@@ -30,16 +30,16 @@ class CGoals: Component
             self.render()
         }
         
-        goalsModel?.observer.add(closure)
-        settingsModel?.observer.add(closure)
+        goals?.observer.add(closure)
+        settings?.observer.add(closure)
         
         render()
     }
     
     func render()
     {
-        let goals = goalsModel?.get("current") as! Int
-        let total = settingsModel?.get("total") as! Int
+        let goals = self.goals?.get("current") as! Int
+        let total = settings?.get("total") as! Int
         
         let title = String(format: localeString("goals"), arguments: [goals, total])
         let goalTitle = NSMutableAttributedString(string: title)

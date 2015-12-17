@@ -147,3 +147,12 @@ func getSound(name: String) -> AVAudioPlayer?
     
     return player
 }
+
+func createBitmapContext(w: Int, _ h: Int) -> CGContext
+{
+    let colorSpace = CGColorSpaceCreateDeviceRGB()
+    let bitmapInfo = CGBitmapInfo(rawValue: CGImageAlphaInfo.PremultipliedFirst.rawValue)
+    let context = CGBitmapContextCreate(nil, w, h, 8, 0, colorSpace, bitmapInfo.rawValue)
+    
+    return context!
+}

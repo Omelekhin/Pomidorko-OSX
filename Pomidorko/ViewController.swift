@@ -29,6 +29,7 @@ class ViewController: NSViewController
         
         AppDelegate.timerWindow = view.window
         flatify(view.window!, color: BlueColor)
+        view.window?.makeFirstResponder(nil)
         
         skip?.cursor = NSCursor.pointingHandCursor()
         control?.cursor = NSCursor.pointingHandCursor()
@@ -53,7 +54,7 @@ class ViewController: NSViewController
         
         components = [
             "control": CControl(timer: timer, control: control),
-            "status":  CStatusBar(timer: timer, statusBar: AppDelegate.statusBar),
+            "status":  CStatusBar(timer: timer, statusBar: AppDelegate.statusBar, goals: goals),
             "goals":   CGoals(field: goalsField, goals: goals, settings: settings),
             "scale":   CScale(timer: timer, scale: scale),
             "sound":   CSound(timer: timer),

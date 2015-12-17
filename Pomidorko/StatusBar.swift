@@ -18,6 +18,7 @@ class StatusBar: NSView, NSMenuDelegate
     var segment: Double = 1.0
     var title: String = ""
     var color: NSColor = WhiteColor
+    var alpha: Double = 1
     
     override func drawRect(dirtyRect: NSRect)
     {
@@ -25,31 +26,13 @@ class StatusBar: NSView, NSMenuDelegate
         
         let context = NSGraphicsContext.currentContext()?.CGContext
         let color   = (isMenuVisible ? WhiteColor : self.color).CGColor
-        let radius  = 7
+        let image   = CGBitmapContextCreateImage(renderPie(color))
+        
+        CGContextSetAlpha(context, CGFloat(alpha))
+        CGContextDrawImage(context, NSMakeRect(0, 0, 26, 22), image)
+        CGContextSetAlpha(context, 1.0)
         
         CGContextSetFillColorWithColor(context!, color)
-        CGContextSetStrokeColorWithColor(context!, color)
-        
-        CGContextBeginPath(context!)
-        CGContextAddArc(context!,
-            CGFloat(StatusBarMarginLeft + radius),
-            CGFloat(StatusBarMarginTop + radius), CGFloat(radius),
-            CGFloat(M_PI / 2),
-            CGFloat(M_PI / 2 + M_PI * 2 * segment), 0
-        )
-        CGContextAddLineToPoint(context!,
-            CGFloat(StatusBarMarginLeft + radius),
-            CGFloat(StatusBarMarginTop + radius)
-        )
-        CGContextFillPath(context!)
-        
-        CGContextStrokeEllipseInRect(context!,
-            NSMakeRect(
-                CGFloat(StatusBarMarginLeft),
-                CGFloat(StatusBarMarginTop),
-                CGFloat(radius * 2), CGFloat(radius * 2)
-            )
-        )
         
         let attributes = [
             NSForegroundColorAttributeName: self.color,
@@ -60,6 +43,39 @@ class StatusBar: NSView, NSMenuDelegate
             NSMakePoint(26, CGFloat(StatusBarMarginTop - 1)),
             withAttributes: attributes
         )
+    }
+    
+    func renderPie(color: CGColorRef) -> CGContext
+    {
+        let context = createBitmapContext(26, 22)
+        let radius  = 7
+        
+        CGContextSetLineWidth(context, 1.5)
+        CGContextSetFillColorWithColor(context, color)
+        CGContextSetStrokeColorWithColor(context, color)
+        
+        CGContextStrokeEllipseInRect(context,
+            NSMakeRect(
+                CGFloat(StatusBarMarginLeft),
+                CGFloat(StatusBarMarginTop),
+                CGFloat(radius * 2), CGFloat(radius * 2)
+            )
+        )
+        
+        CGContextBeginPath(context)
+        CGContextAddArc(context,
+            CGFloat(StatusBarMarginLeft + radius),
+            CGFloat(StatusBarMarginTop + radius), CGFloat(radius),
+            CGFloat(M_PI / 2),
+            CGFloat(M_PI / 2 + M_PI * 2 * segment), 0
+        )
+        CGContextAddLineToPoint(context,
+            CGFloat(StatusBarMarginLeft + radius),
+            CGFloat(StatusBarMarginTop + radius)
+        )
+        CGContextFillPath(context)
+        
+        return context
     }
     
     override func mouseDown(theEvent: NSEvent)
