@@ -8,7 +8,7 @@
 
 import Foundation
 
-typealias KVDict = Dictionary<String, AnyObject?>
+typealias KVDict = [String: AnyObject]
 
 extension Dictionary
 {

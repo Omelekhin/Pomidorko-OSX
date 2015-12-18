@@ -25,7 +25,7 @@ class Model
     
     func set(key: String, value: AnyObject?)
     {
-        data.updateValue(value, forKey: key)
+        data.updateValue(value!, forKey: key)
         observer.invoke(data)
     }
     

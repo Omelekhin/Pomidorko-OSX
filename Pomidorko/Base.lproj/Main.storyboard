@@ -190,6 +190,9 @@
                                     <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
+                                <connections>
+                                    <outlet property="formatter" destination="sNN-DW-Mhn" id="s8L-vy-Sj9"/>
+                                </connections>
                             </textField>
                             <textField verticalHuggingPriority="750" fixedFrame="YES" tag="3" translatesAutoresizingMaskIntoConstraints="NO" id="r0J-Vr-QDO">
                                 <rect key="frame" x="177" y="252" width="123" height="22"/>
@@ -198,6 +201,9 @@
                                     <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
+                                <connections>
+                                    <outlet property="formatter" destination="sNN-DW-Mhn" id="9qG-Qu-u1w"/>
+                                </connections>
                             </textField>
                             <textField verticalHuggingPriority="750" fixedFrame="YES" tag="4" translatesAutoresizingMaskIntoConstraints="NO" id="dzY-ZL-vA2">
                                 <rect key="frame" x="204" y="200" width="96" height="22"/>
@@ -206,6 +212,9 @@
                                     <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
+                                <connections>
+                                    <outlet property="formatter" destination="sNN-DW-Mhn" id="5wT-O8-Yxu"/>
+                                </connections>
                             </textField>
                             <textField verticalHuggingPriority="750" fixedFrame="YES" tag="5" translatesAutoresizingMaskIntoConstraints="NO" id="v63-Gt-ih7">
                                 <rect key="frame" x="204" y="157" width="96" height="22"/>
@@ -214,6 +223,9 @@
                                     <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
+                                <connections>
+                                    <outlet property="formatter" destination="sNN-DW-Mhn" id="oYY-38-SHk"/>
+                                </connections>
                             </textField>
                             <textField verticalHuggingPriority="750" fixedFrame="YES" tag="1" translatesAutoresizingMaskIntoConstraints="NO" id="XsJ-84-tYX">
                                 <rect key="frame" x="177" y="339" width="123" height="22"/>
@@ -222,11 +234,15 @@
                                     <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
+                                <connections>
+                                    <outlet property="formatter" destination="sNN-DW-Mhn" id="xvB-Hs-WcT"/>
+                                </connections>
                             </textField>
                         </subviews>
                     </view>
                 </viewController>
                 <customObject id="ZJx-gN-d6S" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+                <numberFormatter formatterBehavior="default10_4" usesGroupingSeparator="NO" groupingSize="0" minimumIntegerDigits="0" maximumIntegerDigits="42" id="sNN-DW-Mhn"/>
             </objects>
             <point key="canvasLocation" x="-844" y="935"/>
         </scene>

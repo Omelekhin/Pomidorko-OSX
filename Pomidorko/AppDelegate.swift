@@ -24,19 +24,21 @@ class AppDelegate: NSObject, NSApplicationDelegate
     override init()
     {
         let timer = Timer()
-        let goals = Goals(data: KVDict())
-        let settings = Settings(data: KVDict())
+        let goals = Goals(data: getPreferences("goals") as! KVDict)
+        let settings = Settings(data: getPreferences("settings") as! KVDict)
         
         statusController = StatusBarController(
             goals: goals, timer: timer
         )
         
+        print(goals.data)
+        
         goals.observer.add({ (dict: KVDict) -> Void in
-            // Add logic for persisting model to the disk
+            savePreferences("goals", data: dict as AnyObject?)
         })
         
         settings.observer.add({ (dict: KVDict) -> Void in
-            // Add logic for persisting model to the disk
+            savePreferences("settings", data: dict as AnyObject?)
         })
         
         super.init()
