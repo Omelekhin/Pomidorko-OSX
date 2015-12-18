@@ -8,8 +8,8 @@
 
 import Cocoa
 
-let StatusBarMarginLeft = 6
-let StatusBarMarginTop = 4
+let StatusBarMarginLeft = 6 * screenFactor()
+let StatusBarMarginTop = 4 * screenFactor()
 
 class StatusBar: NSView, NSMenuDelegate
 {
@@ -48,9 +48,10 @@ class StatusBar: NSView, NSMenuDelegate
     func renderPie(color: CGColorRef) -> CGContext
     {
         let context = createBitmapContext(26, 22)
-        let radius  = 7
+        let factor  = screenFactor()
+        let radius  = CGFloat(7 * factor)
         
-        CGContextSetLineWidth(context, 1.5)
+        CGContextSetLineWidth(context, 1.5 * factor)
         CGContextSetFillColorWithColor(context, color)
         CGContextSetStrokeColorWithColor(context, color)
         
@@ -58,14 +59,14 @@ class StatusBar: NSView, NSMenuDelegate
             NSMakeRect(
                 CGFloat(StatusBarMarginLeft),
                 CGFloat(StatusBarMarginTop),
-                CGFloat(radius * 2), CGFloat(radius * 2)
+                radius * 2, radius * 2
             )
         )
         
         CGContextBeginPath(context)
         CGContextAddArc(context,
             CGFloat(StatusBarMarginLeft + radius),
-            CGFloat(StatusBarMarginTop + radius), CGFloat(radius),
+            CGFloat(StatusBarMarginTop + radius), radius,
             CGFloat(M_PI / 2),
             CGFloat(M_PI / 2 + M_PI * 2 * segment), 0
         )

@@ -31,8 +31,6 @@ class AppDelegate: NSObject, NSApplicationDelegate
             goals: goals, timer: timer
         )
         
-        print(goals.data)
-        
         goals.observer.add({ (dict: KVDict) -> Void in
             savePreferences("goals", data: dict as AnyObject?)
         })
@@ -47,6 +45,11 @@ class AppDelegate: NSObject, NSApplicationDelegate
         AppDelegate.goals = goals
         AppDelegate.settings = settings
         AppDelegate.statusBar = statusController.view as? StatusBar
+    }
+    
+    func applicationWillTerminate(notification: NSNotification)
+    {
+        NSUserDefaults.standardUserDefaults().synchronize()
     }
     
     func applicationShouldHandleReopen(sender: NSApplication, hasVisibleWindows flag: Bool) -> Bool

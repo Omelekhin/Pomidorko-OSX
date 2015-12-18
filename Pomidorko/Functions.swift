@@ -148,9 +148,14 @@ func getSound(name: String) -> AVAudioPlayer?
     return player
 }
 
+func screenFactor() -> CGFloat
+{
+    return (NSScreen.mainScreen()?.backingScaleFactor)!
+}
+
 func createBitmapContext(w: Int, _ h: Int) -> CGContext
 {
-    let scaleFactor = (NSScreen.mainScreen()?.backingScaleFactor)!
+    let scaleFactor = screenFactor()
     let width = Int(CGFloat(w) * scaleFactor)
     let height = Int(CGFloat(h) * scaleFactor)
     
@@ -165,10 +170,7 @@ func createBitmapContext(w: Int, _ h: Int) -> CGContext
 
 func savePreferences(key: String, data: AnyObject?)
 {
-    let preferences = NSUserDefaults.standardUserDefaults()
-    
-    preferences.setObject(data, forKey: key)
-    preferences.synchronize()
+    NSUserDefaults.standardUserDefaults().setObject(data, forKey: key)
 }
 
 func getPreferences(key: String) -> AnyObject?
