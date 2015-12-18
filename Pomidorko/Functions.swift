@@ -150,9 +150,13 @@ func getSound(name: String) -> AVAudioPlayer?
 
 func createBitmapContext(w: Int, _ h: Int) -> CGContext
 {
+    let scaleFactor = (NSScreen.mainScreen()?.backingScaleFactor)!
+    let width = Int(CGFloat(w) * scaleFactor)
+    let height = Int(CGFloat(h) * scaleFactor)
+    
     let colorSpace = CGColorSpaceCreateDeviceRGB()
     let bitmapInfo = CGBitmapInfo(rawValue: CGImageAlphaInfo.PremultipliedFirst.rawValue)
-    let context = CGBitmapContextCreate(nil, w, h, 8, 0, colorSpace, bitmapInfo.rawValue)
+    let context = CGBitmapContextCreate(nil, width, height, 8, 0, colorSpace, bitmapInfo.rawValue)
     
     return context!
 }
