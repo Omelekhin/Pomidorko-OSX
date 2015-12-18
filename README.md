@@ -12,13 +12,13 @@ So, we have following shit done:
 4. Motherfucking hovering
 5. Ticking and sound notification
 6. The shit in the right corner
+7. Saving progress to the disk
 
 We need to make up this shit before December the 20th:
 
-1. Saving progress to the disk
-2. Reset progress at early morning
-3. Settings window
-4. Fade from dock
+1. Reset progress at early morning
+2. Settings window
+3. Fade from dock
 
 That's all the shit needed to be implemented
 
