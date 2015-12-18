@@ -8,8 +8,8 @@
 
 import Cocoa
 
-let StatusBarMarginLeft = 6 * screenFactor()
-let StatusBarMarginTop = 4 * screenFactor()
+let StatusBarMarginLeft = 6
+let StatusBarMarginTop = 4
 
 class StatusBar: NSView, NSMenuDelegate
 {
@@ -51,28 +51,31 @@ class StatusBar: NSView, NSMenuDelegate
         let factor  = screenFactor()
         let radius  = CGFloat(7 * factor)
         
+        let topMargin = CGFloat(StatusBarMarginTop) * factor
+        let leftMargin = CGFloat(StatusBarMarginLeft) * factor
+        
         CGContextSetLineWidth(context, 1.5 * factor)
         CGContextSetFillColorWithColor(context, color)
         CGContextSetStrokeColorWithColor(context, color)
         
         CGContextStrokeEllipseInRect(context,
             NSMakeRect(
-                CGFloat(StatusBarMarginLeft),
-                CGFloat(StatusBarMarginTop),
+                leftMargin,
+                topMargin,
                 radius * 2, radius * 2
             )
         )
         
         CGContextBeginPath(context)
         CGContextAddArc(context,
-            CGFloat(StatusBarMarginLeft + radius),
-            CGFloat(StatusBarMarginTop + radius), radius,
+            leftMargin + radius,
+            topMargin + radius, radius,
             CGFloat(M_PI / 2),
             CGFloat(M_PI / 2 + M_PI * 2 * segment), 0
         )
         CGContextAddLineToPoint(context,
-            CGFloat(StatusBarMarginLeft + radius),
-            CGFloat(StatusBarMarginTop + radius)
+            leftMargin + radius,
+            topMargin + radius
         )
         CGContextFillPath(context)
         
