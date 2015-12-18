@@ -19,7 +19,7 @@ class Scale: NSView
         CGContextSetFillColorWithColor(context, WhiteColor.CGColor)
         CGContextSetFontSize(context, 10)
         
-        for index in 0..<55 {
+        for index in 0..<56 {
             let offset: CGFloat = CGFloat(time / 60.0) * 40.0
             let x: CGFloat = dirtyRect.width / 2 + CGFloat(index * 40) - offset
             

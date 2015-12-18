@@ -35,9 +35,6 @@
 /* Class = "NSMenuItem"; title = "Hide Pomidorko"; ObjectID = "Olw-nP-bQN"; */
 "Olw-nP-bQN.title" = "Hide Pomidorko";
 
-/* Class = "NSMenuItem"; title = "Zoom"; ObjectID = "R4o-n2-Eq4"; */
-"R4o-n2-Eq4.title" = "Zoom";
-
 /* Class = "NSWindow"; title = "About timer"; ObjectID = "SZX-S9-C18"; */
 "SZX-S9-C18.title" = "About timer";
 
@@ -58,3 +55,6 @@
 
 /* Class = "NSMenuItem"; title = "Help"; ObjectID = "wpr-3q-Mcd"; */
 "wpr-3q-Mcd.title" = "Help";
+
+/* Class = "NSWindow"; title = "Preferences"; ObjectID = "xnt-uR-6mn"; */
+"xnt-uR-6mn.title" = "Preferences";

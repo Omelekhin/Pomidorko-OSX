@@ -1,60 +1,60 @@
 
-/* Class = "NSMenuItem"; title = "Pomidorko"; ObjectID = "1Xt-HY-uBw"; */
+/* Class = "NSMenuItem"; title = "Помидорко"; ObjectID = "1Xt-HY-uBw"; */
 "1Xt-HY-uBw.title" = "Помидорко";
 
-/* Class = "NSMenuItem"; title = "Quit Pomidorko"; ObjectID = "4sb-4s-VLi"; */
+/* Class = "NSMenuItem"; title = "Завершить"; ObjectID = "4sb-4s-VLi"; */
 "4sb-4s-VLi.title" = "Завершить";
 
 /* Class = "NSMenuItem"; title = "About Pomidorko"; ObjectID = "5kV-Vb-QxS"; */
-"5kV-Vb-QxS.title" = "О таймере";
+"5kV-Vb-QxS.title" = "About Pomidorko";
 
 /* Class = "NSMenu"; title = "Main Menu"; ObjectID = "AYu-sK-qS6"; */
-"AYu-sK-qS6.title" = "Главнаое меню";
+"AYu-sK-qS6.title" = "Main Menu";
 
-/* Class = "NSMenuItem"; title = "Preferences…"; ObjectID = "BOF-NM-1cW"; */
+/* Class = "NSMenuItem"; title = "Настройки…"; ObjectID = "BOF-NM-1cW"; */
 "BOF-NM-1cW.title" = "Настройки…";
 
-/* Class = "NSMenu"; title = "Help"; ObjectID = "F2S-fz-NVQ"; */
+/* Class = "NSMenu"; title = "Справка"; ObjectID = "F2S-fz-NVQ"; */
 "F2S-fz-NVQ.title" = "Справка";
 
-/* Class = "NSMenuItem"; title = "Pomidorko Help"; ObjectID = "FKE-Sm-Kum"; */
+/* Class = "NSMenuItem"; title = "Справка"; ObjectID = "FKE-Sm-Kum"; */
 "FKE-Sm-Kum.title" = "Справка";
 
 /* Class = "NSButtonCell"; title = "Skip the pomidoro"; ObjectID = "HKI-XO-Dob"; */
-"HKI-XO-Dob.title" = "Пропустить помидорку";
+"HKI-XO-Dob.title" = "Skip the pomidoro";
 
-/* Class = "NSMenuItem"; title = "Show All"; ObjectID = "Kd2-mp-pUS"; */
+/* Class = "NSMenuItem"; title = "Показать все"; ObjectID = "Kd2-mp-pUS"; */
 "Kd2-mp-pUS.title" = "Показать все";
 
-/* Class = "NSMenuItem"; title = "Bring All to Front"; ObjectID = "LE2-aR-0XJ"; */
+/* Class = "NSMenuItem"; title = "Все окна – на передний план"; ObjectID = "LE2-aR-0XJ"; */
 "LE2-aR-0XJ.title" = "Все окна – на передний план";
 
-/* Class = "NSMenuItem"; title = "Minimize"; ObjectID = "OY7-WF-poV"; */
+/* Class = "NSMenuItem"; title = "Уменьшить"; ObjectID = "OY7-WF-poV"; */
 "OY7-WF-poV.title" = "Уменьшить";
 
-/* Class = "NSMenuItem"; title = "Hide Pomidorko"; ObjectID = "Olw-nP-bQN"; */
+/* Class = "NSMenuItem"; title = "Скрыть таймер"; ObjectID = "Olw-nP-bQN"; */
 "Olw-nP-bQN.title" = "Скрыть таймер";
 
-/* Class = "NSMenuItem"; title = "Zoom"; ObjectID = "R4o-n2-Eq4"; */
-"R4o-n2-Eq4.title" = "Увеличить";
-
 /* Class = "NSWindow"; title = "About timer"; ObjectID = "SZX-S9-C18"; */
-"SZX-S9-C18.title" = "О таймере";
+"SZX-S9-C18.title" = "About timer";
 
-/* Class = "NSMenu"; title = "Window"; ObjectID = "Td7-aD-5lo"; */
+/* Class = "NSMenu"; title = "Окно"; ObjectID = "Td7-aD-5lo"; */
 "Td7-aD-5lo.title" = "Окно";
 
-/* Class = "NSMenuItem"; title = "Hide Others"; ObjectID = "Vdr-fp-XzO"; */
+/* Class = "NSMenuItem"; title = "Скрыть остальные"; ObjectID = "Vdr-fp-XzO"; */
 "Vdr-fp-XzO.title" = "Скрыть остальные";
 
 /* Class = "NSTextFieldCell"; title = "25:00"; ObjectID = "YO0-UC-0S2"; */
 "YO0-UC-0S2.title" = "25:00";
 
 /* Class = "NSMenuItem"; title = "Window"; ObjectID = "aUF-d1-5bR"; */
-"aUF-d1-5bR.title" = "Окно";
+"aUF-d1-5bR.title" = "Window";
 
-/* Class = "NSMenu"; title = "Pomidorko"; ObjectID = "uQy-DD-JDr"; */
+/* Class = "NSMenu"; title = "Помидорко"; ObjectID = "uQy-DD-JDr"; */
 "uQy-DD-JDr.title" = "Помидорко";
 
-/* Class = "NSMenuItem"; title = "Help"; ObjectID = "wpr-3q-Mcd"; */
+/* Class = "NSMenuItem"; title = "Справка"; ObjectID = "wpr-3q-Mcd"; */
 "wpr-3q-Mcd.title" = "Справка";
+
+/* Class = "NSWindow"; title = "Preferences"; ObjectID = "xnt-uR-6mn"; */
+"xnt-uR-6mn.title" = "Preferences";

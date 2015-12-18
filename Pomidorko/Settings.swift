@@ -13,9 +13,9 @@ class Settings: Model
     override init(data: KVDict)
     {
         let defaults: KVDict = [
+            "time": 25,
             "shortBreak": 5,
             "longBreak": 20,
-            "time": 25,
             
             "round": 4,
             "total": 12,
