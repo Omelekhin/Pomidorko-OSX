@@ -57,8 +57,8 @@ class ViewController: NSViewController
             "status":  CStatusBar(timer: timer, statusBar: AppDelegate.statusBar, goals: goals),
             "goals":   CGoals(field: goalsField, goals: goals, settings: settings),
             "scale":   CScale(timer: timer, scale: scale),
-            "sound":   CSound(timer: timer),
-            "tick":    CTick(timer: timer),
+            "sound":   CSound(timer: timer, settings: settings),
+            "tick":    CTick(timer: timer, settings: settings),
             "skip":    CSkip(button: skip, goals: goals, timer: timer),
             "time":    CTime(label: time, timer: timer),
         ]

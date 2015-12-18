@@ -13,18 +13,34 @@ class CSound: Component
 {
     var timer: Timer?
     var sound: AVAudioPlayer?
+    var settings: Settings?
+    var enabled: Bool = false
     
-    init(timer: Timer?)
+    init(timer: Timer?, settings: Settings?)
     {
         self.timer = timer
         self.sound = getSound("bell")
+        self.settings = settings
     }
     
     func activate()
     {
-        timer?.emitter.add("stop", closure: { (d: Double) -> Void in
-            self.beep()
+        settings?.observer.add({ (dict: KVDict) -> Void in
+            self.toggle()
         })
+        
+        timer?.emitter.add("stop", closure: { (d: Double) -> Void in
+            if self.enabled == true {
+                self.beep()
+            }
+        })
+        
+        toggle()
+    }
+    
+    func toggle()
+    {
+        enabled = settings?.get("sound") as! Bool
     }
     
     func beep()

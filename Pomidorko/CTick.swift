@@ -14,18 +14,34 @@ class CTick: Component
     var time: Int = -1
     var timer: Timer?
     var sound: AVAudioPlayer?
+    var settings: Settings?
+    var enabled: Bool = false
     
-    init(timer: Timer?)
+    init(timer: Timer?, settings: Settings?)
     {
         self.timer = timer
         self.sound = getSound("tick")
+        self.settings = settings
     }
     
     func activate()
     {
-        timer?.emitter.add("tick", closure: { (time: Double) -> Void in
-            self.tick(time)
+        settings?.observer.add({ (dict: KVDict) -> Void in
+            self.toggle()
         })
+        
+        timer?.emitter.add("tick", closure: { (time: Double) -> Void in
+            if self.enabled == true {
+                self.tick(time)
+            }
+        })
+        
+        toggle()
+    }
+    
+    func toggle()
+    {
+        enabled = self.settings?.get("tick") as! Bool
     }
     
     func tick(time: Double)
