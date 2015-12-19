@@ -335,7 +335,7 @@
                                 </textFieldCell>
                             </textField>
                             <button focusRingType="none" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ff9-iI-A4R" userLabel="Control" customClass="PlayPause" customModule="Pomidorko" customModuleProvider="target">
-                                <rect key="frame" x="110" y="110" width="100" height="100"/>
+                                <rect key="frame" x="110" y="108" width="100" height="100"/>
                                 <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" alignment="center" focusRingType="none" imageScaling="proportionallyDown" inset="2" id="9Lp-rZ-kyt">
                                     <behavior key="behavior" pushIn="YES" changeContents="YES" lightByContents="YES"/>
                                     <font key="font" metaFont="system"/>

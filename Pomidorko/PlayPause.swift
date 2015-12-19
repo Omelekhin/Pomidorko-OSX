@@ -24,12 +24,12 @@ class PlayPause: HoverableButton
         CGContextSaveGState(context)
         
         if self.state == 1 {
-            CGContextTranslateCTM(context, 32, 26)
+            CGContextTranslateCTM(context, 32, 25)
             CGContextScaleCTM(context, 0.4, 0.4)
             play(context!)
         }
         else {
-            CGContextTranslateCTM(context, 28, 26)
+            CGContextTranslateCTM(context, 28, 25)
             CGContextScaleCTM(context, 0.4, 0.4)
             pause(context!)
         }
