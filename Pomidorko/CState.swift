@@ -36,10 +36,17 @@ class CState: Component
             self.next()
         })
         
+        let remained = goals?.get("remained") as! Double
         let recess = goals?.get("recess") as! Bool
         let time = goals?.get("current") as! Int
         
-        setTime(recess, current: time)
+        if remained > 0 {
+            timer?.duration = Int(remained)
+        }
+        else {
+            setTime(recess, current: time)
+        }
+        
         render(recess, current: time)
     }
     

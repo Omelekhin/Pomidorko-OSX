@@ -244,7 +244,7 @@
                 <customObject id="ZJx-gN-d6S" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
                 <numberFormatter formatterBehavior="default10_4" usesGroupingSeparator="NO" groupingSize="0" minimumIntegerDigits="0" maximumIntegerDigits="42" id="sNN-DW-Mhn"/>
             </objects>
-            <point key="canvasLocation" x="-844" y="935"/>
+            <point key="canvasLocation" x="-845" y="935"/>
         </scene>
         <!--Window Controller-->
         <scene sceneID="DBF-gc-eml">
@@ -264,7 +264,7 @@
                 </windowController>
                 <customObject id="wkK-c8-3kB" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-402" y="353"/>
+            <point key="canvasLocation" x="-381" y="353"/>
         </scene>
         <!--About View Controller-->
         <scene sceneID="9NM-pR-qdn">
@@ -277,7 +277,7 @@
                 </viewController>
                 <customObject id="Iqj-zH-Y3B" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-402" y="974"/>
+            <point key="canvasLocation" x="-381" y="974"/>
         </scene>
         <!--Window Controller-->
         <scene sceneID="R2V-B0-nI4">

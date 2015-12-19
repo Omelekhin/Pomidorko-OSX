@@ -84,7 +84,7 @@ class Timer: NSObject
     }
     
     func time() -> Double
-    {   
+    {
         return remained > 0 ? remained / 1000.0
                             : Double(duration)
     }

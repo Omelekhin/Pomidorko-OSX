@@ -49,6 +49,9 @@ class AppDelegate: NSObject, NSApplicationDelegate
     
     func applicationWillTerminate(notification: NSNotification)
     {
+        AppDelegate.timer?.pause()
+        AppDelegate.goals?.set("remained", value: AppDelegate.timer?.time())
+        
         NSUserDefaults.standardUserDefaults().synchronize()
     }
     
