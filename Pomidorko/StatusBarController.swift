@@ -45,6 +45,12 @@ class StatusBarController: NSViewController
         
         statusBar = createStatusBar()
         render()
+        
+        NSEvent.addGlobalMonitorForEventsMatchingMask(.KeyDownMask, handler: { (event: NSEvent) -> Void in
+            if event.keyCode == 100 && event.modifierFlags.rawValue == 9961768 {
+                self.toggleTimer(nil)
+            }
+        })
     }
 
     required init?(coder: NSCoder)
@@ -135,5 +141,10 @@ class StatusBarController: NSViewController
     {
         AppDelegate.openTimer()
         NSApp.activateIgnoringOtherApps(true)
+    }
+    
+    @IBAction func quitApp(sender: AnyObject?)
+    {
+        NSApp.terminate(nil)
     }
 }

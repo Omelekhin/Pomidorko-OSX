@@ -46,9 +46,12 @@
                 <menuItem isSeparatorItem="YES" id="XQL-X7-hCb"/>
                 <menuItem title="Quit timer" id="npd-jF-yDZ">
                     <modifierMask key="keyEquivalentModifierMask"/>
+                    <connections>
+                        <action selector="quitApp:" target="-2" id="8Tt-70-eEq"/>
+                    </connections>
                 </menuItem>
             </items>
-            <point key="canvasLocation" x="411.5" y="403.5"/>
+            <point key="canvasLocation" x="31.5" y="153.5"/>
         </menu>
     </objects>
 </document>
