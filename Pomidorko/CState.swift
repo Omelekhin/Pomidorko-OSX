@@ -41,12 +41,10 @@ class CState: Component
         let time = goals?.get("current") as! Int
         
         if remained > 0 {
-            timer?.duration = Int(remained)
-        }
-        else {
-            setTime(recess, current: time)
+            timer?.remained = remained * 1000
         }
         
+        setTime(recess, current: time)
         render(recess, current: time)
     }
     

@@ -44,10 +44,18 @@ class CStatusBar: NSObject, Component
         })
         
         timer?.emitter.add("start", closure: { (time: Double) -> Void in
-            self.statusBar?.alpha = (self.goals!.get("recess") as! Bool) == true ? 0.5 : 1
+            self.setupAlpha()
         })
         
+        setupAlpha()
         render((timer?.time())!)
+    }
+    
+    func setupAlpha()
+    {
+        let recess = self.goals!.get("recess") as! Bool
+        
+        self.statusBar?.alpha = recess == true ? 0.5 : 1
     }
     
     func render(time: Double)
