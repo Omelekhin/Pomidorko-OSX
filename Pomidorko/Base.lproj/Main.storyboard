@@ -305,16 +305,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="468"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
-                            <button focusRingType="none" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xbp-hu-5tH" userLabel="Skip" customClass="HoverableButton" customModule="Pomidorko" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="431" width="320" height="17"/>
-                                <buttonCell key="cell" type="square" title="Skip the pomidoro" bezelStyle="shadowlessSquare" imagePosition="overlaps" alignment="center" state="on" focusRingType="none" imageScaling="proportionallyDown" inset="2" id="HKI-XO-Dob">
-                                    <behavior key="behavior" pushIn="YES" changeContents="YES" lightByContents="YES"/>
-                                    <font key="font" metaFont="system"/>
-                                </buttonCell>
-                                <connections>
-                                    <action selector="skip:" target="XfG-lQ-9wD" id="J4c-at-te6"/>
-                                </connections>
-                            </button>
                             <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="w3U-eG-cfD" customClass="Scale" customModule="Pomidorko" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="216" width="320" height="100"/>
                             </customView>
@@ -342,6 +332,16 @@
                                 </buttonCell>
                                 <connections>
                                     <action selector="playPause:" target="XfG-lQ-9wD" id="mha-3i-BCY"/>
+                                </connections>
+                            </button>
+                            <button focusRingType="none" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xbp-hu-5tH" userLabel="Skip" customClass="HoverableButton" customModule="Pomidorko" customModuleProvider="target">
+                                <rect key="frame" x="55" y="431" width="210" height="17"/>
+                                <buttonCell key="cell" type="square" title="Skip the pomidoro" bezelStyle="shadowlessSquare" imagePosition="overlaps" alignment="center" state="on" focusRingType="none" imageScaling="proportionallyDown" inset="2" id="HKI-XO-Dob">
+                                    <behavior key="behavior" pushIn="YES" changeContents="YES" lightByContents="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="skip:" target="XfG-lQ-9wD" id="J4c-at-te6"/>
                                 </connections>
                             </button>
                         </subviews>

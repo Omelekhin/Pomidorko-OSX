@@ -93,5 +93,7 @@ class AppDelegate: NSObject, NSApplicationDelegate
         if let window = AppDelegate.timerWindow {
             window.makeKeyAndOrderFront(nil)
         }
+        
+        NSApp.activateIgnoringOtherApps(true)
     }
 }
