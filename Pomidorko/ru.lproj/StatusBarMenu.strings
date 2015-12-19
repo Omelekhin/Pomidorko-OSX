@@ -1,0 +1,21 @@
+
+/* Class = "NSMenuItem"; title = "Play"; ObjectID = "96I-RD-TVH"; */
+"96I-RD-TVH.title" = "Play";
+
+/* Class = "NSMenuItem"; title = "About timer"; ObjectID = "Lw3-re-0U2"; */
+"Lw3-re-0U2.title" = "О таймере";
+
+/* Class = "NSMenuItem"; title = "N-th pomidorko"; ObjectID = "VFt-BN-SPy"; */
+"VFt-BN-SPy.title" = "Н-я помидорка";
+
+/* Class = "NSMenuItem"; title = "Open timer"; ObjectID = "gGz-ia-Ebc"; */
+"gGz-ia-Ebc.title" = "Открыть таймер";
+
+/* Class = "NSMenuItem"; title = "Preferences"; ObjectID = "iIY-it-6xO"; */
+"iIY-it-6xO.title" = "Настройки";
+
+/* Class = "NSMenuItem"; title = "Quit timer"; ObjectID = "npd-jF-yDZ"; */
+"npd-jF-yDZ.title" = "Завершить таймер";
+
+/* Class = "NSMenuItem"; title = "Skip pomodoro"; ObjectID = "viS-Ev-R4a"; */
+"viS-Ev-R4a.title" = "Пропустить помидорку";

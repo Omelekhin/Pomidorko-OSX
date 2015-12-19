@@ -26,8 +26,6 @@ class SettingsController: NSViewController
     {
         super.viewDidAppear()
         
-        print(self)
-        
         flatify(view.window!, color: LightGreyColor)
         view.window?.makeFirstResponder(nil)
         view.window?.canHide = false

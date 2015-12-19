@@ -31,7 +31,5 @@ class CIcon: NSObject, Component
         NSApp.setActivationPolicy(toggle == true
             ? NSApplicationActivationPolicy.Regular
             : NSApplicationActivationPolicy.Accessory)
-        
-        
     }
 }

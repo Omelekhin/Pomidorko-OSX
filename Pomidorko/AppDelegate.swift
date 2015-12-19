@@ -51,7 +51,11 @@ class AppDelegate: NSObject, NSApplicationDelegate
         let goals = Goals(data: getPreferences("goals") as! KVDict)
         let settings = Settings(data: getPreferences("settings") as! KVDict)
         
-        statusController = StatusBarController(goals: goals, timer: timer)
+        statusController = StatusBarController(
+            timer: timer,
+            goals: goals,
+            settings: settings
+        )
         
         super.init()
         

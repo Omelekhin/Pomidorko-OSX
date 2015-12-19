@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="9531" systemVersion="15B42" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="9531"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="StatusBarController" customModule="Pomidorko" customModuleProvider="target">
+            <connections>
+                <outlet property="statusMenu" destination="dEl-F4-1bx" id="4bD-hZ-zcV"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <menu id="dEl-F4-1bx">
+            <items>
+                <menuItem title="N-th pomidorko" id="VFt-BN-SPy">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                </menuItem>
+                <menuItem isSeparatorItem="YES" id="vF8-ld-bGd"/>
+                <menuItem title="Play" keyEquivalent="" id="96I-RD-TVH">
+                    <modifierMask key="keyEquivalentModifierMask" option="YES" command="YES"/>
+                    <connections>
+                        <action selector="toggleTimer:" target="-2" id="sAb-Aj-XNC"/>
+                    </connections>
+                </menuItem>
+                <menuItem title="Skip pomodoro" id="viS-Ev-R4a">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                    <connections>
+                        <action selector="skipTimer:" target="-2" id="WI1-C6-aSl"/>
+                    </connections>
+                </menuItem>
+                <menuItem isSeparatorItem="YES" id="iL6-Te-4Ls"/>
+                <menuItem title="Open timer" id="gGz-ia-Ebc">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                    <connections>
+                        <action selector="openTimer:" target="-2" id="ldv-t2-4a3"/>
+                    </connections>
+                </menuItem>
+                <menuItem isSeparatorItem="YES" id="WhS-af-mB4"/>
+                <menuItem title="About timer" id="Lw3-re-0U2">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                </menuItem>
+                <menuItem title="Preferences" id="iIY-it-6xO">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                </menuItem>
+                <menuItem isSeparatorItem="YES" id="XQL-X7-hCb"/>
+                <menuItem title="Quit timer" id="npd-jF-yDZ">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                </menuItem>
+            </items>
+            <point key="canvasLocation" x="411.5" y="403.5"/>
+        </menu>
+    </objects>
+</document>

@@ -32,7 +32,6 @@ class AboutViewController: NSViewController, WebPolicyDelegate, WebUIDelegate
         let request = NSURLRequest(URL: url)
         
         webView.mainFrame.loadRequest(request)
-        
         webView.policyDelegate = self
         webView.UIDelegate = self
         webView.editingDelegate = self

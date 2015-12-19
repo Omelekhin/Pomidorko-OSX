@@ -10,29 +10,37 @@ import Cocoa
 
 class StatusBarController: NSViewController
 {
-    var statusMenu: NSMenu?
+    @IBOutlet var statusMenu: NSMenu?
     var statusBar: NSStatusItem?
     
     var goals: Goals
     var timer: Timer
+    var settings: Settings
     
-    init(goals: Goals, timer: Timer)
+    init(timer: Timer, goals: Goals, settings: Settings)
     {
         self.goals = goals
         self.timer = timer
+        self.settings = settings
         
         super.init(nibName: nil, bundle: nil)!
+        NSBundle.mainBundle()
+                .loadNibNamed("StatusBarMenu", owner: self, topLevelObjects: nil)
         
         goals.observer.add({ (dict: KVDict) -> Void in
-            self.render()
+            self.renderPomodorosItem()
+        })
+        
+        settings.observer.add({ (dict: KVDict) -> Void in
+            self.renderDockItems()
         })
         
         timer.emitter.add("pause", closure: { (d: Double) -> Void in
-            self.render()
+            self.renderPlayPauseItem()
         })
         
         timer.emitter.add("start", closure: { (d: Double) -> Void in
-            self.render()
+            self.renderPlayPauseItem()
         })
         
         statusBar = createStatusBar()
@@ -46,38 +54,27 @@ class StatusBarController: NSViewController
     
     private func createStatusBar() -> NSStatusItem
     {
-        createMenu()
-        
         let statusItem = NSStatusBar.systemStatusBar()
             .statusItemWithLength(NSVariableStatusItemLength)
         
         let statusView = StatusBar(frame: NSMakeRect(0, 0, 72, 22))
         statusView.statusItem = statusItem
-        
         statusItem.menu = statusMenu
         statusItem.view = statusView
         
         view = statusView
-        
         return statusItem
     }
     
-    func createMenu()
+    func render()
     {
-        statusMenu = NSMenu()
-        statusMenu?.addItemWithTitle("", action:"", keyEquivalent: "")
-        statusMenu?.addItem(NSMenuItem.separatorItem())
-        statusMenu?.addItemWithTitle("", action: "toggleTimer", keyEquivalent: "")
-        statusMenu?.addItemWithTitle("", action: "skipTimer", keyEquivalent: "")
-        statusMenu?.addItem(NSMenuItem.separatorItem())
-        statusMenu?.addItemWithTitle("", action: "openTimer", keyEquivalent: "")
-        
-        for (_, item) in (statusMenu?.itemArray.enumerate())! {
-            (item as NSMenuItem).target = self
-        }
+        renderPomodorosItem()
+        renderPlayPauseItem()
+        renderSkipItem()
+        renderDockItems()
     }
     
-    func render()
+    func renderPomodorosItem()
     {
         let current = goals.get("current") as! Int
         let pomodoros = String(
@@ -85,23 +82,39 @@ class StatusBarController: NSViewController
             arguments: [timeOrdinal(current)]
         )
         
-        let isBreak = goals.get("recess") as! Bool
-        
         statusMenu?.itemAtIndex(0)?.title = pomodoros
+    }
+    
+    func renderPlayPauseItem()
+    {
         statusMenu?.itemAtIndex(2)?.title = localeString(
             timer.isRunning() == true ? "pause" : "play"
         )
+    }
+    
+    func renderSkipItem()
+    {
+        let isBreak = goals.get("recess") as! Bool
+        
         statusMenu?.itemAtIndex(3)?.title = localeString(
             isBreak == true ? "skip-break" : "skip-pomodoro"
         )
-        statusMenu?.itemAtIndex(5)?.title = localeString("open-timer")
+    }
+    
+    func renderDockItems()
+    {
+        let isDockHidden = settings.get("dock") as! Bool
+        
+        for i in 6..<11 {
+            statusMenu?.itemAtIndex(i)?.hidden = isDockHidden
+        }
     }
     
     /**
      * Menu actions
      */
     
-    func toggleTimer()
+    @IBAction func toggleTimer(sender: AnyObject?)
     {
         let timer = AppDelegate.timer
         
@@ -113,12 +126,12 @@ class StatusBarController: NSViewController
         }
     }
     
-    func skipTimer()
+    @IBAction func skipTimer(sender: AnyObject?)
     {
         AppDelegate.timer?.stop()
     }
     
-    func openTimer()
+    @IBAction func openTimer(sender: AnyObject?)
     {
         AppDelegate.openTimer()
         NSApp.activateIgnoringOtherApps(true)
