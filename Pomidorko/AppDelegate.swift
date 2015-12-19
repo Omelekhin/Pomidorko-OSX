@@ -8,6 +8,28 @@
 
 import Cocoa
 
+func resetToday(time: Double, start: Double) -> Bool
+{
+    let twoDays: Double = 60 * 60 * 24 * 2
+    
+    let dateNow = NSDate(timeIntervalSince1970: time)
+    let dateStart = NSDate(timeIntervalSince1970: start)
+    
+    return (dateDay(dateNow) != dateDay(dateStart)
+        && dateHour(dateNow) >= 6) || time - start > twoDays
+}
+
+func resetAtMorning()
+{
+    let goals = getPreferences("goals") as! KVDict
+    
+    if let start = goals["start"] {
+        if resetToday(now(), start: start as! Double) {
+            removePreference("goals")
+        }
+    }
+}
+
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate
 {
@@ -23,13 +45,15 @@ class AppDelegate: NSObject, NSApplicationDelegate
     
     override init()
     {
+        resetAtMorning()
+        
         let timer = Timer()
         let goals = Goals(data: getPreferences("goals") as! KVDict)
         let settings = Settings(data: getPreferences("settings") as! KVDict)
         
-        statusController = StatusBarController(
-            goals: goals, timer: timer
-        )
+        statusController = StatusBarController(goals: goals, timer: timer)
+        
+        super.init()
         
         goals.observer.add({ (dict: KVDict) -> Void in
             savePreferences("goals", data: dict as AnyObject?)
@@ -38,8 +62,6 @@ class AppDelegate: NSObject, NSApplicationDelegate
         settings.observer.add({ (dict: KVDict) -> Void in
             savePreferences("settings", data: dict as AnyObject?)
         })
-        
-        super.init()
         
         AppDelegate.timer = timer
         AppDelegate.goals = goals

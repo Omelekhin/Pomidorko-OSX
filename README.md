@@ -14,11 +14,12 @@ So, we have following shit done:
 6. The shit in the right corner
 7. Saving progress to the disk
 8. Fade from dock
+9. Reset progress at early morning
 
 We need to make up this shit before December the 20th:
 
-1. Reset progress at early morning
-2. Settings window
+1. Settings window
+2. Show menu while dock icon is hidden
 
 That's all the shit needed to be implemented
 

@@ -28,7 +28,7 @@ class Timer: NSObject
         let dur = remained == 0 ? Double(duration) * 1000.0
                                 : remained
         
-        startTime = now()
+        startTime = now() * 1000.0
         endTime = startTime + dur
         
         timer = NSTimer(
@@ -62,7 +62,7 @@ class Timer: NSObject
             return
         }
         
-        remained = endTime - now()
+        remained = endTime - now() * 1000.0
         
         timer?.invalidate()
         timer = nil
@@ -72,7 +72,7 @@ class Timer: NSObject
     
     func tick()
     {
-        var time = (endTime - now()) / 1000.0
+        var time = (endTime - now() * 1000.0) / 1000.0
         
         if time <= 0 {
             time = 0

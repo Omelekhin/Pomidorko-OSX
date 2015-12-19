@@ -73,7 +73,21 @@ func localeString(key: String) -> String
 
 func now() -> Double
 {
-    return NSDate().timeIntervalSince1970 * 1000.0
+    return NSDate().timeIntervalSince1970
+}
+
+func dateDay(date: NSDate) -> Int
+{
+    let components = NSCalendar.currentCalendar().components(.Day, fromDate: date)
+    
+    return components.day
+}
+
+func dateHour(date: NSDate) -> Int
+{
+    let components = NSCalendar.currentCalendar().components(.Hour, fromDate: date)
+    
+    return components.hour
 }
 
 func timeOrdinal(time: Int) -> String
@@ -171,6 +185,12 @@ func createBitmapContext(w: Int, _ h: Int) -> CGContext
 func savePreferences(key: String, data: AnyObject?)
 {
     NSUserDefaults.standardUserDefaults().setObject(data, forKey: key)
+}
+
+func removePreference(key: String)
+{
+    NSUserDefaults.standardUserDefaults().removeObjectForKey(key)
+    NSUserDefaults.standardUserDefaults().synchronize()
 }
 
 func getPreferences(key: String) -> AnyObject?
