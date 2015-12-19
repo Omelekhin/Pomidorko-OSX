@@ -57,6 +57,7 @@
 		13D8ED481C1EBFF10084A31A /* StatusBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13D8ED471C1EBFF10084A31A /* StatusBarController.swift */; };
 		13DC2A7F1BE9177A009F6474 /* Component.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13DC2A7E1BE9177A009F6474 /* Component.swift */; };
 		13DC2A811BE91806009F6474 /* CGoals.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13DC2A801BE91806009F6474 /* CGoals.swift */; };
+		13DEF9C61C2547390072D6E6 /* CIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13DEF9C51C2547390072D6E6 /* CIcon.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -122,6 +123,7 @@
 		13D8ED471C1EBFF10084A31A /* StatusBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatusBarController.swift; sourceTree = "<group>"; };
 		13DC2A7E1BE9177A009F6474 /* Component.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Component.swift; sourceTree = "<group>"; };
 		13DC2A801BE91806009F6474 /* CGoals.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CGoals.swift; sourceTree = "<group>"; };
+		13DEF9C51C2547390072D6E6 /* CIcon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CIcon.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -305,6 +307,7 @@
 				1393E5C91BEE50C50062C8C8 /* CControl.swift */,
 				1370B27F1C1C9E6300ED1934 /* CSound.swift */,
 				13D8ED451C1DB87B0084A31A /* CStatusBar.swift */,
+				13DEF9C51C2547390072D6E6 /* CIcon.swift */,
 			);
 			name = Components;
 			sourceTree = "<group>";
@@ -431,6 +434,7 @@
 				137AAB391BD6D1660049209B /* Colors.swift in Sources */,
 				134690AD1BEA6A0900414003 /* Timer.swift in Sources */,
 				1339E0B91BD96B820014CBDB /* PlayPause.swift in Sources */,
+				13DEF9C61C2547390072D6E6 /* CIcon.swift in Sources */,
 				1393E5CA1BEE50C50062C8C8 /* CControl.swift in Sources */,
 				136D8B4B1C1D8361001A8A5A /* StatusBar.swift in Sources */,
 				1342CA981BED0D9D00184716 /* CState.swift in Sources */,

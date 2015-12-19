@@ -61,6 +61,7 @@ class ViewController: NSViewController
             "tick":    CTick(timer: timer, settings: settings),
             "skip":    CSkip(button: skip, goals: goals, timer: timer),
             "time":    CTime(label: time, timer: timer),
+            "icon":    CIcon(settings: settings)
         ]
         
         for (_, component) in components! {

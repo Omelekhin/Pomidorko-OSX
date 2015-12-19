@@ -19,6 +19,7 @@
 
 "open-timer" = "Open timer";
 "n-pomodoro" = "%@ pomodoro";
+"preferences" = "Preferences";
 
 "0" = "th";
 "1" = "st";
