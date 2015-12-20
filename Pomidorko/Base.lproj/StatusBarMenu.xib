@@ -39,9 +39,15 @@
                 <menuItem isSeparatorItem="YES" id="WhS-af-mB4"/>
                 <menuItem title="About timer" id="Lw3-re-0U2">
                     <modifierMask key="keyEquivalentModifierMask"/>
+                    <connections>
+                        <action selector="openAbout:" target="-2" id="eAA-Pa-5fI"/>
+                    </connections>
                 </menuItem>
                 <menuItem title="Preferences" id="iIY-it-6xO">
                     <modifierMask key="keyEquivalentModifierMask"/>
+                    <connections>
+                        <action selector="openPreferences:" target="-2" id="MIp-pe-whO"/>
+                    </connections>
                 </menuItem>
                 <menuItem isSeparatorItem="YES" id="XQL-X7-hCb"/>
                 <menuItem title="Quit timer" id="npd-jF-yDZ">

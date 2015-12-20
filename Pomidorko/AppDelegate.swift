@@ -37,6 +37,8 @@ class AppDelegate: NSObject, NSApplicationDelegate
     var statusController: StatusBarController
     
     static var timerWindow: NSWindow?
+    static var preferences: NSWindowController?
+    static var about: NSWindowController?
     
     static var settings: Settings?
     static var timer: Timer?
@@ -94,6 +96,32 @@ class AppDelegate: NSObject, NSApplicationDelegate
             window.makeKeyAndOrderFront(nil)
         }
         
+        NSApp.activateIgnoringOtherApps(true)
+    }
+    
+    internal class func openPreferences()
+    {
+        if AppDelegate.preferences == nil {
+            let storyBoard = NSStoryboard(name: "Main", bundle: nil)
+            
+            AppDelegate.preferences =
+                storyBoard.instantiateControllerWithIdentifier("preferences") as? NSWindowController
+        }
+        
+        AppDelegate.preferences?.showWindow(nil)
+        NSApp.activateIgnoringOtherApps(true)
+    }
+    
+    internal class func openAbout()
+    {
+        if AppDelegate.about == nil {
+            let storyBoard = NSStoryboard(name: "Main", bundle: nil)
+            
+            AppDelegate.about =
+                storyBoard.instantiateControllerWithIdentifier("about") as? NSWindowController
+        }
+        
+        AppDelegate.about?.showWindow(nil)
         NSApp.activateIgnoringOtherApps(true)
     }
 }

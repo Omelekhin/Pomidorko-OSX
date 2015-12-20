@@ -10,7 +10,7 @@ import Cocoa
 
 class SettingsController: NSViewController
 {
-    var controls: [NSView] = []
+    var controls: [NSControl] = []
     var map: [Int: String] = [
         1: "time",
         2: "shortBreak",
@@ -32,7 +32,7 @@ class SettingsController: NSViewController
         
         for value in view.subviews {
             if (value.tag > 0) {
-                controls.append(value)
+                controls.append(value as! NSControl)
             }
         }
         
@@ -50,16 +50,15 @@ class SettingsController: NSViewController
                 let field = control as! NSTextField
                 
                 field.intValue = Int32(settings?.get(key) as! Int)
-                field.target = self
-                field.action = "update:"
             }
             else {
                 let button = control as! NSButton
                 
                 button.state = (settings?.get(key) as! Bool).toInt()
-                button.target = self
-                button.action = "update:"
             }
+            
+            control.target = self
+            control.action = "update:"
         }
     }
     

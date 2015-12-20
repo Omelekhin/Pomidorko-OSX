@@ -117,11 +117,11 @@
 		1393E5C91BEE50C50062C8C8 /* CControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CControl.swift; sourceTree = "<group>"; };
 		13B8565B1C205C6600E83891 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		13B8565F1C205CAB00E83891 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		13B856621C207BE300E83891 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
-		13B856631C207BEA00E83891 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Main.strings; sourceTree = "<group>"; };
 		13B856641C207C3400E83891 /* SettingsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsController.swift; sourceTree = "<group>"; };
 		13BA886E1BD9D8D5008E98AC /* Scale.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Scale.swift; sourceTree = "<group>"; };
 		13BAEBE01BE16466007ED8C2 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
+		13C8A7821C25CE1500FAC91E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
+		13C8A7831C25CE1900FAC91E /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Main.strings; sourceTree = "<group>"; };
 		13D8ED451C1DB87B0084A31A /* CStatusBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CStatusBar.swift; sourceTree = "<group>"; };
 		13D8ED471C1EBFF10084A31A /* StatusBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatusBarController.swift; sourceTree = "<group>"; };
 		13DC2A7E1BE9177A009F6474 /* Component.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Component.swift; sourceTree = "<group>"; };
@@ -219,14 +219,13 @@
 		133D89C01BB9A950007AFAF7 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				13C8A7841C26996500FAC91E /* XIB */,
 				1370B27A1C1C9D2000ED1934 /* Sounds */,
 				130982171BE1182F00C48C12 /* About */,
-				134690CB1BEAFE2900414003 /* Main.storyboard */,
 				133D89C61BB9A950007AFAF7 /* Images.xcassets */,
 				133D89C11BB9A950007AFAF7 /* Info.plist */,
 				134690BD1BEAEBE600414003 /* Localizable.strings */,
 				13B8565C1C205C6600E83891 /* InfoPlist.strings */,
-				13DEF9CB1C256B2A0072D6E6 /* StatusBarMenu.xib */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -315,6 +314,15 @@
 				13DEF9C51C2547390072D6E6 /* CIcon.swift */,
 			);
 			name = Components;
+			sourceTree = "<group>";
+		};
+		13C8A7841C26996500FAC91E /* XIB */ = {
+			isa = PBXGroup;
+			children = (
+				134690CB1BEAFE2900414003 /* Main.storyboard */,
+				13DEF9CB1C256B2A0072D6E6 /* StatusBarMenu.xib */,
+			);
+			name = XIB;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -502,8 +510,8 @@
 			isa = PBXVariantGroup;
 			children = (
 				1342CA8A1BEAFF9F00184716 /* Base */,
-				13B856621C207BE300E83891 /* en */,
-				13B856631C207BEA00E83891 /* ru */,
+				13C8A7821C25CE1500FAC91E /* en */,
+				13C8A7831C25CE1900FAC91E /* ru */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";

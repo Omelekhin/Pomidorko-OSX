@@ -46,6 +46,14 @@ class StatusBarController: NSViewController
         statusBar = createStatusBar()
         render()
         
+        NSEvent.addLocalMonitorForEventsMatchingMask(.KeyDownMask, handler: { (event: NSEvent) -> NSEvent? in
+            if event.keyCode == 100 && event.modifierFlags.rawValue == 9961768 {
+                self.toggleTimer(nil)
+            }
+            
+            return event
+        })
+        
         NSEvent.addGlobalMonitorForEventsMatchingMask(.KeyDownMask, handler: { (event: NSEvent) -> Void in
             if event.keyCode == 100 && event.modifierFlags.rawValue == 9961768 {
                 self.toggleTimer(nil)
@@ -140,11 +148,20 @@ class StatusBarController: NSViewController
     @IBAction func openTimer(sender: AnyObject?)
     {
         AppDelegate.openTimer()
-        NSApp.activateIgnoringOtherApps(true)
     }
     
     @IBAction func quitApp(sender: AnyObject?)
     {
         NSApp.terminate(nil)
+    }
+    
+    @IBAction func openPreferences(sender: AnyObject?)
+    {
+        AppDelegate.openPreferences()
+    }
+    
+    @IBAction func openAbout(sender: AnyObject?)
+    {
+        AppDelegate.openAbout()
     }
 }

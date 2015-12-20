@@ -2,11 +2,17 @@
 /* Class = "NSMenuItem"; title = "Pomidorko"; ObjectID = "1Xt-HY-uBw"; */
 "1Xt-HY-uBw.title" = "Pomidorko";
 
+/* Class = "NSTextFieldCell"; title = "Pomodoros in the round"; ObjectID = "2vl-d3-fT8"; */
+"2vl-d3-fT8.title" = "Pomodoros in the round";
+
 /* Class = "NSMenuItem"; title = "Quit Pomidorko"; ObjectID = "4sb-4s-VLi"; */
 "4sb-4s-VLi.title" = "Quit Pomidorko";
 
 /* Class = "NSMenuItem"; title = "About Pomidorko"; ObjectID = "5kV-Vb-QxS"; */
 "5kV-Vb-QxS.title" = "About Pomidorko";
+
+/* Class = "NSButtonCell"; title = " Tick-tock"; ObjectID = "6Uk-ab-2St"; */
+"6Uk-ab-2St.title" = " Tick-tock";
 
 /* Class = "NSMenu"; title = "Main Menu"; ObjectID = "AYu-sK-qS6"; */
 "AYu-sK-qS6.title" = "Main Menu";
@@ -38,6 +44,9 @@
 /* Class = "NSWindow"; title = "About timer"; ObjectID = "SZX-S9-C18"; */
 "SZX-S9-C18.title" = "About timer";
 
+/* Class = "NSButtonCell"; title = " Sound"; ObjectID = "TUD-gX-abD"; */
+"TUD-gX-abD.title" = " Sound";
+
 /* Class = "NSMenu"; title = "Window"; ObjectID = "Td7-aD-5lo"; */
 "Td7-aD-5lo.title" = "Window";
 
@@ -47,11 +56,26 @@
 /* Class = "NSTextFieldCell"; title = "25:00"; ObjectID = "YO0-UC-0S2"; */
 "YO0-UC-0S2.title" = "25:00";
 
+/* Class = "NSButtonCell"; title = " Icon in the dock"; ObjectID = "aR0-TD-m7O"; */
+"aR0-TD-m7O.title" = " Icon in the dock";
+
 /* Class = "NSMenuItem"; title = "Window"; ObjectID = "aUF-d1-5bR"; */
 "aUF-d1-5bR.title" = "Window";
 
+/* Class = "NSTextFieldCell"; title = "Long break"; ObjectID = "eK9-en-8o7"; */
+"eK9-en-8o7.title" = "Long break";
+
+/* Class = "NSTextFieldCell"; title = "Pomodoros in the day"; ObjectID = "n0R-ta-Pv4"; */
+"n0R-ta-Pv4.title" = "Pomodoros in the day";
+
+/* Class = "NSTextFieldCell"; title = "Time of work"; ObjectID = "tyO-50-vQ4"; */
+"tyO-50-vQ4.title" = "Time of work";
+
 /* Class = "NSMenu"; title = "Pomidorko"; ObjectID = "uQy-DD-JDr"; */
 "uQy-DD-JDr.title" = "Pomidorko";
+
+/* Class = "NSTextFieldCell"; title = "Short break"; ObjectID = "wAZ-bD-QSU"; */
+"wAZ-bD-QSU.title" = "Short break";
 
 /* Class = "NSMenuItem"; title = "Help"; ObjectID = "wpr-3q-Mcd"; */
 "wpr-3q-Mcd.title" = "Help";
