@@ -15,11 +15,15 @@ So, we have following shit done:
 7. Saving progress to the disk
 8. Fade from dock
 9. Reset progress at early morning
+10. Settings window
+11. Show menu while dock icon is hidden
 
-We need to make up this shit before December the 20th:
+We need to make up this shit before December the 25th:
 
-1. Settings window
-2. Show menu while dock icon is hidden
+1. Change font 300 to goals
+2. Try Fn + Cmd + F8 shortcut
+3. Tab circulation for subviews in settings
+4. Settings enter key for inputs
 
 That's all the shit needed to be implemented
 
