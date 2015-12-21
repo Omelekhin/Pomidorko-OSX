@@ -22,8 +22,7 @@ So, we have following shit done:
 We need to make up this shit before December the 25th:
 
 1. Change font 300 to goals
-2. Try Fn + Cmd + F8 shortcut
-3. Tab circulation for subviews in settings
+2. Tab circulation for subviews in settings
 
 That's all the shit needed to be implemented
 
