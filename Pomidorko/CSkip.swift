@@ -41,8 +41,7 @@ class CSkip: NSObject, Component
     func renderTitle()
     {
         let recess = goals?.get("recess") as! Bool
-        let title = recess == true ? localeString("skip-break") 
-                                   : localeString("skip-pomodoro")
+        let title  = localeString(recess == true ? "skip-break" : "skip-pomodoro")
         
         let attributed = NSMutableAttributedString(string: title)
         

@@ -62,7 +62,8 @@ class StatusBar: NSView, NSMenuDelegate
             NSMakeRect(
                 leftMargin,
                 topMargin,
-                radius * 2, radius * 2
+                radius * 2,
+                radius * 2
             )
         )
         
@@ -75,12 +76,16 @@ class StatusBar: NSView, NSMenuDelegate
         )
         CGContextAddLineToPoint(context,
             leftMargin + radius,
-            topMargin + radius
+            topMargin  + radius
         )
         CGContextFillPath(context)
         
         return context
     }
+    
+    /**
+     * Implementing status bar menu
+     */
     
     override func mouseDown(theEvent: NSEvent)
     {

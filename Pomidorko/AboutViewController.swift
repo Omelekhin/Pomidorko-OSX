@@ -11,19 +11,11 @@ import WebKit
 
 class AboutViewController: NSViewController, WebPolicyDelegate, WebUIDelegate
 {
+    @IBOutlet var webView: WebView?
+    
     override func viewDidAppear()
     {
         super.viewDidAppear()
-        
-        let webView = WebView(
-            frame: NSMakeRect(
-                0,  0,
-                view.frame.width,
-                view.frame.height - 18
-            ),
-            frameName: "Frame",
-            groupName: "Group"
-        )
         
         let path = NSBundle.mainBundle().pathForResource(
             localeString("about-page"), ofType: "html"
@@ -31,18 +23,19 @@ class AboutViewController: NSViewController, WebPolicyDelegate, WebUIDelegate
         let url = NSURL(fileURLWithPath: path!)
         let request = NSURLRequest(URL: url)
         
-        webView.mainFrame.loadRequest(request)
-        webView.policyDelegate = self
-        webView.UIDelegate = self
-        webView.editingDelegate = self
+        webView?.mainFrame.loadRequest(request)
+        webView?.policyDelegate = self
+        webView?.UIDelegate = self
+        webView?.editingDelegate = self
         
-        view.addSubview(webView)
+        view.addSubview(webView!)
         
         flatify(view.window!, color: WhiteColor)
     }
     
     /** 
-     * WebView disabling shit 
+     * WebView disabling shit that was taken from multiple
+     * StackOverflow questions
      * 
      * I hate those long method definitions
      */

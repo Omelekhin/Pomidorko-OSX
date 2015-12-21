@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15B42" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="9531"/>
+        <plugIn identifier="com.apple.WebKitIBPlugin" version="9531"/>
     </dependencies>
     <scenes>
         <!--Application-->
@@ -256,11 +257,22 @@
                     <view key="view" id="fCW-2b-kwJ">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="530"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <webView fixedFrame="YES" maintainsBackForwardList="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QBA-Uw-L6W">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="512"/>
+                                <webPreferences key="preferences" defaultFontSize="14" defaultFixedFontSize="12" plugInsEnabled="NO" javaEnabled="NO" javaScriptEnabled="NO" javaScriptCanOpenWindowsAutomatically="NO" allowsAnimatedImages="NO" allowsAnimatedImageLooping="NO">
+                                    <nil key="identifier"/>
+                                </webPreferences>
+                            </webView>
+                        </subviews>
                     </view>
+                    <connections>
+                        <outlet property="webView" destination="QBA-Uw-L6W" id="HxR-6j-lJo"/>
+                    </connections>
                 </viewController>
                 <customObject id="Iqj-zH-Y3B" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-381" y="974"/>
+            <point key="canvasLocation" x="-381" y="995"/>
         </scene>
         <!--Window Controller-->
         <scene sceneID="R2V-B0-nI4">
@@ -278,7 +290,7 @@
                 </windowController>
                 <customObject id="Oky-zY-oP4" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="70" y="353"/>
+            <point key="canvasLocation" x="70" y="343"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="hIz-AP-VOD">

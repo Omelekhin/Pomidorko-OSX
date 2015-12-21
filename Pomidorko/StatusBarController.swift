@@ -27,6 +27,15 @@ class StatusBarController: NSViewController
         NSBundle.mainBundle()
                 .loadNibNamed("StatusBarMenu", owner: self, topLevelObjects: nil)
         
+        addModelEvents()
+        addKeyEvents()
+        
+        statusBar = createStatusBar()
+        render()
+    }
+    
+    func addModelEvents()
+    {
         goals.observer.add({ (dict: KVDict) -> Void in
             self.renderPomodorosItem()
         })
@@ -42,10 +51,10 @@ class StatusBarController: NSViewController
         timer.emitter.add("start", closure: { (d: Double) -> Void in
             self.renderPlayPauseItem()
         })
-        
-        statusBar = createStatusBar()
-        render()
-        
+    }
+    
+    func addKeyEvents()
+    {
         NSEvent.addLocalMonitorForEventsMatchingMask(.KeyDownMask, handler: { (event: NSEvent) -> NSEvent? in
             if event.keyCode == 100 && event.modifierFlags.rawValue == 9961768 {
                 self.toggleTimer(nil)

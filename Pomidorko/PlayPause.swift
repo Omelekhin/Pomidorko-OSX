@@ -16,11 +16,10 @@ class PlayPause: HoverableButton
     {
         let context: CGContext? = NSGraphicsContext.currentContext()?.CGContext
         
-        CGContextSetFillColorWithColor(context, self.backgroundColor.CGColor)
+        CGContextSetFillColorWithColor(context, backgroundColor.CGColor)
         CGContextFillEllipseInRect(context, dirtyRect)
         
         CGContextSetFillColorWithColor(context, WhiteColor.CGColor)
-        
         CGContextSaveGState(context)
         
         if self.state == 1 {

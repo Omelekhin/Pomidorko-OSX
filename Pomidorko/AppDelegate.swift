@@ -75,6 +75,10 @@ class AppDelegate: NSObject, NSApplicationDelegate
         AppDelegate.statusBar = statusController.view as? StatusBar
     }
     
+    /**
+     * Menu actions
+     */
+    
     @IBAction func openAbout(sender: AnyObject?)
     {
         AppDelegate.openAbout()
@@ -84,6 +88,10 @@ class AppDelegate: NSObject, NSApplicationDelegate
     {
         AppDelegate.openPreferences()
     }
+    
+    /**
+     * App delegate methods
+     */
     
     func applicationWillTerminate(notification: NSNotification)
     {
@@ -100,6 +108,10 @@ class AppDelegate: NSObject, NSApplicationDelegate
         return true
     }
     
+    /**
+     * Global window openers
+     */
+    
     internal class func openTimer()
     {
         if let window = AppDelegate.timerWindow {
@@ -112,10 +124,7 @@ class AppDelegate: NSObject, NSApplicationDelegate
     internal class func openPreferences()
     {
         if AppDelegate.preferences == nil {
-            let storyBoard = NSStoryboard(name: "Main", bundle: nil)
-            
-            AppDelegate.preferences =
-                storyBoard.instantiateControllerWithIdentifier("preferences") as? NSWindowController
+            AppDelegate.preferences = AppDelegate.createController("preferences")
         }
         
         AppDelegate.preferences?.showWindow(nil)
@@ -125,13 +134,17 @@ class AppDelegate: NSObject, NSApplicationDelegate
     internal class func openAbout()
     {
         if AppDelegate.about == nil {
-            let storyBoard = NSStoryboard(name: "Main", bundle: nil)
-            
-            AppDelegate.about =
-                storyBoard.instantiateControllerWithIdentifier("about") as? NSWindowController
+            AppDelegate.about = AppDelegate.createController("about")
         }
         
         AppDelegate.about?.showWindow(nil)
         NSApp.activateIgnoringOtherApps(true)
+    }
+    
+    internal class func createController(key: String) -> NSWindowController
+    {
+        let storyBoard = NSStoryboard(name: "Main", bundle: nil)
+        
+        return storyBoard.instantiateControllerWithIdentifier(key) as! NSWindowController
     }
 }
