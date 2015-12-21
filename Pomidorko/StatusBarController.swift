@@ -120,7 +120,7 @@ class StatusBarController: NSViewController
         let isDockHidden = settings.get("dock") as! Bool
         
         for i in 6..<11 {
-            statusMenu?.itemAtIndex(i)?.hidden = isDockHidden
+            statusMenu?.itemAtIndex(i)?.hidden = !isDockHidden
         }
     }
     

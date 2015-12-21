@@ -28,7 +28,7 @@ class CIcon: NSObject, Component
     
     func toggleDockIcon(toggle: Bool)
     {
-        NSApp.setActivationPolicy(toggle == true
+        NSApp.setActivationPolicy(toggle == false
             ? NSApplicationActivationPolicy.Regular
             : NSApplicationActivationPolicy.Accessory)
     }

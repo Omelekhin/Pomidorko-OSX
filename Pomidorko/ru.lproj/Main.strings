@@ -57,7 +57,7 @@
 "YO0-UC-0S2.title" = "25:00";
 
 /* Class = "NSButtonCell"; title = " Icon in the dock"; ObjectID = "aR0-TD-m7O"; */
-"aR0-TD-m7O.title" = " Иконка в доке";
+"aR0-TD-m7O.title" = " Скрыть иконку в доке";
 
 /* Class = "NSMenuItem"; title = "Window"; ObjectID = "aUF-d1-5bR"; */
 "aUF-d1-5bR.title" = "Окно";

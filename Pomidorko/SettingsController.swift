@@ -10,7 +10,7 @@ import Cocoa
 
 class SettingsController: NSViewController
 {
-    var controls: [NSControl] = []
+    var controls: [AnyObject] = []
     var map: [Int: String] = [
         1: "time",
         2: "shortBreak",
@@ -30,6 +30,8 @@ class SettingsController: NSViewController
         view.window?.makeFirstResponder(nil)
         view.window?.canHide = false
         
+        initControls()
+        
         for value in view.subviews {
             if (value.tag > 0) {
                 controls.append(value as! NSControl)
@@ -39,41 +41,84 @@ class SettingsController: NSViewController
         fillSettings()
     }
     
+    func initControls()
+    {
+        for value in view.subviews {
+            if (value.tag > 0 && value.tag <= 5) {
+                let suffix = value.tag > 3 ? "" : localeString("min")
+                
+                controls.append(
+                    createControl(
+                        Int(value.frame.origin.x),
+                        Int(value.frame.origin.y) - 7,
+                        value.tag,
+                        suffix
+                    )
+                )
+                
+                value.removeFromSuperview()
+            }
+        }
+    }
+    
+    func createControl(x: Int, _ y: Int, _ tag: Int, _ suffix: String) -> SettingsField
+    {
+        let control = SettingsField()
+        
+        switch tag {
+            case 1: control.max = 55; break;
+            case 2: control.max = 20; break;
+            case 3: control.max = 45; break;
+            default: break;
+        }
+        
+        control.move(x, y: y)
+        control.tag = tag
+        control.setupSuffix(suffix)
+        
+        control.targetObj = self
+        control.actionObj = "update:"
+        
+        view.addSubview(control.view)
+        
+        return control
+    }
+    
     func fillSettings()
     {
         let settings = AppDelegate.settings
         
         for control in controls {
-            let key = map[control.tag]!
-            
-            if control is NSTextField {
-                let field = control as! NSTextField
+            if control is SettingsField {
+                let field = control as! SettingsField
+                let key = map[field.tag]!
                 
-                field.intValue = Int32(settings?.get(key) as! Int)
+                field.setValue(settings?.get(key) as! Int)
             }
-            else {
+            else if control is NSButton {
                 let button = control as! NSButton
+                let key = map[button.tag]!
                 
                 button.state = (settings?.get(key) as! Bool).toInt()
+                button.target = self
+                button.action = "update:"
             }
-            
-            control.target = self
-            control.action = "update:"
         }
     }
     
-    func update(sender: NSView)
+    func update(sender: AnyObject)
     {
-        let key = map[sender.tag]!
         let settings = AppDelegate.settings
         
-        if sender is NSTextField {
-            let field = sender as! NSTextField
+        if sender is SettingsField {
+            let field = sender as! SettingsField
+            let key = map[field.tag]!
             
-            settings?.set(key, value: Int(field.intValue))
+            settings?.set(key, value: field.getValue())
         }
-        else {
+        else if sender is NSButton {
             let button = sender as! NSButton
+            let key = map[button.tag]!
             
             settings?.set(key, value: Bool(button.state))
         }

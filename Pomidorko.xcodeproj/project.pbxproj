@@ -46,6 +46,11 @@
 		1370B27E1C1C9D2900ED1934 /* tick.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 1370B27C1C1C9D2900ED1934 /* tick.mp3 */; };
 		1370B2801C1C9E6300ED1934 /* CSound.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1370B27F1C1C9E6300ED1934 /* CSound.swift */; };
 		137AAB391BD6D1660049209B /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 137AAB381BD6D1660049209B /* Colors.swift */; };
+		137CEC591C27EFB20097A391 /* SettingsField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 137CEC571C27EFB20097A391 /* SettingsField.swift */; };
+		137CEC5A1C27EFB20097A391 /* SettingsField.xib in Resources */ = {isa = PBXBuildFile; fileRef = 137CEC581C27EFB20097A391 /* SettingsField.xib */; };
+		137CEC5D1C27F0DE0097A391 /* SettingsBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 137CEC5C1C27F0DE0097A391 /* SettingsBackground.swift */; };
+		137CEC5F1C27FBF10097A391 /* SettingsButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 137CEC5E1C27FBF10097A391 /* SettingsButton.swift */; };
+		137CEC611C280F4F0097A391 /* Placeholder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 137CEC601C280F4F0097A391 /* Placeholder.swift */; };
 		13816C031BED757500E55319 /* CTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13816C021BED757500E55319 /* CTime.swift */; };
 		13816C051BED97BE00E55319 /* CScale.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13816C041BED97BE00E55319 /* CScale.swift */; };
 		1393E5CA1BEE50C50062C8C8 /* CControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1393E5C91BEE50C50062C8C8 /* CControl.swift */; };
@@ -110,6 +115,11 @@
 		1370B27C1C1C9D2900ED1934 /* tick.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = tick.mp3; sourceTree = "<group>"; };
 		1370B27F1C1C9E6300ED1934 /* CSound.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CSound.swift; sourceTree = "<group>"; };
 		137AAB381BD6D1660049209B /* Colors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		137CEC571C27EFB20097A391 /* SettingsField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsField.swift; sourceTree = "<group>"; };
+		137CEC581C27EFB20097A391 /* SettingsField.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SettingsField.xib; sourceTree = "<group>"; };
+		137CEC5C1C27F0DE0097A391 /* SettingsBackground.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsBackground.swift; sourceTree = "<group>"; };
+		137CEC5E1C27FBF10097A391 /* SettingsButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsButton.swift; sourceTree = "<group>"; };
+		137CEC601C280F4F0097A391 /* Placeholder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Placeholder.swift; sourceTree = "<group>"; };
 		13816C021BED757500E55319 /* CTime.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CTime.swift; sourceTree = "<group>"; };
 		13816C041BED97BE00E55319 /* CScale.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CScale.swift; sourceTree = "<group>"; };
 		1383E9EF1C256B6C0044667E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/StatusBarMenu.strings; sourceTree = "<group>"; };
@@ -280,11 +290,13 @@
 		137AAB3A1BD6DAD40049209B /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				137CEC5B1C27F0CC0097A391 /* Settings */,
 				130982141BE1177A00C48C12 /* ViewControllers */,
 				1339E0B81BD96B820014CBDB /* PlayPause.swift */,
 				13BA886E1BD9D8D5008E98AC /* Scale.swift */,
 				1370B2781C1C98CE00ED1934 /* HoverableButton.swift */,
 				136D8B4A1C1D8361001A8A5A /* StatusBar.swift */,
+				137CEC601C280F4F0097A391 /* Placeholder.swift */,
 			);
 			name = UI;
 			sourceTree = "<group>";
@@ -297,6 +309,16 @@
 				1339E0BA1BD97DD90014CBDB /* Shapes.swift */,
 			);
 			name = Common;
+			sourceTree = "<group>";
+		};
+		137CEC5B1C27F0CC0097A391 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				137CEC571C27EFB20097A391 /* SettingsField.swift */,
+				137CEC5C1C27F0DE0097A391 /* SettingsBackground.swift */,
+				137CEC5E1C27FBF10097A391 /* SettingsButton.swift */,
+			);
+			name = Settings;
 			sourceTree = "<group>";
 		};
 		13BA886D1BD9D231008E98AC /* Components */ = {
@@ -319,6 +341,7 @@
 		13C8A7841C26996500FAC91E /* XIB */ = {
 			isa = PBXGroup;
 			children = (
+				137CEC581C27EFB20097A391 /* SettingsField.xib */,
 				134690CB1BEAFE2900414003 /* Main.storyboard */,
 				13DEF9CB1C256B2A0072D6E6 /* StatusBarMenu.xib */,
 			);
@@ -417,6 +440,7 @@
 				13DEF9C91C256B2A0072D6E6 /* StatusBarMenu.xib in Resources */,
 				133D89C71BB9A950007AFAF7 /* Images.xcassets in Resources */,
 				13B8565A1C205C6600E83891 /* InfoPlist.strings in Resources */,
+				137CEC5A1C27EFB20097A391 /* SettingsField.xib in Resources */,
 				134690C21BEAFCCE00414003 /* index-en.html in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -438,10 +462,13 @@
 				133D89C51BB9A950007AFAF7 /* ViewController.swift in Sources */,
 				13DC2A7F1BE9177A009F6474 /* Component.swift in Sources */,
 				133AD55A1BE01E160023788E /* Dictionary.swift in Sources */,
+				137CEC591C27EFB20097A391 /* SettingsField.swift in Sources */,
 				13D8ED481C1EBFF10084A31A /* StatusBarController.swift in Sources */,
 				1370B2801C1C9E6300ED1934 /* CSound.swift in Sources */,
+				137CEC611C280F4F0097A391 /* Placeholder.swift in Sources */,
 				133F3A5F1BE5B009007ED1B7 /* Settings.swift in Sources */,
 				13B856651C207C3400E83891 /* SettingsController.swift in Sources */,
+				137CEC5F1C27FBF10097A391 /* SettingsButton.swift in Sources */,
 				1370B2791C1C98CE00ED1934 /* HoverableButton.swift in Sources */,
 				130982161BE1179700C48C12 /* AboutViewController.swift in Sources */,
 				13DC2A811BE91806009F6474 /* CGoals.swift in Sources */,
@@ -454,6 +481,7 @@
 				1342CA981BED0D9D00184716 /* CState.swift in Sources */,
 				133AD5521BDFE2840023788E /* Observer.swift in Sources */,
 				13D8ED461C1DB87B0084A31A /* CStatusBar.swift in Sources */,
+				137CEC5D1C27F0DE0097A391 /* SettingsBackground.swift in Sources */,
 				133D89C31BB9A950007AFAF7 /* AppDelegate.swift in Sources */,
 				1342CA921BEC3EC000184716 /* CSkip.swift in Sources */,
 				1342CA9B1BED1A2C00184716 /* Bool.swift in Sources */,

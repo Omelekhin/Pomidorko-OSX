@@ -167,6 +167,11 @@ func screenFactor() -> CGFloat
     return (NSScreen.mainScreen()?.backingScaleFactor)!
 }
 
+func clamp<T: Comparable>(x: T, _ min: T, _ max: T) -> T
+{
+    return x < min ? min : ((x > max) ? max : x)
+}
+
 func createBitmapContext(w: Int, _ h: Int) -> CGContext
 {
     let scaleFactor = screenFactor()

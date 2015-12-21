@@ -17,6 +17,7 @@
 "pause" = "Pause";
 "play" = "Play";
 
+"min" = "min";
 "n-pomodoro" = "%@ pomodoro";
 
 "0" = "th";

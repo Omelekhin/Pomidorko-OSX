@@ -45,6 +45,7 @@ class CGoals: Component
         let goalTitle = NSMutableAttributedString(string: title)
         let goalsOffset = String(goals).characters.count
         
+        // @todo change font-weight to 300
         increase(goalTitle,
             font: NSFont.systemFontOfSize(14),
             offset: 0,
