@@ -61,6 +61,7 @@
 		13D8ED481C1EBFF10084A31A /* StatusBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13D8ED471C1EBFF10084A31A /* StatusBarController.swift */; };
 		13DC2A7F1BE9177A009F6474 /* Component.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13DC2A7E1BE9177A009F6474 /* Component.swift */; };
 		13DC2A811BE91806009F6474 /* CGoals.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13DC2A801BE91806009F6474 /* CGoals.swift */; };
+		13DE8A9B1C28729A00DF1D3C /* SettingsTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13DE8A9A1C28729A00DF1D3C /* SettingsTextField.swift */; };
 		13DEF9C61C2547390072D6E6 /* CIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13DEF9C51C2547390072D6E6 /* CIcon.swift */; };
 		13DEF9C91C256B2A0072D6E6 /* StatusBarMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 13DEF9CB1C256B2A0072D6E6 /* StatusBarMenu.xib */; };
 /* End PBXBuildFile section */
@@ -134,6 +135,7 @@
 		13D8ED471C1EBFF10084A31A /* StatusBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatusBarController.swift; sourceTree = "<group>"; };
 		13DC2A7E1BE9177A009F6474 /* Component.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Component.swift; sourceTree = "<group>"; };
 		13DC2A801BE91806009F6474 /* CGoals.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CGoals.swift; sourceTree = "<group>"; };
+		13DE8A9A1C28729A00DF1D3C /* SettingsTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsTextField.swift; sourceTree = "<group>"; };
 		13DEF9C51C2547390072D6E6 /* CIcon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CIcon.swift; sourceTree = "<group>"; };
 		13DEF9CA1C256B2A0072D6E6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/StatusBarMenu.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -314,6 +316,7 @@
 				137CEC571C27EFB20097A391 /* SettingsField.swift */,
 				137CEC5C1C27F0DE0097A391 /* SettingsBackground.swift */,
 				137CEC5E1C27FBF10097A391 /* SettingsButton.swift */,
+				13DE8A9A1C28729A00DF1D3C /* SettingsTextField.swift */,
 			);
 			name = Settings;
 			sourceTree = "<group>";
@@ -477,6 +480,7 @@
 				1342CA981BED0D9D00184716 /* CState.swift in Sources */,
 				133AD5521BDFE2840023788E /* Observer.swift in Sources */,
 				13D8ED461C1DB87B0084A31A /* CStatusBar.swift in Sources */,
+				13DE8A9B1C28729A00DF1D3C /* SettingsTextField.swift in Sources */,
 				137CEC5D1C27F0DE0097A391 /* SettingsBackground.swift in Sources */,
 				133D89C31BB9A950007AFAF7 /* AppDelegate.swift in Sources */,
 				1342CA921BEC3EC000184716 /* CSkip.swift in Sources */,

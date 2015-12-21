@@ -28,6 +28,9 @@ class SettingsField: NSViewController
         
         colorButton(increaseButton)
         colorButton(decreaseButton)
+        
+        input?.target = self
+        input?.action = "inputSetValue:"
     }
     
     func colorButton(button: NSButton?)

@@ -17,13 +17,13 @@ So, we have following shit done:
 9. Reset progress at early morning
 10. Settings window
 11. Show menu while dock icon is hidden
+12. Settings enter key for inputs
 
 We need to make up this shit before December the 25th:
 
 1. Change font 300 to goals
 2. Try Fn + Cmd + F8 shortcut
 3. Tab circulation for subviews in settings
-4. Settings enter key for inputs
 
 That's all the shit needed to be implemented
 
