@@ -18,11 +18,11 @@ So, we have following shit done:
 10. Settings window
 11. Show menu while dock icon is hidden
 12. Settings enter key for inputs
+13. Change font 300 to goals
 
 We need to make up this shit before December the 25th:
 
-1. Change font 300 to goals
-2. Tab circulation for subviews in settings
+1. Tab circulation for subviews in settings
 
 That's all the shit needed to be implemented
 

@@ -47,13 +47,13 @@ class CGoals: Component
         
         // @todo change font-weight to 300
         increase(goalTitle,
-            font: NSFont.systemFontOfSize(14),
+            font: systemFont(14.0),
             offset: 0,
             length: title.characters.count
         )
         
         increase(goalTitle,
-            font: NSFont.systemFontOfSize(28),
+            font: systemFont(28.0),
             offset: 0,
             length: goalsOffset
         )

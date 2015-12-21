@@ -34,6 +34,20 @@ func timeFont(size: CGFloat) -> NSFont
     return font
 }
 
+func systemFont(size: CGFloat) -> NSFont
+{
+    var font: NSFont
+    
+    if #available(OSX 10.11, *) {
+        font = NSFont.systemFontOfSize(size, weight: NSFontWeightLight)
+    }
+    else {
+        font = NSFont.systemFontOfSize(size)
+    }
+    
+    return font
+}
+
 func colorize(string: NSMutableAttributedString, color: NSColor)
 {
     let range: NSRange = NSMakeRange(0, string.length)
