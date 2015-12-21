@@ -1,5 +1,5 @@
 body {
-	font-family: 'Helvetica Neue', sans-serif;
+    font-family: -apple-system, "Helvetica Neue", "Lucida Grande";
 }
 
 html body * {
@@ -38,6 +38,7 @@ a:hover {
 	font-weight: 500;
 	
 	display: inline-block;
+    margin-top: 20px;
 }
 
 #h-caption {
@@ -85,8 +86,9 @@ a:hover {
 #hr {
 	border: none;
 	height: 1px;
+    width: 110%;
 	background: #ccc;
-	margin: 25px 0;
+	margin: 25px 0 25px -5%;
 }
 
 #creators,
@@ -98,7 +100,7 @@ a:hover {
 }
 
 #donate {
-	margin-bottom: 30px;
+	margin-bottom: 20px;
 }
 
 #donate-h {
