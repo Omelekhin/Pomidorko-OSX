@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15B42" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="9531"/>
     </dependencies>
@@ -271,11 +271,11 @@
             <objects>
                 <viewController id="JuN-mh-FDN" customClass="AboutViewController" customModule="Pomidorko" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="fCW-2b-kwJ">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="488"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="530"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="I7i-Tz-6s7">
-                                <rect key="frame" x="127" y="276" width="44" height="17"/>
+                                <rect key="frame" x="127" y="318" width="44" height="17"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="10 min" id="IhZ-sJ-f87">
                                     <font key="font" metaFont="system"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -283,14 +283,14 @@
                                 </textFieldCell>
                             </textField>
                             <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Oui-dg-mjN">
-                                <rect key="frame" x="78" y="267" width="49" height="32"/>
+                                <rect key="frame" x="78" y="309" width="49" height="32"/>
                                 <buttonCell key="cell" type="push" title="+" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="XEj-V9-1ZJ">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
                             </button>
                             <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="E7L-rt-X3T">
-                                <rect key="frame" x="172" y="265" width="47" height="32"/>
+                                <rect key="frame" x="172" y="307" width="47" height="32"/>
                                 <buttonCell key="cell" type="push" title="-" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="yp3-LR-0eh">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
@@ -333,7 +333,7 @@
                                 <rect key="frame" x="0.0" y="216" width="320" height="100"/>
                             </customView>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZYe-o0-HZK" userLabel="Goals">
-                                <rect key="frame" x="-2" y="11" width="324" height="61"/>
+                                <rect key="frame" x="-2" y="10" width="324" height="61"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" id="Yef-Et-obV">
                                     <font key="font" metaFont="system" size="28"/>
                                     <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -359,10 +359,10 @@
                                 </connections>
                             </button>
                             <button focusRingType="none" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xbp-hu-5tH" userLabel="Skip" customClass="HoverableButton" customModule="Pomidorko" customModuleProvider="target">
-                                <rect key="frame" x="55" y="431" width="210" height="17"/>
+                                <rect key="frame" x="55" y="427" width="210" height="17"/>
                                 <buttonCell key="cell" type="square" title="Skip the pomidoro" bezelStyle="shadowlessSquare" imagePosition="overlaps" alignment="center" state="on" focusRingType="none" imageScaling="proportionallyDown" inset="2" id="HKI-XO-Dob">
                                     <behavior key="behavior" pushIn="YES" changeContents="YES" lightByContents="YES"/>
-                                    <font key="font" metaFont="system"/>
+                                    <font key="font" metaFont="system" size="12"/>
                                 </buttonCell>
                                 <connections>
                                     <action selector="skip:" target="XfG-lQ-9wD" id="J4c-at-te6"/>
