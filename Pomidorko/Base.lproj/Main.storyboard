@@ -17,14 +17,13 @@
                                         <menuItem title="About Pomidorko" id="5kV-Vb-QxS">
                                             <modifierMask key="keyEquivalentModifierMask"/>
                                             <connections>
-                                                <action selector="orderFrontStandardAboutPanel:" target="Ady-hI-5gd" id="Exp-CZ-Vem"/>
-                                                <segue destination="bq4-Jh-Vbv" kind="show" id="1TA-X9-cwE"/>
+                                                <action selector="openAbout:" target="Voe-Tx-rLC" id="1ab-dl-hwX"/>
                                             </connections>
                                         </menuItem>
                                         <menuItem isSeparatorItem="YES" id="VOq-y0-SEH"/>
                                         <menuItem title="Preferences…" keyEquivalent="," id="BOF-NM-1cW">
                                             <connections>
-                                                <segue destination="07p-OP-sBg" kind="show" id="nn5-Kq-R25"/>
+                                                <action selector="openPreferences:" target="Voe-Tx-rLC" id="SOk-va-SFM"/>
                                             </connections>
                                         </menuItem>
                                         <menuItem isSeparatorItem="YES" id="wFC-TO-SCJ"/>
@@ -227,7 +226,6 @@
                     </view>
                 </viewController>
                 <customObject id="ZJx-gN-d6S" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
-                <numberFormatter formatterBehavior="default10_4" usesGroupingSeparator="NO" groupingSize="0" minimumIntegerDigits="0" maximumIntegerDigits="42" id="sNN-DW-Mhn"/>
             </objects>
             <point key="canvasLocation" x="-845" y="935"/>
         </scene>

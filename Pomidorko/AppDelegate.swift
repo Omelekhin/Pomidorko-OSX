@@ -75,6 +75,16 @@ class AppDelegate: NSObject, NSApplicationDelegate
         AppDelegate.statusBar = statusController.view as? StatusBar
     }
     
+    @IBAction func openAbout(sender: AnyObject?)
+    {
+        AppDelegate.openAbout()
+    }
+    
+    @IBAction func openPreferences(sender: AnyObject?)
+    {
+        AppDelegate.openPreferences()
+    }
+    
     func applicationWillTerminate(notification: NSNotification)
     {
         AppDelegate.timer?.pause()
