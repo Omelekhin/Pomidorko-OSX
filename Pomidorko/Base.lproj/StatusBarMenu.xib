@@ -17,7 +17,7 @@
                     <modifierMask key="keyEquivalentModifierMask"/>
                 </menuItem>
                 <menuItem isSeparatorItem="YES" id="vF8-ld-bGd"/>
-                <menuItem title="Play" keyEquivalent="" id="96I-RD-TVH">
+                <menuItem title="Play" keyEquivalent="p" id="96I-RD-TVH">
                     <modifierMask key="keyEquivalentModifierMask" option="YES" command="YES"/>
                     <connections>
                         <action selector="toggleTimer:" target="-2" id="sAb-Aj-XNC"/>

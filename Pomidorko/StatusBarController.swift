@@ -56,7 +56,7 @@ class StatusBarController: NSViewController
     func addKeyEvents()
     {
         NSEvent.addLocalMonitorForEventsMatchingMask(.KeyDownMask, handler: { (event: NSEvent) -> NSEvent? in
-            if event.keyCode == 100 && event.modifierFlags.rawValue == 9961768 {
+            if event.keyCode == 35 && event.modifierFlags.rawValue == 1573160 {
                 self.toggleTimer(nil)
             }
             
@@ -64,7 +64,7 @@ class StatusBarController: NSViewController
         })
         
         NSEvent.addGlobalMonitorForEventsMatchingMask(.KeyDownMask, handler: { (event: NSEvent) -> Void in
-            if event.keyCode == 100 && event.modifierFlags.rawValue == 9961768 {
+            if event.keyCode == 35 && event.modifierFlags.rawValue == 1573160 {
                 self.toggleTimer(nil)
             }
         })
