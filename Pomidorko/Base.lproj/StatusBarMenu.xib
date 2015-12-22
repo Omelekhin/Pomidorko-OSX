@@ -13,7 +13,7 @@
         <customObject id="-3" userLabel="Application" customClass="NSObject"/>
         <menu id="dEl-F4-1bx">
             <items>
-                <menuItem title="N-th pomidorko" id="VFt-BN-SPy">
+                <menuItem title="N-th pomodoro" id="VFt-BN-SPy">
                     <modifierMask key="keyEquivalentModifierMask"/>
                 </menuItem>
                 <menuItem isSeparatorItem="YES" id="vF8-ld-bGd"/>
@@ -30,14 +30,14 @@
                     </connections>
                 </menuItem>
                 <menuItem isSeparatorItem="YES" id="iL6-Te-4Ls"/>
-                <menuItem title="Open timer" id="gGz-ia-Ebc">
+                <menuItem title="Show timer" id="gGz-ia-Ebc">
                     <modifierMask key="keyEquivalentModifierMask"/>
                     <connections>
                         <action selector="openTimer:" target="-2" id="ldv-t2-4a3"/>
                     </connections>
                 </menuItem>
                 <menuItem isSeparatorItem="YES" id="WhS-af-mB4"/>
-                <menuItem title="About timer" id="Lw3-re-0U2">
+                <menuItem title="About Pomidorko" id="Lw3-re-0U2">
                     <modifierMask key="keyEquivalentModifierMask"/>
                     <connections>
                         <action selector="openAbout:" target="-2" id="eAA-Pa-5fI"/>
@@ -50,7 +50,7 @@
                     </connections>
                 </menuItem>
                 <menuItem isSeparatorItem="YES" id="XQL-X7-hCb"/>
-                <menuItem title="Quit timer" id="npd-jF-yDZ">
+                <menuItem title="Quit Pomidorko" id="npd-jF-yDZ">
                     <modifierMask key="keyEquivalentModifierMask"/>
                     <connections>
                         <action selector="quitApp:" target="-2" id="8Tt-70-eEq"/>

@@ -9,7 +9,7 @@
 "4sb-4s-VLi.title" = "Завершить";
 
 /* Class = "NSMenuItem"; title = "About Pomidorko"; ObjectID = "5kV-Vb-QxS"; */
-"5kV-Vb-QxS.title" = "О таймере";
+"5kV-Vb-QxS.title" = "О Помидорко";
 
 /* Class = "NSButtonCell"; title = " Tick-tock"; ObjectID = "6Uk-ab-2St"; */
 "6Uk-ab-2St.title" = " Тикание таймера";
@@ -39,10 +39,10 @@
 "OY7-WF-poV.title" = "Уменьшить";
 
 /* Class = "NSMenuItem"; title = "Скрыть таймер"; ObjectID = "Olw-nP-bQN"; */
-"Olw-nP-bQN.title" = "Скрыть таймер";
+"Olw-nP-bQN.title" = "Скрыть Помидорко";
 
 /* Class = "NSWindow"; title = "About timer"; ObjectID = "SZX-S9-C18"; */
-"SZX-S9-C18.title" = "О таймере";
+"SZX-S9-C18.title" = "О Помидорко";
 
 /* Class = "NSButtonCell"; title = " Sound"; ObjectID = "TUD-gX-abD"; */
 "TUD-gX-abD.title" = " Звуковое уведомление";
