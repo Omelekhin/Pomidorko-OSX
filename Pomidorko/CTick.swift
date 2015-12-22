@@ -13,9 +13,11 @@ class CTick: Component
 {
     var time: Int = -1
     var timer: Timer?
+    
     var sound: AVAudioPlayer?
-    var settings: Settings?
     var enabled: Bool = false
+    
+    var settings: Settings?
     
     init(timer: Timer?, settings: Settings?)
     {

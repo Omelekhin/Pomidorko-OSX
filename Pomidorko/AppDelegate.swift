@@ -143,8 +143,7 @@ class AppDelegate: NSObject, NSApplicationDelegate
     
     internal class func createController(key: String) -> NSWindowController
     {
-        let storyBoard = NSStoryboard(name: "Main", bundle: nil)
-        
-        return storyBoard.instantiateControllerWithIdentifier(key) as! NSWindowController
+        return NSStoryboard(name: "Main", bundle: nil)
+            .instantiateControllerWithIdentifier(key) as! NSWindowController
     }
 }

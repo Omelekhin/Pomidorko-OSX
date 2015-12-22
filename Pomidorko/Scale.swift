@@ -24,6 +24,10 @@ class Scale: NSView
             let offset: CGFloat = CGFloat(time / 60.0) * 40.0
             let x: CGFloat = dirtyRect.width / 2 + CGFloat(index * 40) - offset
             
+            if x < -40 {
+                continue
+            }
+            
             if x > dirtyRect.width {
                 break
             }
@@ -36,7 +40,6 @@ class Scale: NSView
             )
             
             CGContextFillPath(context)
-            CGContextSetTextPosition(context, x, 30)
             
             if isLabeled {
                 NSString(format: "%i", Int(index)).drawAtPoint(

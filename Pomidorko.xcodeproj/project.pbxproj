@@ -221,12 +221,12 @@
 				1342CA991BED1A1A00184716 /* Extensions */,
 				133F3A5C1BE5AEAA007ED1B7 /* Models */,
 				137AAB3A1BD6DAD40049209B /* UI */,
-				133D89C01BB9A950007AFAF7 /* Supporting Files */,
+				133D89C01BB9A950007AFAF7 /* Assets */,
 			);
 			path = Pomidorko;
 			sourceTree = "<group>";
 		};
-		133D89C01BB9A950007AFAF7 /* Supporting Files */ = {
+		133D89C01BB9A950007AFAF7 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
 				13C8A7841C26996500FAC91E /* XIB */,
@@ -237,7 +237,7 @@
 				134690BD1BEAEBE600414003 /* Localizable.strings */,
 				13B8565C1C205C6600E83891 /* InfoPlist.strings */,
 			);
-			name = "Supporting Files";
+			name = Assets;
 			sourceTree = "<group>";
 		};
 		133D89D21BB9A951007AFAF7 /* PomidorkoTests */ = {

@@ -22,7 +22,7 @@ class SettingsButton: NSButton
         ]
         
         NSString(string: title).drawAtPoint(
-            NSMakePoint(9, 4),
+            NSMakePoint(10, 3),
             withAttributes: attributes
         )
     }
