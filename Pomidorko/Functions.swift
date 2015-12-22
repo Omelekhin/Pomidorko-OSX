@@ -201,7 +201,7 @@ func createBitmapContext(w: Int, _ h: Int) -> CGContext
 
 /** User preferences */
 
-func savePreferences(key: String, data: AnyObject?)
+func savePreference(key: String, data: AnyObject?)
 {
     NSUserDefaults.standardUserDefaults().setObject(data, forKey: key)
 }
@@ -212,7 +212,7 @@ func removePreference(key: String)
     NSUserDefaults.standardUserDefaults().synchronize()
 }
 
-func getPreferences(key: String) -> AnyObject?
+func getPreference(key: String) -> AnyObject?
 {
     if let data = NSUserDefaults.standardUserDefaults().objectForKey(key) {
         return data
