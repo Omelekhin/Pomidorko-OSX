@@ -38,6 +38,28 @@ class SettingsController: NSViewController
             }
         }
         
+        // Дикий костыль
+        controls.sortInPlace({ (a, b) -> Bool in
+            if a is SettingsField && b is NSButton {
+                return (a as! SettingsField).tag < (b as! NSButton).tag
+            }
+            
+            if a is NSButton && b is NSButton {
+                return (a as! NSButton).tag < (b as! NSButton).tag
+            }
+            
+            if a is SettingsField && b is SettingsField {
+                return (a as! SettingsField).tag < (b as! SettingsField).tag
+            }
+            
+            if a is NSButton && b is SettingsField {
+                return (a as! NSButton).tag < (b as! SettingsField).tag
+            }
+            
+            return false
+        })
+        
+        setupFocus()
         fillSettings()
     }
     
@@ -82,6 +104,21 @@ class SettingsController: NSViewController
         view.addSubview(control.view)
         
         return control
+    }
+    
+    func setupFocus()
+    {
+        view.window?.initialFirstResponder = (controls[0] as! SettingsField).input
+        
+        // Дикий костыль
+        (controls[0] as! SettingsField).input?.nextKeyView = (controls[1] as! SettingsField).input
+        (controls[1] as! SettingsField).input?.nextKeyView = (controls[2] as! SettingsField).input
+        (controls[2] as! SettingsField).input?.nextKeyView = (controls[3] as! SettingsField).input
+        (controls[3] as! SettingsField).input?.nextKeyView = (controls[4] as! SettingsField).input
+        (controls[4] as! SettingsField).input?.nextKeyView = (controls[5] as! NSButton)
+        (controls[5] as! NSButton).nextKeyView = (controls[6] as! NSButton)
+        (controls[6] as! NSButton).nextKeyView = (controls[7] as! NSButton)
+        (controls[7] as! NSButton).nextKeyView = (controls[0] as! SettingsField).input
     }
     
     func fillSettings()
