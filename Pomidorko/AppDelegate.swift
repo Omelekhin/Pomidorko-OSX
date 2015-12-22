@@ -114,11 +114,11 @@ class AppDelegate: NSObject, NSApplicationDelegate
     
     internal class func openTimer()
     {
+        AppDelegate.activateApp()
+        
         if let window = AppDelegate.timerWindow {
             window.makeKeyAndOrderFront(nil)
         }
-        
-        NSApp.activateIgnoringOtherApps(true)
     }
     
     internal class func openPreferences()
@@ -127,8 +127,8 @@ class AppDelegate: NSObject, NSApplicationDelegate
             AppDelegate.preferences = AppDelegate.createController("preferences")
         }
         
+        AppDelegate.activateApp()
         AppDelegate.preferences?.showWindow(nil)
-        NSApp.activateIgnoringOtherApps(true)
     }
     
     internal class func openAbout()
@@ -137,13 +137,22 @@ class AppDelegate: NSObject, NSApplicationDelegate
             AppDelegate.about = AppDelegate.createController("about")
         }
         
+        AppDelegate.activateApp()
         AppDelegate.about?.showWindow(nil)
-        NSApp.activateIgnoringOtherApps(true)
     }
+    
+    /**
+     * Static helpers
+     */
     
     internal class func createController(key: String) -> NSWindowController
     {
         return NSStoryboard(name: "Main", bundle: nil)
             .instantiateControllerWithIdentifier(key) as! NSWindowController
+    }
+    
+    internal class func activateApp()
+    {
+        NSApp.activateIgnoringOtherApps(true)
     }
 }
