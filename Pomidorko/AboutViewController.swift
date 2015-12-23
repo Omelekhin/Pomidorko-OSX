@@ -28,8 +28,6 @@ class AboutViewController: NSViewController, WebPolicyDelegate, WebUIDelegate
         webView?.UIDelegate = self
         webView?.editingDelegate = self
         
-        view.addSubview(webView!)
-        
         flatify(view.window!, color: WhiteColor)
     }
     
