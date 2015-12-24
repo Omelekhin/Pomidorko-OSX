@@ -6,7 +6,7 @@
   Copyright © 2015 volter9. All rights reserved.
 */
 
-"goals" = "%i из %i отработанных помидорок";
+"goals" = "%i из %i помидорок";
 "second-index" = "4";
 
 "about-page" = "index-ru";
