@@ -78,7 +78,8 @@ class SettingsField: NSViewController
         if suffix == "" {
             view.setFrameSize(NSMakeSize(110, 28))
             
-            increaseButton?.frame.origin.x = 110 - 30
+            increaseButton?.frame = NSMakeRect(80, 0, 30, 28)
+            self.suffix?.hidden = true
             input?.frame.origin.x = 110 - 33 - 30 - 6
         }
     }
