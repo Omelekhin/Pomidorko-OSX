@@ -13,14 +13,16 @@ class CStatusBar: NSObject, Component
     var statusBar: StatusBar?
     var timer: Timer?
     var goals: Goals?
+    var settings: Settings?
     
-    init(timer: Timer?, statusBar: StatusBar?, goals: Goals?)
+    init(timer: Timer?, statusBar: StatusBar?, goals: Goals?, settings: Settings?)
     {
         super.init()
         
         self.timer = timer
         self.statusBar = statusBar
         self.goals = goals
+        self.settings = settings
         
         NSDistributedNotificationCenter.defaultCenter().addObserver(
             self,
@@ -45,6 +47,12 @@ class CStatusBar: NSObject, Component
         
         timer?.emitter.add("start", closure: { (time: Double) -> Void in
             self.setupAlpha()
+        })
+        
+        settings?.observer.add({ (dict: KVDict) -> Void in
+            if self.timer!.isClean() {
+                self.render((self.timer?.time())!)
+            }
         })
         
         setupAlpha()

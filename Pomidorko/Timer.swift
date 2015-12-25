@@ -93,4 +93,9 @@ class Timer: NSObject
     {
         return timer != nil
     }
+    
+    func isClean() -> Bool
+    {
+        return !isRunning() && remained == 0
+    }
 }

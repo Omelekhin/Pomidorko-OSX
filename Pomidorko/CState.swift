@@ -36,13 +36,23 @@ class CState: Component
             self.next()
         })
         
+        settings?.observer.add({ (dict: KVDict) -> Void in
+            self.setCurrentTime()
+        })
+        
         let remained = goals?.get("remained") as! Double
-        let recess = goals?.get("recess") as! Bool
-        let time = goals?.get("current") as! Int
         
         if remained > 0 {
             timer?.remained = remained * 1000
         }
+        
+        setCurrentTime()
+    }
+    
+    func setCurrentTime()
+    {
+        let recess = goals?.get("recess") as! Bool
+        let time = goals?.get("current") as! Int
         
         setTime(recess, current: time)
         render(recess, current: time)

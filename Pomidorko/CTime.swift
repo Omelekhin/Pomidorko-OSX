@@ -12,17 +12,25 @@ class CTime: Component
 {
     var label: NSTextField?
     var timer: Timer?
+    var settings: Settings?
     
-    init(label: NSTextField?, timer: Timer?)
+    init(label: NSTextField?, timer: Timer?, settings: Settings?)
     {
         self.label = label
         self.timer = timer
+        self.settings = settings
     }
     
     func activate()
     {
         timer?.emitter.add("tick", closure: { (time: Double) -> Void in
             self.render(time)
+        })
+        
+        settings?.observer.add({ (dict: KVDict) -> Void in
+            if self.timer!.isClean() {
+                self.render((self.timer?.time())!)
+            }
         })
         
         render((timer?.time())!)
