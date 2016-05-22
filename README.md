@@ -13,6 +13,6 @@ To launch it, just clone the repo and open up .xcodeproj via finder or via XCode
 
 ## Wanna continue development?
 
-Please contact pasha@omelekhin.ru. He's the organizer of this project, he'll need a new developer to continue developing this project (Pomidorko for iOS and iWatch).
+Please contact <pasha@omelekhin.ru>. He's the organizer of this project, he'll need a new developer to continue developing this project (Pomidorko for iOS and iWatch).
 
 Happy coding :smile: !
