@@ -1,30 +1,18 @@
-# Pomidorko OS X
+# Pomidorko timer app for OS X
 
-So bla-bla-bla, ok, so here's the plan...
+This is repo with source code and resources of Pomidorko timer for OS X. It's written in Swift (which is not as good as Obj-C, Obj-C is better :smile:). Pomidorko timer is hosted [here](http://pomidorko.com/apps/), I mean you could download the app in the link behind.
 
-# :bird: :boom: :fire: THE FUCKING PLAN :us: :boom: :bird:
+I'm not maintaining this project anymore. 
 
-So, we have following shit done:
+## Requirements
 
-1. About ~~page~~ window UI
-2. Timer UI 
-3. Timer logic
-4. Motherfucking hovering
-5. Ticking and sound notification
-6. The shit in the right corner
-7. Saving progress to the disk
-8. Fade from dock
-9. Reset progress at early morning
-10. Settings window
-11. Show menu while dock icon is hidden
-12. Settings enter key for inputs
-13. Change font 300 to goals
-14. Tab circulation for subviews in settings
+* Mac with OS X 10.11
+* XCode 6.1
 
-We need to make up this shit before December the 25th:
+To launch it, just clone the repo and open up .xcodeproj via finder or via XCode.
 
-0. No items
+## Wanna continue development?
 
-That's all the shit needed to be implemented
+Please contact pasha@omelekhin.ru. He's the organizer of this project, he'll need a new developer to continue developing this project (Pomidorko for iOS and iWatch).
 
-P.S.: I love writing README's files in `vim`, it's very fun, ha-ha-ha
+Happy coding :smile: !
