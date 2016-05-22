@@ -38,7 +38,9 @@ class SettingsController: NSViewController
             }
         }
         
-        // Дикий костыль
+        /**
+         * Train your programming (O)OP skills with refactoring this code snippet
+         */
         controls.sortInPlace({ (a, b) -> Bool in
             if a is SettingsField && b is NSButton {
                 return (a as! SettingsField).tag < (b as! NSButton).tag
