@@ -17,4 +17,4 @@ Please contact <pasha@omelekhin.ru>. He's the organizer of this project, he'll n
 
 Happy coding :smile: !
 
-Also checkout the source code of Pomidorko the web app.
+Also checkout the source code of [Pomidorko](https://github.com/volter9/Pomidorko) the web app.
